@@ -297,25 +297,25 @@
     "subLinks": []
   },
   {
-    "name": "Đường l...",
+    "name": "Đường lên ...",
     "icon": "./img/Đường lên đỉnh Olympia.ico",
     "mainLink": "https://duong-len-dinh-olympia.fandom.com/vi/wiki/%C4%90%C6%B0%E1%BB%9Dng_l%C3%AAn_%C4%91%E1%BB%89nh_Olympia_Wiki",
     "subLinks": []
   },
   {
-    "name": "Oxford...",
+    "name": "Oxford Dictio...",
     "icon": "./img/Oxford Dictionary.ico",
     "mainLink": "https://www.oxfordlearnersdictionaries.com/",
     "subLinks": []
   },
   {
-    "name": "Dịch vụ c...",
+    "name": "Dịch vụ công",
     "icon": "./img/Dịch vụ công.png",
     "mainLink": "https://dichvucong.bocongan.gov.vn/",
     "subLinks": []
   },
   {
-    "name": "Font Aw...",
+    "name": "Font Awesome",
     "icon": "./img/Font Awesome.svg",
     "mainLink": "https://fontawesome.com/",
     "subLinks": []
@@ -327,19 +327,19 @@
     "subLinks": []
   },
   {
-    "name": "Listen E...",
+    "name": "Listen English",
     "icon": "./img/Listen English.ico",
     "mainLink": "https://dailydictation.com/",
     "subLinks": []
   },
   {
-    "name": "Write En...",
+    "name": "Write English",
     "icon": "./img/Write English.ico",
     "mainLink": "https://writeandimprove.com/",
     "subLinks": []
   },
   {
-    "name": "Visual St...",
+    "name": "Visual Studio ...",
     "icon": "./img/Visual Studio Code.ico",
     "mainLink": "https://code.visualstudio.com/",
     "subLinks": []
@@ -351,13 +351,13 @@
     "subLinks": []
   },
   {
-    "name": "Submarine...",
+    "name": "Submarine Ca...",
     "icon": "./img/Submarine Cable Map.ico",
     "mainLink": "https://www.submarinecablemap.com/",
     "subLinks": []
   },
   {
-    "name": "Wayback...",
+    "name": "Wayback Mac...",
     "icon": "./img/Wayback Machine.png",
     "mainLink": "https://web.archive.org/",
     "subLinks": []
@@ -369,7 +369,7 @@
     "subLinks": []
   },
   {
-    "name": "News In ...",
+    "name": "News In Levels",
     "icon": "./img/News In Levels.png",
     "mainLink": "https://www.newsinlevels.com/",
     "subLinks": []
@@ -420,7 +420,20 @@
     "name": "Store",
     "icon": "./img/Store.png",
     "mainLink": "https://chromewebstore.google.com/",
-    "subLinks": []
+    "subLinks": [
+      {
+        "name": "Pesticide for Chrome",
+        "url": "https://chromewebstore.google.com/detail/pesticide-for-chrome/mahhmjhkidipojpgcboknihcljndifaa"
+      },
+      {
+        "name": "Cho phép sao chép +",
+        "url": "https://chromewebstore.google.com/detail/cho-ph%C3%A9p-sao-ch%C3%A9p-+/ajhbdcgfhlhhmocddefknjjkejcfpbnj"
+      },
+      {
+        "name": "Từ điển eJOY AI",
+        "url": "https://chromewebstore.google.com/detail/t%E1%BB%AB-%C4%91i%E1%BB%83n-ejoy-ai/amfojhdiedpdnlijjbhjnhokbnohfdfb"
+      }
+    ]
   },
   {
     "name": "E-MIT",
@@ -429,7 +442,7 @@
     "subLinks": []
   },
   {
-    "name": "Code Be...",
+    "name": "Code Beautify",
     "icon": "./img/Code Beautify.png",
     "mainLink": "https://codebeautify.org/",
     "subLinks": []
@@ -441,13 +454,13 @@
     "subLinks": []
   },
   {
-    "name": "Free For...",
+    "name": "Free Formatter",
     "icon": "./img/Free Formatter.ico",
     "mainLink": "https://www.freeformatter.com/",
     "subLinks": []
   },
   {
-    "name": "Code Sa...",
+    "name": "Code Sandbox",
     "icon": "./img/Code Sandbox.svg",
     "mainLink": "https://codesandbox.io/",
     "subLinks": []
@@ -465,13 +478,146 @@
     "subLinks": []
   },
   {
-    "name": "Hợp âm ...",
+    "name": "Hợp âm",
     "icon": "./img/Hợp âm chuẩn.ico",
     "mainLink": "https://hopamchuan.com/",
     "subLinks": [
       {
         "name": "Vùng Lá Me Bay",
         "url": "https://hopamchuan.com/song/4547/vung-la-me-bay"
+      },
+      {
+        "name": "E Là Không Thể",
+        "url": "https://hopamchuan.com/song/66225/e-la-khong-the"
+      },
+      {
+        "name": "Em Là Của Anh",
+        "url": "https://hopamchuan.com/song/6074/em-la-cua-anh"
+      },
+      {
+        "name": "Một Con Vịt",
+        "url": "https://hopamchuan.com/song/4012/mot-con-vit"
+      },
+      {
+        "name": "Anh đếch cần gì ngoài em",
+        "url": "https://hopamchuan.com/song/23241/anh-dech-can-gi-ngoai-em-anh-dech-can-gi-nhieu-ngoai-em"
+      },
+      {
+        "name": "Vùng Trời Bình Yên",
+        "url": "https://hopamchuan.com/song/564/vung-troi-binh-yen"
+      },
+      {
+        "name": "Rồi Tới Luôn",
+        "url": "https://hopamchuan.com/song/47291/roi-toi-luon"
+      },
+      {
+        "name": "Niềm Vui Của Em",
+        "url": "https://hopamchuan.com/song/7078/niem-vui-cua-em"
+      },
+      {
+        "name": "Cháu Yêu Bà",
+        "url": "https://hopamchuan.com/song/7129/chau-yeu-ba"
+      },
+      {
+        "name": "Reality",
+        "url": "https://hopamchuan.com/song/7944/reality"
+      },
+      {
+        "name": "Cám Ơn Tình Yêu",
+        "url": "https://hopamchuan.com/song/1590/cam-on-tinh-yeu"
+      },
+      {
+        "name": "Thuyền Quyên",
+        "url": "https://hopamchuan.com/song/56148/thuyen-quyen"
+      },
+      {
+        "name": "Tìm Lại Bầu Trời",
+        "url": "https://hopamchuan.com/song/3126/tim-lai-bau-troi"
+      },
+      {
+        "name": "Không Sao Em À",
+        "url": "https://hopamchuan.com/song/43428/khong-sao-em-a"
+      },
+      {
+        "name": "Đêm Lao Xao",
+        "url": "https://hopamchuan.com/song/2094/dem-lao-xao"
+      },
+      {
+        "name": "Đồi Hoa Mặt Trời",
+        "url": "https://hopamchuan.com/song/1110/doi-hoa-mat-troi"
+      },
+      {
+        "name": "Em Là Bông Hồng Nhỏ",
+        "url": "https://hopamchuan.com/song/472/em-la-bong-hong-nho"
+      },
+      {
+        "name": "Nâng Chén Tiêu Sầu",
+        "url": "https://hopamchuan.com/song/69299/nang-chen-tieu-sau"
+      },
+      {
+        "name": "Tuổi Đá Buồn",
+        "url": "https://hopamchuan.com/song/2803/tuoi-da-buon"
+      },
+      {
+        "name": "Bên Trên Tầng Lầu",
+        "url": "https://hopamchuan.com/song/55358/ben-tren-tang-lau"
+      },
+      {
+        "name": "Một Đêm Say",
+        "url": "https://hopamchuan.com/song/23907/mot-dem-say"
+      },
+      {
+        "name": "Ít Nhưng Dài Lâu",
+        "url": "https://hopamchuan.com/song/9942/it-nhung-dai-lau"
+      },
+      {
+        "name": "Đào Nương",
+        "url": "https://hopamchuan.com/song/46684/dao-nuong"
+      },
+      {
+        "name": "Đừng Xa Em Đêm Nay",
+        "url": "https://hopamchuan.com/song/485/dung-xa-em-dem-nay"
+      },
+      {
+        "name": "Chỉ Còn Những Mùa Nhớ",
+        "url": "https://hopamchuan.com/song/4080/chi-con-nhung-mua-nho"
+      },
+      {
+        "name": "Một Thuở Yêu Người",
+        "url": "https://hopamchuan.com/song/3198/mot-thuo-yeu-nguoi"
+      },
+      {
+        "name": "Ân Tình Sang Trang",
+        "url": "https://hopamchuan.com/song/58151/an-tinh-sang-trang"
+      },
+      {
+        "name": "Tình Đời (Kiếp Cầm Ca)",
+        "url": "https://hopamchuan.com/song/7225/tinh-doi-kiep-cam-ca"
+      },
+      {
+        "name": "Gặp Mẹ Trong Mơ",
+        "url": "https://hopamchuan.com/song/4010/gap-me-trong-mo"
+      },
+      {
+        "name": "Bác Hồ Một Tình Yêu Bao La",
+        "url": "https://hopamchuan.com/song/763/bac-ho-mot-tinh-yeu-bao-la"
+      },
+      {
+        "name": "Bước Qua Đời Nhau",
+        "url": "https://hopamchuan.com/song/28277/buoc-qua-doi-nhau"
+      },
+      {
+        "name": "Vầng Trăng Khóc",
+        "url": "https://hopamchuan.com/song/620/vang-trang-khoc"
+      },
+      {
+        "name": "Cầu Vồng Khuyết",
+        "url": "https://hopamchuan.com/song/80/cau-vong-khuyet"
+      },
+
+      {
+        "name": "Hoa Cài Mái Tóc",
+        "url": "https://hopamchuan.com/song/3122/hoa-cai-mai-toc"
       }
     ]
   },
@@ -482,13 +628,13 @@
     "subLinks": []
   },
   {
-    "name": "Stack Ov...",
+    "name": "Stack Overflow",
     "icon": "./img/Stack Overflow.ico",
     "mainLink": "https://stackoverflow.com/",
     "subLinks": []
   },
   {
-    "name": "Geeksfor...",
+    "name": "Geeksfor Geeks",
     "icon": "./img/Geeksfor Geeks.png",
     "mainLink": "https://www.geeksforgeeks.org/",
     "subLinks": []
@@ -500,7 +646,7 @@
     "subLinks": []
   },
   {
-    "name": "Browser ...",
+    "name": "Browser Defa...",
     "icon": "./img/Browser Default Styles.png",
     "mainLink": "https://browserdefaultstyles.com/",
     "subLinks": []
@@ -518,7 +664,7 @@
     "subLinks": []
   },
   {
-    "name": "CSS Refe...",
+    "name": "CSS Reference",
     "icon": "./img/CSS Reference.png",
     "mainLink": "https://cssreference.io/",
     "subLinks": []
@@ -530,25 +676,25 @@
     "subLinks": []
   },
   {
-    "name": "OBS Stu...",
+    "name": "OBS Studio",
     "icon": "./img/OBS Studio.png",
     "mainLink": "https://obsproject.com/",
     "subLinks": []
   },
   {
-    "name": "HTML C...",
+    "name": "HTML Color C...",
     "icon": "./img/HTML Color Codes.png",
     "mainLink": "https://htmlcolorcodes.com/",
     "subLinks": []
   },
   {
-    "name": "CSS Font...",
+    "name": "CSS Font Stack",
     "icon": "./img/CSS Font Stack.ico",
     "mainLink": "https://www.cssfontstack.com/",
     "subLinks": []
   },
   {
-    "name": "Styled C...",
+    "name": "Styled Compo...",
     "icon": "./img/Styled Components.png",
     "mainLink": "https://styled-components.com/",
     "subLinks": []
@@ -558,5 +704,267 @@
     "icon": "./img/Validator.ico",
     "mainLink": "https://validator.w3.org/",
     "subLinks": []
+  },
+  {
+    "name": "CSS Generato...",
+    "icon": "./img/CSS Generator Tool.png",
+    "mainLink": "https://cssgenerator.org/",
+    "subLinks": []
+  },
+  {
+    "name": "VTV Go",
+    "icon": "./img/VTVgo.png",
+    "mainLink": "https://vtvgo.vn/",
+    "subLinks": []
+  },
+  {
+    "name": "LRC Generator",
+    "icon": "./img/LRC Generator.ico",
+    "mainLink": "https://lrcgenerator.com/",
+    "subLinks": []
+  },
+  {
+    "name": "Box Shadows",
+    "icon": "./img/Box Shadows.svg",
+    "mainLink": "https://box-shadow.dev/",
+    "subLinks": []
+  },
+  {
+    "name": "Tiền Phong",
+    "icon": "./img/Tiền Phong.ico",
+    "mainLink": "https://tienphong.vn/",
+    "subLinks": []
+  },
+  {
+    "name": "Vietjack",
+    "icon": "./img/Vietjack.ico",
+    "mainLink": "https://www.vietjack.com/",
+    "subLinks": []
+  },
+  {
+    "name": "Motchilli",
+    "icon": "./img/Motchilli.png",
+    "mainLink": "https://motchilli.to/",
+    "subLinks": []
+  },
+  {
+    "name": "CSS Gradient",
+    "icon": "./img/CSS Gradient.ico",
+    "mainLink": "https://cssgradient.io/",
+    "subLinks": []
+  },
+  {
+    "name": "Newsweek",
+    "icon": "./img/Newsweek.ico",
+    "mainLink": "https://www.newsweek.com/",
+    "subLinks": []
+  },
+  {
+    "name": "Bản đồ",
+    "icon": "./img/Bản đồ.ico",
+    "mainLink": "https://www.bing.com/maps",
+    "subLinks": []
+  },
+  {
+    "name": "Jetbrains",
+    "icon": "./img/Jetbrains.ico",
+    "mainLink": "https://www.jetbrains.com/",
+    "subLinks": []
+  },
+  {
+    "name": "CSS Scan",
+    "icon": "./img/CSS Scan.png",
+    "mainLink": "https://getcssscan.com/",
+    "subLinks": []
+  },
+  {
+    "name": "Netlify",
+    "icon": "./img/Netlify.ico",
+    "mainLink": "https://www.netlify.com/",
+    "subLinks": []
+  },
+  {
+    "name": "Dev Tools",
+    "icon": "./img/Dev Tools.png",
+    "mainLink": "https://tools.webdevpuneet.com/",
+    "subLinks": []
+  },
+  {
+    "name": "Hợp Âm V",
+    "icon": "./img/Hợp Âm Việt.png",
+    "mainLink": "https://hopamviet.vn/",
+    "subLinks": [
+      {
+        "name": "Xót xa",
+        "url": "https://hopamviet.vn/chord/song/xot-xa/W8IUIIBF.html"
+      },
+      {
+        "name": "Rước tình về với quê hương",
+        "url": "https://hopamviet.vn/chord/song/ruoc-tinh-ve-voi-que-huong/W8IUIUA7.html"
+      },
+      {
+        "name": "Chị tôi",
+        "url": "https://hopamviet.vn/chord/song/chi-toi/W8IUI0DZ.html"
+      },
+      {
+        "name": "Đám cưới trên đường quê",
+        "url": "https://hopamviet.vn/chord/song/dam-cuoi-tren-duong-que/W8IUIOCO.html"
+      },
+      {
+        "name": "Đám cưới như mơ",
+        "url": "https://hopamviet.vn/chord/song/dam-cuoi-nhu-mo/W8IUIE6I.html"
+      },
+      {
+        "name": "Thành phố buồn",
+        "url": "https://hopamviet.vn/chord/song/thanh-pho-buon/W8IUIIIW.html"
+      },
+      {
+        "name": "Con đường xưa em đi",
+        "url": "https://hopamviet.vn/chord/song/con-duong-xua-em-di/W8IU0F8Z.html"
+      },
+      {
+        "name": "Lặng yên - Lặng yên dưới vực sâu OST",
+        "url": "https://hopamviet.vn/chord/song/lang-yen/W8IUUZ90.html"
+      },
+      {
+        "name": "Cát bụi",
+        "url": "https://hopamviet.vn/chord/song/cat-bui/W8IU0F8C.html"
+      }
+    ]
+  },
+  {
+    "name": "",
+    "icon": "",
+    "mainLink": "",
+    "subLinks": [
+      {"name": "", "url": ""},
+      {"name": "", "url": ""}
+    ]
+  },
+  {
+    "name": "",
+    "icon": "",
+    "mainLink": "",
+    "subLinks": [
+      {"name": "", "url": ""},
+      {"name": "", "url": ""}
+    ]
+  },
+  {
+    "name": "",
+    "icon": "",
+    "mainLink": "",
+    "subLinks": [
+      {"name": "", "url": ""},
+      {"name": "", "url": ""}
+    ]
+  },
+  {
+    "name": "",
+    "icon": "",
+    "mainLink": "",
+    "subLinks": [
+      {"name": "", "url": ""},
+      {"name": "", "url": ""}
+    ]
+  },
+  {
+    "name": "",
+    "icon": "",
+    "mainLink": "",
+    "subLinks": [
+      {"name": "", "url": ""},
+      {"name": "", "url": ""}
+    ]
+  },
+  {
+    "name": "",
+    "icon": "",
+    "mainLink": "",
+    "subLinks": [
+      {"name": "", "url": ""},
+      {"name": "", "url": ""}
+    ]
+  },
+  {
+    "name": "",
+    "icon": "",
+    "mainLink": "",
+    "subLinks": [
+      {"name": "", "url": ""},
+      {"name": "", "url": ""}
+    ]
+  },
+  {
+    "name": "",
+    "icon": "",
+    "mainLink": "",
+    "subLinks": [
+      {"name": "", "url": ""},
+      {"name": "", "url": ""}
+    ]
+  },
+  {
+    "name": "",
+    "icon": "",
+    "mainLink": "",
+    "subLinks": [
+      {"name": "", "url": ""},
+      {"name": "", "url": ""}
+    ]
+  },
+  {
+    "name": "",
+    "icon": "",
+    "mainLink": "",
+    "subLinks": [
+      {"name": "", "url": ""},
+      {"name": "", "url": ""}
+    ]
+  },
+  {
+    "name": "",
+    "icon": "",
+    "mainLink": "",
+    "subLinks": [
+      {"name": "", "url": ""},
+      {"name": "", "url": ""}
+    ]
+  },
+  {
+    "name": "",
+    "icon": "",
+    "mainLink": "",
+    "subLinks": [
+      {"name": "", "url": ""},
+      {"name": "", "url": ""}
+    ]
+  },
+  {
+    "name": "",
+    "icon": "",
+    "mainLink": "",
+    "subLinks": [
+      {"name": "", "url": ""},
+      {"name": "", "url": ""}
+    ]
+  },
+  {
+    "name": "",
+    "icon": "",
+    "mainLink": "",
+    "subLinks": [
+      {"name": "", "url": ""},
+      {"name": "", "url": ""}
+    ]
+  },
+  {
+    "name": "",
+    "icon": "",
+    "mainLink": "",
+    "subLinks": [
+      {"name": "", "url": ""},
+      {"name": "", "url": ""}
+    ]
   }
 ]

@@ -1,0 +1,562 @@
+[
+  {
+    "name": "Chat GPT",
+    "icon": "./img/CHATGPT.ico",
+    "mainLink": "https://chat.openai.com/",
+    "subLinks": []
+  },
+  {
+    "name": "BlackBox",
+    "icon": "./img/BLACKBOX.AI.ico",
+    "mainLink": "https://www.blackbox.ai",
+    "subLinks": []
+  },
+  {
+    "name": "Gemini",
+    "icon": "./img/GEMINI.png",
+    "mainLink": "https://gemini.google.com",
+    "subLinks": []
+  },
+  {
+    "name": "Deepseek",
+    "icon": "./img/DEEPSEEK.png",
+    "mainLink": "https://chat.deepseek.com/",
+    "subLinks": []
+  },
+  {
+    "name": "Copilot",
+    "icon": "./img/COPILOT.svg",
+    "mainLink": "https://copilot.microsoft.com",
+    "subLinks": []
+  },
+  {
+    "name": "Grok",
+    "icon": "./img/GROK.svg",
+    "mainLink": "https://grok.com/",
+    "subLinks": []
+  },
+  {
+    "name": "Claude",
+    "icon": "./img/Claude.png",
+    "mainLink": "https://claude.ai",
+    "subLinks": []
+  },
+  {
+    "name": "Facebook",
+    "icon": "./img/Facebook.svg",
+    "mainLink": "https://www.facebook.com",
+    "subLinks": [
+      {
+        "name": "Lưu Thế Tài",
+        "url": "https://www.facebook.com/luu.the.tai.2025"
+      }
+    ]
+  },
+  {
+    "name": "Zalo",
+    "icon": "./img/ZALO.png",
+    "mainLink": "https://chat.zalo.me/",
+    "subLinks": []
+  },
+  {
+    "name": "TikTok",
+    "icon": "./img/TIKTOK.ico",
+    "mainLink": "https://www.tiktok.com",
+    "subLinks": [
+      {
+        "name": "Tài tệp tễnh",
+        "url": "https://www.tiktok.com/@taitaptenh?_t=ZS-8yP3r9F3OPh&_r=1&fbclid=IwY2xjawL0PXNleHRuA2FlbQIxMABicmlkETFOU1B4YlpTMzB2dDVMaDFmAR7GLkv2X7qg0wwLlaq8IasMvOKQdjccFFnzV605dOZu6IsoZyyThHbPYRU6lQ_aem_E4yAe99aySvP_vYYCv0MWQ"
+      }
+    ]
+  },
+  {
+    "name": "YouTube",
+    "icon": "./img/YOUTUBE.png",
+    "mainLink": "https://www.youtube.com/",
+    "subLinks": [
+      {
+        "name": "The Tai E-MIT Official",
+        "url": "https://www.youtube.com/@thetaie-mit"
+      }
+    ]
+  },
+  {
+    "name": "Spotify",
+    "icon": "./img/SPOTIFY.svg",
+    "mainLink": "https://open.spotify.com/",
+    "subLinks": []
+  },
+  {
+    "name": "TopCV",
+    "icon": "./img/TopCV.ico",
+    "mainLink": "https://www.topcv.vn",
+    "subLinks": []
+  },
+  {
+    "name": "Math",
+    "icon": "./img/Math.png",
+    "mainLink": "https://toanmath.com/",
+    "subLinks": []
+  },
+  {
+    "name": "Máy tính",
+    "icon": "./img/maytinh.png",
+    "mainLink": "https://maytinhonline.info/",
+    "subLinks": []
+  },
+  {
+    "name": "Maps",
+    "icon": "./img/GoogleMap.png",
+    "mainLink": "https://www.google.com/maps",
+    "subLinks": []
+  },
+  {
+    "name": "Search",
+    "icon": "./img/GoogleSearch.ico",
+    "mainLink": "https://www.google.com/",
+    "subLinks": []
+  },
+  {
+    "name": "Dịch",
+    "icon": "./img/GoogleDich.ico",
+    "mainLink": "https://translate.google.com",
+    "subLinks": []
+  },
+  {
+    "name": "Fonts",
+    "icon": "./img/GoogleFonts.svg",
+    "mainLink": "https://fonts.google.com",
+    "subLinks": []
+  },
+  {
+    "name": "Meet",
+    "icon": "./img/GoogleMeet.png",
+    "mainLink": "https://meet.google.com",
+    "subLinks": []
+  },
+  {
+    "name": "Form",
+    "icon": "./img/GoogleForm.png",
+    "mainLink": "https://docs.google.com/forms",
+    "subLinks": []
+  },
+  {
+    "name": "Drive",
+    "icon": "./img/GoogleDrive.png",
+    "mainLink": "https://drive.google.com",
+    "subLinks": []
+  },
+  {
+    "name": "Gmail",
+    "icon": "./img/GoogleGmail.png",
+    "mainLink": "https://mail.google.com",
+    "subLinks": []
+  },
+  {
+    "name": "VnExpress",
+    "icon": "./img/VnExpress.ico",
+    "mainLink": "https://vnexpress.net/",
+    "subLinks": []
+  },
+  {
+    "name": "Wayground",
+    "icon": "./img/Wayground.ico",
+    "mainLink": "https://wayground.com/",
+    "subLinks": []
+  },
+  {
+    "name": "GitHub",
+    "icon": "./img/GitHub.svg",
+    "mainLink": "https://github.com/",
+    "subLinks": []
+  },
+  {
+    "name": "Word",
+    "icon": "./img/Word.png",
+    "mainLink": "https://docs.google.com/document",
+    "subLinks": []
+  },
+  {
+    "name": "Excel",
+    "icon": "./img/Excel.png",
+    "mainLink": "https://docs.google.com/spreadsheets",
+    "subLinks": []
+  },
+  {
+    "name": "PowerPoint",
+    "icon": "./img/PowerPoint.png",
+    "mainLink": "https://docs.google.com/presentation",
+    "subLinks": []
+  },
+  {
+    "name": "Canva",
+    "icon": "./img/Canva.ico",
+    "mainLink": "https://www.canva.com/",
+    "subLinks": []
+  },
+  {
+    "name": "Trends",
+    "icon": "./img/Trends.ico",
+    "mainLink": "https://trends.google.com",
+    "subLinks": []
+  },
+  {
+    "name": "Dân trí",
+    "icon": "./img/Dân trí.ico",
+    "mainLink": "https://dantri.com.vn/",
+    "subLinks": []
+  },
+  {
+    "name": "Photopea",
+    "icon": "./img/Photopea.png",
+    "mainLink": "https://www.photopea.com/",
+    "subLinks": []
+  },
+  {
+    "name": "Figma",
+    "icon": "./img/Figma.png",
+    "mainLink": "https://www.figma.com/",
+    "subLinks": []
+  },
+  {
+    "name": "W3schools",
+    "icon": "./img/W3schools.ico",
+    "mainLink": "https://www.w3schools.com/",
+    "subLinks": []
+  },
+  {
+    "name": "Sách mềm",
+    "icon": "./img/Sách mềm.png",
+    "mainLink": "https://sachmem.net",
+    "subLinks": []
+  },
+  {
+    "name": "V1study",
+    "icon": "./img/V1study.ico",
+    "mainLink": "https://v1study.com/",
+    "subLinks": []
+  },
+  {
+    "name": "Drawio",
+    "icon": "./img/Drawio.ico",
+    "mainLink": "https://www.drawio.com/",
+    "subLinks": []
+  },
+  {
+    "name": "TailwindCss",
+    "icon": "./img/Tailwindcss.png",
+    "mainLink": "https://tailwindcss.com/",
+    "subLinks": []
+  },
+  {
+    "name": "MDN",
+    "icon": "./img/MDN.ico",
+    "mainLink": "https://developer.mozilla.org/",
+    "subLinks": []
+  },
+  {
+    "name": "Calendar",
+    "icon": "./img/Calendar.ico",
+    "mainLink": "https://calendar.google.com/",
+    "subLinks": []
+  },
+  {
+    "name": "Tạo QR",
+    "icon": "./img/Tạo QR.png",
+    "mainLink": "https://qr.io/",
+    "subLinks": []
+  },
+  {
+    "name": "Bootstrap",
+    "icon": "./img/Bootstrap.png",
+    "mainLink": "https://getbootstrap.com/",
+    "subLinks": []
+  },
+  {
+    "name": "Diffchecker",
+    "icon": "./img/Diffchecker.svg",
+    "mainLink": "https://www.diffchecker.com/",
+    "subLinks": []
+  },
+  {
+    "name": "I love PDF",
+    "icon": "./img/I love PDF.png",
+    "mainLink": "https://www.ilovepdf.com/",
+    "subLinks": []
+  },
+  {
+    "name": "minSap",
+    "icon": "./img/minSap-Tools.png",
+    "mainLink": "https://minsap.com/",
+    "subLinks": []
+  },
+  {
+    "name": "Favicon",
+    "icon": "./img/Favicon.ico",
+    "mainLink": "https://www.favicon-generator.org/",
+    "subLinks": []
+  },
+  {
+    "name": "Đường l...",
+    "icon": "./img/Đường lên đỉnh Olympia.ico",
+    "mainLink": "https://duong-len-dinh-olympia.fandom.com/vi/wiki/%C4%90%C6%B0%E1%BB%9Dng_l%C3%AAn_%C4%91%E1%BB%89nh_Olympia_Wiki",
+    "subLinks": []
+  },
+  {
+    "name": "Oxford...",
+    "icon": "./img/Oxford Dictionary.ico",
+    "mainLink": "https://www.oxfordlearnersdictionaries.com/",
+    "subLinks": []
+  },
+  {
+    "name": "Dịch vụ c...",
+    "icon": "./img/Dịch vụ công.png",
+    "mainLink": "https://dichvucong.bocongan.gov.vn/",
+    "subLinks": []
+  },
+  {
+    "name": "Font Aw...",
+    "icon": "./img/Font Awesome.svg",
+    "mainLink": "https://fontawesome.com/",
+    "subLinks": []
+  },
+  {
+    "name": "24H",
+    "icon": "./img/24H.svg",
+    "mainLink": "https://www.24h.com.vn/",
+    "subLinks": []
+  },
+  {
+    "name": "Listen E...",
+    "icon": "./img/Listen English.ico",
+    "mainLink": "https://dailydictation.com/",
+    "subLinks": []
+  },
+  {
+    "name": "Write En...",
+    "icon": "./img/Write English.ico",
+    "mainLink": "https://writeandimprove.com/",
+    "subLinks": []
+  },
+  {
+    "name": "Visual St...",
+    "icon": "./img/Visual Studio Code.ico",
+    "mainLink": "https://code.visualstudio.com/",
+    "subLinks": []
+  },
+  {
+    "name": "CodePen",
+    "icon": "./img/CodePen.webp",
+    "mainLink": "https://codepen.io/",
+    "subLinks": []
+  },
+  {
+    "name": "Submarine...",
+    "icon": "./img/Submarine Cable Map.ico",
+    "mainLink": "https://www.submarinecablemap.com/",
+    "subLinks": []
+  },
+  {
+    "name": "Wayback...",
+    "icon": "./img/Wayback Machine.png",
+    "mainLink": "https://web.archive.org/",
+    "subLinks": []
+  },
+  {
+    "name": "Perplexity",
+    "icon": "./img/Perplexity.png",
+    "mainLink": "https://www.perplexity.ai/",
+    "subLinks": []
+  },
+  {
+    "name": "News In ...",
+    "icon": "./img/News In Levels.png",
+    "mainLink": "https://www.newsinlevels.com/",
+    "subLinks": []
+  },
+  {
+    "name": "Messenger",
+    "icon": "./img/Messenger.svg",
+    "mainLink": "https://www.messenger.com",
+    "subLinks": []
+  },
+  {
+    "name": "Threads",
+    "icon": "./img/Threads.svg",
+    "mainLink": "https://www.threads.com",
+    "subLinks": []
+  },
+  {
+    "name": "Unsplash",
+    "icon": "./img/Unsplash.svg",
+    "mainLink": "https://unsplash.com/",
+    "subLinks": []
+  },
+  {
+    "name": "Chat",
+    "icon": "./img/Chat.ico",
+    "mainLink": "https://mail.google.com/chat",
+    "subLinks": []
+  },
+  {
+    "name": "Emmet",
+    "icon": "./img/Emmet.ico",
+    "mainLink": "https://emmet.io/",
+    "subLinks": []
+  },
+  {
+    "name": "X",
+    "icon": "./img/X.svg",
+    "mainLink": "https://x.com/",
+    "subLinks": []
+  },
+  {
+    "name": "Git",
+    "icon": "./img/Git.svg",
+    "mainLink": "https://git-scm.com/",
+    "subLinks": []
+  },
+  {
+    "name": "Store",
+    "icon": "./img/Store.png",
+    "mainLink": "https://chromewebstore.google.com/",
+    "subLinks": []
+  },
+  {
+    "name": "E-MIT",
+    "icon": "./img/E-MIT.svg",
+    "mainLink": "",
+    "subLinks": []
+  },
+  {
+    "name": "Code Be...",
+    "icon": "./img/Code Beautify.png",
+    "mainLink": "https://codebeautify.org/",
+    "subLinks": []
+  },
+  {
+    "name": "Node.js",
+    "icon": "./img/Nodejs.png",
+    "mainLink": "https://nodejs.org/",
+    "subLinks": []
+  },
+  {
+    "name": "Free For...",
+    "icon": "./img/Free Formatter.ico",
+    "mainLink": "https://www.freeformatter.com/",
+    "subLinks": []
+  },
+  {
+    "name": "Code Sa...",
+    "icon": "./img/Code Sandbox.svg",
+    "mainLink": "https://codesandbox.io/",
+    "subLinks": []
+  },
+  {
+    "name": "React",
+    "icon": "./img/React.svg",
+    "mainLink": "https://react.dev/",
+    "subLinks": []
+  },
+  {
+    "name": "Firebase",
+    "icon": "./img/Firebase.png",
+    "mainLink": "https://firebase.google.com/",
+    "subLinks": []
+  },
+  {
+    "name": "Hợp âm ...",
+    "icon": "./img/Hợp âm chuẩn.ico",
+    "mainLink": "https://hopamchuan.com/",
+    "subLinks": [
+      {
+        "name": "Vùng Lá Me Bay",
+        "url": "https://hopamchuan.com/song/4547/vung-la-me-bay"
+      }
+    ]
+  },
+  {
+    "name": "Autoprefixer",
+    "icon": "./img/Autoprefixer.ico",
+    "mainLink": "https://autoprefixer.github.io/",
+    "subLinks": []
+  },
+  {
+    "name": "Stack Ov...",
+    "icon": "./img/Stack Overflow.ico",
+    "mainLink": "https://stackoverflow.com/",
+    "subLinks": []
+  },
+  {
+    "name": "Geeksfor...",
+    "icon": "./img/Geeksfor Geeks.png",
+    "mainLink": "https://www.geeksforgeeks.org/",
+    "subLinks": []
+  },
+  {
+    "name": "Can I Use",
+    "icon": "./img/Can I Use.png",
+    "mainLink": "https://caniuse.com/",
+    "subLinks": []
+  },
+  {
+    "name": "Browser ...",
+    "icon": "./img/Browser Default Styles.png",
+    "mainLink": "https://browserdefaultstyles.com/",
+    "subLinks": []
+  },
+  {
+    "name": "CSS Tricks",
+    "icon": "./img/CSS Tricks.svg",
+    "mainLink": "https://css-tricks.com/",
+    "subLinks": []
+  },
+  {
+    "name": "UI Faces",
+    "icon": "./img/UI Faces.png",
+    "mainLink": "https://uifaces.co/",
+    "subLinks": []
+  },
+  {
+    "name": "CSS Refe...",
+    "icon": "./img/CSS Reference.png",
+    "mainLink": "https://cssreference.io/",
+    "subLinks": []
+  },
+  {
+    "name": "Meyerweb",
+    "icon": "./img/Meyerweb.ico",
+    "mainLink": "https://meyerweb.com/",
+    "subLinks": []
+  },
+  {
+    "name": "OBS Stu...",
+    "icon": "./img/OBS Studio.png",
+    "mainLink": "https://obsproject.com/",
+    "subLinks": []
+  },
+  {
+    "name": "HTML C...",
+    "icon": "./img/HTML Color Codes.png",
+    "mainLink": "https://htmlcolorcodes.com/",
+    "subLinks": []
+  },
+  {
+    "name": "CSS Font...",
+    "icon": "./img/CSS Font Stack.ico",
+    "mainLink": "https://www.cssfontstack.com/",
+    "subLinks": []
+  },
+  {
+    "name": "Styled C...",
+    "icon": "./img/Styled Components.png",
+    "mainLink": "https://styled-components.com/",
+    "subLinks": []
+  },
+  {
+    "name": "Validator",
+    "icon": "./img/Validator.ico",
+    "mainLink": "https://validator.w3.org/",
+    "subLinks": []
+  }
+]

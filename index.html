@@ -8,620 +8,190 @@
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" />
   <style>
     body {
-      background-color: rgb(255, 85, 85);
-      background-size: cover;
-      min-height: 100vh;
-      padding: 10px 5px 100px;
-      font-family: system-ui, sans-serif;
+      background-color: #2680b8;
+      color: #fff;
+      padding: 30px;
+      margin-top: 30px;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    }
+
+    .app-container {
+      display: grid;
+      grid-template-columns: repeat(15, 1fr);
+      gap: 16px;
+      justify-items: center;
     }
 
     .app-icon {
       text-align: center;
-      margin: 15px;
-      transition: transform 0.2s;
-    }
-
-    .app-icon:hover {
-      transform: scale(1.08);
+      position: relative;
     }
 
     .app-icon img {
-      width: 45px;
-      height: 45px;
-      padding: 5px;
+      width: 48px;
+      height: 48px;
       border-radius: 12px;
       background-color: #fff;
-      box-shadow: 0 3px 8px rgba(0, 0, 0, 0.3);
+      padding: 5px;
+      transition: transform 0.2s;
+      box-shadow: 0 2px 6px rgba(0, 0, 0, 0.3);
+    }
+
+    .app-icon:hover img {
+      transform: scale(1.1);
     }
 
     .app-label {
-      font-size: 0.65rem;
-      margin-top: 4px;
-      color: white;
-      text-shadow: 0 1px 2px rgba(0, 0, 0, 0.6);
+      font-size: 0.75rem;
+      margin-top: 6px;
+      color: #fff;
     }
 
-    .dock {
-      background: rgba(255, 255, 255, 0.2);
-      border-radius: 30px;
-      padding: 10px 0;
+    .badge {
+      position: absolute;
+      top: -6px;
+      right: -15px;
+      background-color: red;
+      color: #fff;
+      border-radius: 999px;
+      font-size: 0.75rem;
+      font-weight: bold;
+      cursor: pointer;
+      padding: 5px;
+      min-width: 22px;
+      text-align: center;
+    }
+
+    .modal-links {
       position: fixed;
-      bottom: 15px;
+      top: 50%;
       left: 50%;
-      transform: translateX(-50%);
+      transform: translate(-50%, -50%);
+      background: #fff;
+      color: #333;
+      padding: 25px;
+      border-radius: 12px;
       width: 90%;
-      display: flex;
-      justify-content: space-around;
-      backdrop-filter: blur(8px);
+      max-width: 400px;
+      box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+      z-index: 999;
     }
 
-    .dock .app-icon img {
-      width: 45px;
-      height: 45px;
+    .modal-links h5 {
+      margin-bottom: 15px;
     }
 
-    a {
+    .modal-links a {
+      display: block;
+      margin: 6px 0;
       text-decoration: none;
+      color: #007bff;
     }
 
-    .container {
-      margin-top: 30px;
+    .modal-links a:hover {
+      text-decoration: underline;
+    }
+
+    .overlay {
+      position: fixed;
+      inset: 0;
+      background: rgba(0, 0, 0, 0.6);
+      z-index: 998;
+    }
+
+    .close-btn {
+      position: absolute;
+      top: 8px;
+      right: 12px;
+      font-size: 1.2rem;
+      cursor: pointer;
+      color: #888;
+    }
+
+    .close-btn:hover {
+      color: #000;
+    }
+
+    @media (max-width: 1400px) {
+      .app-container {
+        grid-template-columns: repeat(auto-fit, minmax(50px, 1fr));
+      }
     }
   </style>
 </head>
 
 <body>
-  <div class="container text-center text-white">
-    <div class="row row-cols-10 g-2">
-      <!-- Chat GPT  -->
-      <div class="col app-icon">
-        <a href="https://chat.openai.com/" target="_blank"><img src="./img/CHATGPT.ico" />
-          <div class="app-label">Chat GPT</div>
-        </a>
-      </div>
-      <!-- BlackBox -->
-      <div class="col app-icon">
-        <a href="https://www.blackbox.ai" target="_blank"><img src="./img/BLACKBOX.AI.ico" />
-          <div class="app-label">BlackBox</div>
-        </a>
-      </div>
-      <!-- Gemini -->
-      <div class="col app-icon">
-        <a href="https://gemini.google.com" target="_blank"><img src="./img/GEMINI.png" />
-          <div class="app-label">Gemini</div>
-        </a>
-      </div>
-      <!-- Deepseek -->
-      <div class="col app-icon">
-        <a href="https://chat.deepseek.com/" target="_blank"><img src="./img/DEEPSEEK.png" />
-          <div class="app-label">Deepseek</div>
-        </a>
-      </div>
-      <!--Copilot  -->
-      <div class="col app-icon">
-        <a href="https://copilot.microsoft.com" target="_blank"><img src="./img/COPILOT.svg" />
-          <div class="app-label">Copilot</div>
-        </a>
-      </div>
-      <!-- Grok -->
-      <div class="col app-icon">
-        <a href="https://grok.com/" target="_blank"><img src="./img/GROK.svg" />
-          <div class="app-label">Grok</div>
-        </a>
-      </div>
-      <!-- Claude -->
-      <div class="col app-icon">
-        <a href="https://claude.ai" target="_blank"><img src="" />
-          <div class="app-label">Claude</div>
-        </a>
-      </div>
-      <!-- Facebook -->
-      <div class="col app-icon">
-        <a href="https://www.facebook.com" target="_blank"><img src="./img/Facebook.svg" />
-          <div class="app-label">Facebook</div>
-        </a>
-      </div>
-      <!-- Zalo -->
-      <div class="col app-icon">
-        <a href="https://chat.zalo.me/" target="_blank"><img src="./img/ZALO.png" />
-          <div class="app-label">Zalo</div>
-        </a>
-      </div>
-      <!-- TikTok -->
-      <div class="col app-icon">
-        <a href="https://www.tiktok.com" target="_blank"><img src="./img/TIKTOK.ico" />
-          <div class="app-label">TikTok</div>
-        </a>
-      </div>
-      <!-- YouTube -->
-      <div class="col app-icon">
-        <a href="https://www.youtube.com/" target="_blank"><img src="./img/YOUTUBE.png" />
-          <div class="app-label">YouTube</div>
-        </a>
-      </div>
-      <!-- Spotify -->
-      <div class="col app-icon">
-        <a href="https://open.spotify.com/" target="_blank"><img src="./img/SPOTIFY.svg" />
-          <div class="app-label">Spotify</div>
-        </a>
-      </div>
-      <!-- TopCV -->
-      <div class="col app-icon">
-        <a href="https://www.topcv.vn" target="_blank"><img src="./img/TopCV.ico" />
-          <div class="app-label">TopCV</div>
-        </a>
-      </div>
-      <!-- Math -->
-      <div class="col app-icon">
-        <a href="https://toanmath.com/" target="_blank"><img src="./img/Math.png" />
-          <div class="app-label">Math</div>
-        </a>
-      </div>
-      <!-- Máy tính -->
-      <div class="col app-icon">
-        <a href="https://maytinhonline.info/" target="_blank"><img src="./img/maytinh.png" />
-          <div class="app-label">Máy tính</div>
-        </a>
-      </div>
-      <!-- Maps -->
-      <div class="col app-icon">
-        <a href="https://www.google.com/maps" target="_blank"><img src="./img/GoogleMap.png" />
-          <div class="app-label">Maps</div>
-        </a>
-      </div>
-      <!-- Search -->
-      <div class="col app-icon">
-        <a href="https://www.google.com/" target="_blank"><img src="./img/GoogleSearch.ico" />
-          <div class="app-label">Search</div>
-        </a>
-      </div>
-      <!-- Dịch-->
-      <div class="col app-icon">
-        <a href="https://translate.google.com" target="_blank"><img src="./img/GoogleDich.ico" />
-          <div class="app-label">Dịch</div>
-        </a>
-      </div>
-      <!-- Fonts -->
-      <div class="col app-icon">
-        <a href="https://fonts.google.com" target="_blank"><img src="./img/GoogleFonts.svg" />
-          <div class="app-label">Fonts</div>
-        </a>
-      </div>
-      <!--Meet -->
-      <div class="col app-icon">
-        <a href="https://meet.google.com" target="_blank"><img src="./img/GoogleMeet.png" />
-          <div class="app-label">Meet</div>
-        </a>
-      </div>
-      <!-- Form-->
-      <div class="col app-icon">
-        <a href="https://docs.google.com/forms" target="_blank"><img src="./img/GoogleForm.png" />
-          <div class="app-label">Form</div>
-        </a>
-      </div>
-      <!-- Drive-->
-      <div class="col app-icon">
-        <a href="https://drive.google.com" target="_blank"><img src="./img/GoogleDrive.png" />
-          <div class="app-label">Drive</div>
-        </a>
-      </div>
-      <!--Gmail -->
-      <div class="col app-icon">
-        <a href="https://mail.google.com" target="_blank"><img src="./img/GoogleGmail.png" />
-          <div class="app-label">Gmail</div>
-        </a>
-      </div>
-      <!-- VnExpress -->
-      <div class="col app-icon">
-        <a href="https://vnexpress.net/" target="_blank"><img src="./img/VnExpress.ico" />
-          <div class="app-label">VnExpress</div>
-        </a>
-      </div>
-      <!--Quizizz -->
-      <div class="col app-icon">
-        <a href="https://quizizz.com" target="_blank"><img src="./img/Quizizz.ico" />
-          <div class="app-label">Quizizz</div>
-        </a>
-      </div>
-      <!-- GitHub -->
-      <div class="col app-icon">
-        <a href="https://github.com/" target="_blank"><img src="./img/GitHub.svg" />
-          <div class="app-label">GitHub</div>
-        </a>
-      </div>
-      <!-- Word -->
-      <div class="col app-icon">
-        <a href="https://docs.google.com/document" target="_blank"><img src="./img/Word.png" />
-          <div class="app-label">Word</div>
-        </a>
-      </div>
-      <!-- Excel -->
-      <div class="col app-icon">
-        <a href="https://docs.google.com/spreadsheets" target="_blank"><img src="./img/Excel.png" />
-          <div class="app-label">Excel</div>
-        </a>
-      </div>
-      <!-- PowerPoint -->
-      <div class="col app-icon">
-        <a href="https://docs.google.com/presentation" target="_blank"><img src="./img/PowerPoint.png" />
-          <div class="app-label">PowerPoint</div>
-        </a>
-      </div>
-      <!-- Canva -->
-      <div class="col app-icon">
-        <a href="https://www.canva.com/" target="_blank"><img src="./img/Canva.ico" />
-          <div class="app-label">Canva</div>
-        </a>
-      </div>
-      <!-- Trends -->
-      <div class="col app-icon">
-        <a href="https://trends.google.com" target="_blank"><img src="./img/Trends.ico" />
-          <div class="app-label">Trends</div>
-        </a>
-      </div>
-      <!-- Dân trí -->
-      <div class="col app-icon">
-        <a href="https://dantri.com.vn/" target="_blank"><img src="./img/Dân trí.ico" />
-          <div class="app-label">Dân trí</div>
-        </a>
-      </div>
-      <!-- Photopea -->
-      <div class="col app-icon">
-        <a href="https://www.photopea.com/" target="_blank"><img src="./img/Photopea.png" />
-          <div class="app-label">Photopea</div>
-        </a>
-      </div>
-      <!-- Figma -->
-      <div class="col app-icon">
-        <a href="https://www.figma.com/" target="_blank"><img src="./img/Figma.png" />
-          <div class="app-label">Figma</div>
-        </a>
-      </div>
-      <!-- W3schools -->
-      <div class="col app-icon">
-        <a href="https://www.w3schools.com/" target="_blank"><img src="./img/W3schools.ico" />
-          <div class="app-label">W3schools</div>
-        </a>
-      </div>
-      <!-- Sách mềm -->
-      <div class="col app-icon">
-        <a href="https://sachmem.net" target="_blank"><img src="./img/Sách mềm.png" />
-          <div class="app-label">Sách mề...</div>
-        </a>
-      </div>
-      <!-- V1study -->
-      <div class="col app-icon">
-        <a href="https://v1study.com/" target="_blank"><img src="./img/V1study.ico" />
-          <div class="app-label">V1study</div>
-        </a>
-      </div>
-      <!-- Drawio -->
-      <div class="col app-icon">
-        <a href="https://www.drawio.com/" target="_blank"><img src="./img/Drawio.ico" />
-          <div class="app-label">Drawio</div>
-        </a>
-      </div>
-      <!-- TailwindCss -->
-      <div class="col app-icon">
-        <a href="https://tailwindcss.com/" target="_blank"><img src="./img/Tailwindcss.png" />
-          <div class="app-label">TailwindCss</div>
-        </a>
-      </div>
-      <!-- MDN -->
-      <div class="col app-icon">
-        <a href="https://developer.mozilla.org/" target="_blank"><img src="./img/MDN.ico" />
-          <div class="app-label">MDN</div>
-        </a>
-      </div>
-      <!-- Calendar -->
-      <div class="col app-icon">
-        <a href="https://calendar.google.com/" target="_blank"><img src="./img/Calendar.ico" />
-          <div class="app-label">Calendar</div>
-        </a>
-      </div>
-      <!-- Tạo QR -->
-      <div class="col app-icon">
-        <a href="https://qr.io/" target="_blank"><img src="./img/Tạo QR.png" />
-          <div class="app-label">Tạo QR</div>
-        </a>
-      </div>
-      <!-- Bootstrap -->
-      <div class="col app-icon">
-        <a href="https://getbootstrap.com/" target="_blank"><img src="./img/Bootstrap.png" />
-          <div class="app-label">Bootstrap</div>
-        </a>
-      </div>
-      <!-- Diffchecker -->
-      <div class="col app-icon">
-        <a href="https://www.diffchecker.com/" target="_blank"><img src="./img/Diffchecker.svg" />
-          <div class="app-label">Diffchecker</div>
-        </a>
-      </div>
-      <!-- I love PDF -->
-      <div class="col app-icon">
-        <a href="https://www.ilovepdf.com/" target="_blank"><img src="./img/I love PDF.png" />
-          <div class="app-label">I love PDF</div>
-        </a>
-      </div>
-      <!-- minSap -->
-      <div class="col app-icon">
-        <a href="https://minsap.com/" target="_blank"><img src="./img/minSap-Tools.png" />
-          <div class="app-label">minSap</div>
-        </a>
-      </div>
-      <!-- Favicon -->
-      <div class="col app-icon">
-        <a href="https://www.favicon-generator.org/" target="_blank"><img src="./img/Favicon.ico" />
-          <div class="app-label">Favicon</div>
-        </a>
-      </div>
-      <!-- Đường lên đỉnh Olympia -->
-      <div class="col app-icon">
-        <a href="https://duong-len-dinh-olympia.fandom.com/vi/wiki/%C4%90%C6%B0%E1%BB%9Dng_l%C3%AAn_%C4%91%E1%BB%89nh_Olympia_Wiki"
-          target="_blank"><img src="./img/Đường lên đỉnh Olympia.ico" />
-          <div class="app-label">Đường l...</div>
-        </a>
-      </div>
-      <!-- Oxford Dictionary -->
-      <div class="col app-icon">
-        <a href="https://www.oxfordlearnersdictionaries.com/" target="_blank"><img src="./img/Oxford Dictionary.ico" />
-          <div class="app-label">Oxford...</div>
-        </a>
-      </div>
-      <!-- Dịch vụ công -->
-      <div class="col app-icon">
-        <a href="https://dichvucong.bocongan.gov.vn/" target="_blank"><img src="./img/Dịch vụ công.png" />
-          <div class="app-label">Dịch vụ c...</div>
-        </a>
-      </div>
-      <!-- Font Awesome -->
-      <div class="col app-icon">
-        <a href="https://fontawesome.com/" target="_blank"><img src="./img/Font Awesome.svg" />
-          <div class="app-label">Font Aw...</div>
-        </a>
-      </div>
-      <!-- 24H -->
-      <div class="col app-icon">
-        <a href="https://www.24h.com.vn/" target="_blank"><img src="./img/24H.svg" />
-          <div class="app-label">24H</div>
-        </a>
-      </div>
-      <!--Listen English  -->
-      <div class="col app-icon">
-        <a href="https://dailydictation.com/" target="_blank"><img src="./img/Listen English.ico" />
-          <div class="app-label">Listen E...</div>
-        </a>
-      </div>
-      <!-- Write English -->
-      <div class="col app-icon">
-        <a href="https://writeandimprove.com/" target="_blank"><img src="./img/Write English.ico" />
-          <div class="app-label">Write En...</div>
-        </a>
-      </div>
-      <!-- Visual Studio Code -->
-      <div class="col app-icon">
-        <a href="https://code.visualstudio.com/" target="_blank"><img src="./img/Visual Studio Code.ico" />
-          <div class="app-label">Visual St...</div>
-        </a>
-      </div>
-      <!-- CodePen -->
-      <div class="col app-icon">
-        <a href="https://codepen.io/" target="_blank"><img src="./img/CodePen.webp" />
-          <div class="app-label">CodePen</div>
-        </a>
-      </div>
-      <!-- Submarine Cable Map -->
-      <div class="col app-icon">
-        <a href="https://www.submarinecablemap.com/" target="_blank"><img src="./img/Submarine Cable Map.ico" />
-          <div class="app-label">Submarine...</div>
-        </a>
-      </div>
-      <!-- Wayback Machine -->
-      <div class="col app-icon">
-        <a href="https://web.archive.org/" target="_blank"><img src="" />
-          <div class="app-label">Wayback...</div>
-        </a>
-      </div>
-      <!-- Perplexity -->
-      <div class="col app-icon">
-        <a href="https://www.perplexity.ai/" target="_blank"><img src="" />
-          <div class="app-label">Perplexity</div>
-        </a>
-      </div>
-      <!-- News In Levels -->
-      <div class="col app-icon">
-        <a href="https://www.newsinlevels.com/" target="_blank"><img src="./img/News In Levels.png" />
-          <div class="app-label">News In ...</div>
-        </a>
-      </div>
-      <!-- Messenger -->
-      <div class="col app-icon">
-        <a href="https://www.messenger.com" target="_blank"><img src="./img/Messenger.svg" />
-          <div class="app-label">Messenger</div>
-        </a>
-      </div>
-      <!-- Threads -->
-      <div class="col app-icon">
-        <a href="https://www.threads.com" target="_blank"><img src="./img/Threads.svg" />
-          <div class="app-label">Threads</div>
-        </a>
-      </div>
-      <!-- Unsplash -->
-      <div class="col app-icon">
-        <a href="https://unsplash.com/" target="_blank"><img src="./img/Unsplash.svg" />
-          <div class="app-label">Unsplash</div>
-        </a>
-      </div>
-      <!-- Chat -->
-      <div class="col app-icon">
-        <a href="https://mail.google.com/chat" target="_blank"><img src="./img/Chat.ico" />
-          <div class="app-label">Chat</div>
-        </a>
-      </div>
-      <!-- Emmet -->
-      <div class="col app-icon">
-        <a href="https://emmet.io/" target="_blank"><img src="./img/Emmet.ico" />
-          <div class="app-label">Emmet</div>
-        </a>
-      </div>
-      <!-- X -->
-      <div class="col app-icon">
-        <a href="https://x.com/" target="_blank"><img src="./img/X.svg" />
-          <div class="app-label">X</div>
-        </a>
-      </div>
-      <!-- Git -->
-      <div class="col app-icon">
-        <a href="https://git-scm.com/" target="_blank"><img src="./img/Git.svg" />
-          <div class="app-label">Git</div>
-        </a>
-      </div>
-      <!-- Store -->
-      <div class="col app-icon">
-        <a href="https://chromewebstore.google.com/" target="_blank"><img src="./img/Store.png" />
-          <div class="app-label">Store</div>
-        </a>
-      </div>
-      <!-- E-MIT -->
-      <div class="col app-icon">
-        <a href="" target="_blank"><img src="./img/E-MIT.svg" />
-          <div class="app-label">E-MIT</div>
-        </a>
-      </div>
-      <!-- Code Beautify -->
-      <div class="col app-icon">
-        <a href="https://codebeautify.org/" target="_blank"><img src="./img/Code Beautify.png" />
-          <div class="app-label">Code Be...</div>
-        </a>
-      </div>
-      <!-- Node.js -->
-      <div class="col app-icon">
-        <a href="https://nodejs.org/" target="_blank"><img src="./img/Nodejs.png" />
-          <div class="app-label">Node.js</div>
-        </a>
-      </div>
-      <!-- Free Formatter -->
-      <div class="col app-icon">
-        <a href="https://www.freeformatter.com/" target="_blank"><img src="./img/Free Formatter.ico" />
-          <div class="app-label">Free For...</div>
-        </a>
-      </div>
-      <!-- Code Sandbox -->
-      <div class="col app-icon">
-        <a href="https://codesandbox.io/" target="_blank"><img src="./img/Code Sandbox.svg" />
-          <div class="app-label">Code Sa...</div>
-        </a>
-      </div>
-      <!-- React -->
-      <div class="col app-icon">
-        <a href="https://react.dev/" target="_blank"><img src="./img/React.svg" />
-          <div class="app-label">React</div>
-        </a>
-      </div>
-      <!-- Firebase -->
-      <div class="col app-icon">
-        <a href="https://firebase.google.com/" target="_blank"><img src="./img/Firebase.png" />
-          <div class="app-label">Firebase</div>
-        </a>
-      </div>
-      <!-- Hợp âm chuẩn -->
-      <div class="col app-icon">
-        <a href="https://hopamchuan.com/" target="_blank"><img src="./img/Hợp âm chuẩn.ico" />
-          <div class="app-label">Hợp âm</div>
-        </a>
-      </div>
-      <!-- Autoprefixer -->
-      <div class="col app-icon">
-        <a href="https://autoprefixer.github.io/" target="_blank"><img src="./img/Autoprefixer.ico" />
-          <div class="app-label">Autoprefixer</div>
-        </a>
-      </div> <!-- Stack Overflow -->
-      <div class="col app-icon">
-        <a href="https://stackoverflow.com/" target="_blank"><img src="./img/Stack Overflow.ico" />
-          <div class="app-label">Stack Ov...</div>
-        </a>
-      </div> <!-- Geeksfor Geeks -->
-      <div class="col app-icon">
-        <a href="https://www.geeksforgeeks.org/" target="_blank"><img src="./img/Geeksfor Geeks.png" />
-          <div class="app-label">Geeksfor...</div>
-        </a>
-      </div> <!-- Can I Use -->
-      <div class="col app-icon">
-        <a href="https://caniuse.com/" target="_blank"><img src="./img/Can I Use.png" />
-          <div class="app-label">Can I Use</div>
-        </a>
-      </div> <!-- Browser Default Styles -->
-      <div class="col app-icon">
-        <a href="https://browserdefaultstyles.com/" target="_blank"><img src="./img/Browser Default Styles.png" />
-          <div class="app-label">Browser ...</div>
-        </a>
-      </div> <!-- CSS Tricks -->
-      <div class="col app-icon">
-        <a href="https://css-tricks.com/" target="_blank"><img src="./img/CSS Tricks.svg" />
-          <div class="app-label">CSS Tricks</div>
-        </a>
-      </div> <!-- UI Faces -->
-      <div class="col app-icon">
-        <a href="https://uifaces.co/" target="_blank"><img src="./img/UI Faces.png" />
-          <div class="app-label">UI Faces</div>
-        </a>
-      </div> <!-- CSS Reference -->
-      <div class="col app-icon">
-        <a href="https://cssreference.io/" target="_blank"><img src="./img/CSS Reference.png" />
-          <div class="app-label">CSS Refe...</div>
-        </a>
-      </div> <!-- Meyerweb -->
-      <div class="col app-icon">
-        <a href="https://meyerweb.com/" target="_blank"><img src="./img/Meyerweb.ico" />
-          <div class="app-label">Meyerweb</div>
-        </a>
-      </div> <!-- OBS Studio -->
-      <div class="col app-icon">
-        <a href="https://obsproject.com/" target="_blank"><img src="./img/OBS Studio.png" />
-          <div class="app-label">OBS Stu...</div>
-        </a>
-      </div> <!-- HTML Color Codes -->
-      <div class="col app-icon">
-        <a href="https://htmlcolorcodes.com/" target="_blank"><img src="./img/HTML Color Codes.png" />
-          <div class="app-label">HTML C...</div>
-        </a>
-      </div> <!-- CSS Font Stack -->
-      <div class="col app-icon">
-        <a href="https://www.cssfontstack.com/" target="_blank"><img src="./img/CSS Font Stack.ico" />
-          <div class="app-label">CSS Font...</div>
-        </a>
-      </div> <!-- Styled Components -->
-      <div class="col app-icon">
-        <a href="https://styled-components.com/" target="_blank"><img src="./img/Styled Components.png" />
-          <div class="app-label">Styled C...</div>
-        </a>
-      </div> <!-- Validator -->
-      <div class="col app-icon">
-        <a href="https://validator.w3.org/" target="_blank"><img src="./img/Validator.ico" />
-          <div class="app-label">Validator</div>
-        </a>
-      </div>
+  <!-- <h2 class="text-center mb-4">Ứng dụng của tôi</h2> -->
+  <div class="app-container" id="appGrid"></div>
+
+  <!-- Modal -->
+  <div id="modal" style="display:none;">
+    <div class="overlay" onclick="closeModal()"></div>
+    <div class="modal-links" id="modalContent">
+      <span class="close-btn" onclick="closeModal()">&times;</span>
     </div>
   </div>
 
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
   <script>
-    window.addEventListener("DOMContentLoaded", () => {
-      const row = document.querySelector(".row");
-      const appIcons = Array.from(document.querySelectorAll(".app-icon"));
-
-      const sortedIcons = appIcons.sort((a, b) => {
-        const nameA = a.querySelector(".app-label").innerText.toLowerCase();
-        const nameB = b.querySelector(".app-label").innerText.toLowerCase();
-        return nameA.localeCompare(nameB);
+    fetch('data.json')
+      .then(res => res.json())
+      .then(data => {
+        // Sắp xếp theo ABC
+        data.sort((a, b) => a.name.localeCompare(b.name));
+        renderApps(data);
       });
 
-      // Xóa các khối cũ
-      row.innerHTML = "";
+    function renderApps(data) {
+      const container = document.getElementById("appGrid");
+      data.forEach(app => {
+        const wrapper = document.createElement("div");
+        wrapper.className = "app-icon";
 
-      // Thêm lại theo thứ tự đã sắp xếp
-      sortedIcons.forEach((icon) => row.appendChild(icon));
-    });
+        const iconLink = document.createElement("a");
+        iconLink.href = app.mainLink;
+        iconLink.target = "_blank";
+        iconLink.innerHTML = `<img src="${app.icon}" alt="${app.name}" />`;
+        wrapper.appendChild(iconLink);
+
+        if (app.subLinks.length > 0) {
+          const badge = document.createElement("span");
+          badge.className = "badge ";
+          badge.innerText = app.subLinks.length;
+          badge.title = "Click để xem các link phụ";
+          badge.addEventListener("click", (e) => {
+            e.preventDefault();
+            e.stopPropagation();
+            showModal(app.name, app.subLinks);
+          });
+          wrapper.appendChild(badge);
+        }
+
+        const label = document.createElement("div");
+        label.className = "app-label";
+        label.innerText = app.name;
+        wrapper.appendChild(label);
+
+        container.appendChild(wrapper);
+      });
+    }
+
+    function showModal(appName, links) {
+      const modal = document.getElementById("modal");
+      const content = document.getElementById("modalContent");
+      content.innerHTML = `<span class="close-btn" onclick="closeModal()">&times;</span><h5>${appName}</h5>`;
+      links.forEach(link => {
+        const a = document.createElement("a");
+        a.href = link.url;
+        a.innerText = link.name;
+        a.target = "_blank";
+        content.appendChild(a);
+      });
+      modal.style.display = "block";
+    }
+
+    function closeModal() {
+      document.getElementById("modal").style.display = "none";
+    }
   </script>
 </body>
 

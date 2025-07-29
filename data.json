@@ -1,48 +1,48 @@
 [
   {
-    "name": "Chat GPT",
+    "name": "-Chat GPT",
     "icon": "./img/CHATGPT.ico",
     "mainLink": "https://chat.openai.com/",
     "subLinks": []
   },
   {
-    "name": "BlackBox",
+    "name": "-BlackBox",
     "icon": "./img/BLACKBOX.AI.ico",
     "mainLink": "https://www.blackbox.ai",
     "subLinks": []
   },
   {
-    "name": "Gemini",
+    "name": "-Gemini",
     "icon": "./img/GEMINI.png",
     "mainLink": "https://gemini.google.com",
     "subLinks": []
   },
   {
-    "name": "Deepseek",
+    "name": "-Deepseek",
     "icon": "./img/DEEPSEEK.png",
     "mainLink": "https://chat.deepseek.com/",
     "subLinks": []
   },
   {
-    "name": "Copilot",
+    "name": "-Copilot",
     "icon": "./img/COPILOT.svg",
     "mainLink": "https://copilot.microsoft.com",
     "subLinks": []
   },
   {
-    "name": "Grok",
+    "name": "-Grok",
     "icon": "./img/GROK.svg",
     "mainLink": "https://grok.com/",
     "subLinks": []
   },
   {
-    "name": "Claude",
+    "name": "-Claude",
     "icon": "./img/Claude.png",
     "mainLink": "https://claude.ai",
     "subLinks": []
   },
   {
-    "name": "Facebook",
+    "name": "-Facebook",
     "icon": "./img/Facebook.svg",
     "mainLink": "https://www.facebook.com",
     "subLinks": [
@@ -53,7 +53,7 @@
     ]
   },
   {
-    "name": "Zalo",
+    "name": "-Zalo",
     "icon": "./img/ZALO.png",
     "mainLink": "https://chat.zalo.me/",
     "subLinks": []
@@ -70,7 +70,7 @@
     ]
   },
   {
-    "name": "YouTube",
+    "name": "-YouTube",
     "icon": "./img/YOUTUBE.png",
     "mainLink": "https://www.youtube.com/",
     "subLinks": [
@@ -93,19 +93,19 @@
     "subLinks": []
   },
   {
-    "name": "Math",
+    "name": "-Math",
     "icon": "./img/Math.png",
     "mainLink": "https://toanmath.com/",
     "subLinks": []
   },
   {
-    "name": "Máy tính",
+    "name": "-Máy tính",
     "icon": "./img/maytinh.png",
     "mainLink": "https://maytinhonline.info/",
     "subLinks": []
   },
   {
-    "name": "Maps",
+    "name": "-Maps",
     "icon": "./img/GoogleMap.png",
     "mainLink": "https://www.google.com/maps",
     "subLinks": []
@@ -141,13 +141,13 @@
     "subLinks": []
   },
   {
-    "name": "Drive",
+    "name": "-Drive",
     "icon": "./img/GoogleDrive.png",
     "mainLink": "https://drive.google.com",
     "subLinks": []
   },
   {
-    "name": "Gmail",
+    "name": "-Gmail",
     "icon": "./img/GoogleGmail.png",
     "mainLink": "https://mail.google.com",
     "subLinks": []
@@ -159,13 +159,13 @@
     "subLinks": []
   },
   {
-    "name": "Wayground",
+    "name": "-Wayground",
     "icon": "./img/Wayground.ico",
     "mainLink": "https://wayground.com/",
     "subLinks": []
   },
   {
-    "name": "GitHub",
+    "name": "-GitHub",
     "icon": "./img/GitHub.svg",
     "mainLink": "https://github.com/",
     "subLinks": []
@@ -213,7 +213,7 @@
     "subLinks": []
   },
   {
-    "name": "Figma",
+    "name": "-Figma",
     "icon": "./img/Figma.png",
     "mainLink": "https://www.figma.com/",
     "subLinks": []
@@ -273,13 +273,13 @@
     "subLinks": []
   },
   {
-    "name": "Diffchecker",
+    "name": "-Diffchecker",
     "icon": "./img/Diffchecker.svg",
     "mainLink": "https://www.diffchecker.com/",
     "subLinks": []
   },
   {
-    "name": "I love PDF",
+    "name": "-I love PDF",
     "icon": "./img/I love PDF.png",
     "mainLink": "https://www.ilovepdf.com/",
     "subLinks": []
@@ -315,7 +315,7 @@
     "subLinks": []
   },
   {
-    "name": "Font Awesome",
+    "name": "-Font Awesome",
     "icon": "./img/Font Awesome.svg",
     "mainLink": "https://fontawesome.com/",
     "subLinks": []
@@ -324,7 +324,12 @@
     "name": "24H",
     "icon": "./img/24H.svg",
     "mainLink": "https://www.24h.com.vn/",
-    "subLinks": []
+    "subLinks": [
+      {
+        "name": "Giá vàng hôm nay",
+        "url": "https://www.24h.com.vn/gia-vang-hom-nay-c425.html"
+      }
+    ]
   },
   {
     "name": "Listen English",
@@ -369,10 +374,19 @@
     "subLinks": []
   },
   {
-    "name": "News In Levels",
+    "name": "News In...",
     "icon": "./img/News In Levels.png",
     "mainLink": "https://www.newsinlevels.com/",
-    "subLinks": []
+    "subLinks": [
+      {
+        "name": "Japanese government sells cheap rice",
+        "url": "https://www.newsinlevels.com/products/japanese-government-sells-cheap-rice-level-1/"
+      },
+      {
+        "name": "Policeman is like a dog",
+        "url": "https://www.newsinlevels.com/products/policeman-is-like-a-dog-level-1/"
+      }
+    ]
   },
   {
     "name": "Messenger",
@@ -417,7 +431,7 @@
     "subLinks": []
   },
   {
-    "name": "Store",
+    "name": "-Store",
     "icon": "./img/Store.png",
     "mainLink": "https://chromewebstore.google.com/",
     "subLinks": [
@@ -436,13 +450,17 @@
     ]
   },
   {
-    "name": "E-MIT",
+    "name": "-E-MIT",
     "icon": "./img/E-MIT.svg",
     "mainLink": "",
     "subLinks": [
       {
         "name": "Streamline English",
         "url": "https://luuthetaibean.github.io/ENGLISH/login.html"
+      },
+      {
+        "name": "Music",
+        "url": "https://luuthetaibean.github.io/musical/"
       }
     ]
   },
@@ -465,10 +483,15 @@
     "subLinks": []
   },
   {
-    "name": "Code Sandbox",
+    "name": "Code S...",
     "icon": "./img/Code Sandbox.svg",
     "mainLink": "https://codesandbox.io/",
-    "subLinks": []
+    "subLinks": [
+      {
+        "name": "Code React online",
+        "url": "https://codesandbox.io/p/sandbox/react-new?utm_source=dotnew"
+      }
+    ]
   },
   {
     "name": "React",
@@ -678,7 +701,12 @@
     "name": "Meyerweb",
     "icon": "./img/Meyerweb.ico",
     "mainLink": "https://meyerweb.com/",
-    "subLinks": []
+    "subLinks": [
+      {
+        "name": "Reset CSS",
+        "url": "https://meyerweb.com/eric/tools/css/reset/"
+      }
+    ]
   },
   {
     "name": "OBS Studio",
@@ -720,10 +748,15 @@
     "name": "VTV Go",
     "icon": "./img/VTVgo.png",
     "mainLink": "https://vtvgo.vn/",
-    "subLinks": []
+    "subLinks": [
+      {
+        "name": "Táo quân 2025",
+        "url": "https://vtvgo.vn/vod/934902"
+      }
+    ]
   },
   {
-    "name": "LRC Generator",
+    "name": "-LRC Generator",
     "icon": "./img/LRC Generator.ico",
     "mainLink": "https://lrcgenerator.com/",
     "subLinks": []

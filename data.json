@@ -439,7 +439,12 @@
     "name": "E-MIT",
     "icon": "./img/E-MIT.svg",
     "mainLink": "",
-    "subLinks": []
+    "subLinks": [
+      {
+        "name": "Streamline English",
+        "url": "https://luuthetaibean.github.io/ENGLISH/login.html"
+      }
+    ]
   },
   {
     "name": "Code Beautify",
@@ -833,12 +838,14 @@
     ]
   },
   {
-    "name": "",
-    "icon": "",
-    "mainLink": "",
+    "name": "Tâm Linh",
+    "icon": "./img/Tâm Linh.png",
+    "mainLink": "https://www.tamlinh.org/",
     "subLinks": [
-      {"name": "", "url": ""},
-      {"name": "", "url": ""}
+      {
+        "name": "Lời văn thỉnh quan hoàng Mười Nghệ An",
+        "url": "https://www.tamlinh.org/loi-van-thinh-quan-hoang-muoi-nghe-an.html"
+      }
     ]
   },
   {

@@ -511,6 +511,10 @@
     "mainLink": "https://hopamchuan.com/",
     "subLinks": [
       {
+        "name": "Anh hứa không bao giờ đua nữa",
+        "url": "https://hopamchuan.com/song/25816/anh-hua-khong-bao-gio-dua-nua/"
+      },
+      {
         "name": "Vùng Lá Me Bay",
         "url": "https://hopamchuan.com/song/4547/vung-la-me-bay"
       },
@@ -752,6 +756,30 @@
       {
         "name": "Táo quân 2025",
         "url": "https://vtvgo.vn/vod/934902"
+      },
+      {
+        "name": "Táo quân 2023",
+        "url": "https://vtvgo.vn/video/play/gap-nhau-cuoi-nam--tao-quan-2023-2,bdTj8LTKsJ.html"
+      },
+      {
+        "name": "Táo quân 2018",
+        "url": "https://vtvgo.vn/video/play/gap-nhau-cuoi-nam--tao-quan-2018-2,TDy7gdxfvH.html"
+      },
+      {
+        "name": "Táo quân 2019",
+        "url": "https://vtvgo.vn/video/play/gap-nhau-cuoi-nam--tao-quan-2019-2,qNl74k9zOj.html"
+      },
+      {
+        "name": "Táo quân 2021",
+        "url": "https://vtvgo.vn/video/play/gap-nhau-cuoi-nam--tao-quan-2021-2,Sd0EAgk3tV.html"
+      },
+      {
+        "name": "Táo quân 2022 P1",
+        "url": "https://vtvgo.vn/video/play/gap-nhau-cuoi-nam--tao-quan-2022--phan-1-2,tFKhgzqg7j.html"
+      },
+      {
+        "name": "Táo quân 2022 P2",
+        "url": "https://vtvgo.vn/video/play/gap-nhau-cuoi-nam--tao-quan-2022--phan-2-2,xmw4iPu2NA.html"
       }
     ]
   },
@@ -882,67 +910,46 @@
     ]
   },
   {
-    "name": "",
-    "icon": "",
-    "mainLink": "",
-    "subLinks": [
-      {"name": "", "url": ""},
-      {"name": "", "url": ""}
-    ]
+    "name": "Dunno",
+    "icon": "./img/Dunno.ico",
+    "mainLink": "https://dunno.ai/",
+    "subLinks": []
   },
   {
-    "name": "",
-    "icon": "",
-    "mainLink": "",
-    "subLinks": [
-      {"name": "", "url": ""},
-      {"name": "", "url": ""}
-    ]
+    "name": "Roadmaps",
+    "icon": "./img/Roadmaps.ico",
+    "mainLink": "https://roadmap.sh/",
+    "subLinks": []
   },
   {
-    "name": "",
-    "icon": "",
-    "mainLink": "",
-    "subLinks": [
-      {"name": "", "url": ""},
-      {"name": "", "url": ""}
-    ]
+    "name": "Vocal Remover",
+    "icon": "./img/Vocal Remover.ico",
+    "mainLink": "https://vocalremover.org/",
+    "subLinks": []
   },
   {
-    "name": "",
-    "icon": "",
-    "mainLink": "",
-    "subLinks": [
-      {"name": "", "url": ""},
-      {"name": "", "url": ""}
-    ]
+    "name": "Vue.js",
+    "icon": "./img/Vuejs.svg",
+    "mainLink": "https://vuejs.org",
+    "subLinks": []
   },
   {
-    "name": "",
-    "icon": "",
-    "mainLink": "",
-    "subLinks": [
-      {"name": "", "url": ""},
-      {"name": "", "url": ""}
-    ]
+    "name": "-Answerr",
+    "icon": "./img/Answerr.ico",
+    "mainLink": "https://answerr.ai/",
+    "subLinks": []
   },
   {
-    "name": "",
-    "icon": "",
-    "mainLink": "",
-    "subLinks": [
-      {"name": "", "url": ""},
-      {"name": "", "url": ""}
-    ]
+    "name": "Reedsy",
+    "icon": "./img/Reedsy.ico",
+    "mainLink": "https://blog.reedsy.com/",
+    "subLinks": []
   },
   {
-    "name": "",
-    "icon": "",
-    "mainLink": "",
-    "subLinks": [
-      {"name": "", "url": ""},
-      {"name": "", "url": ""}
-    ]
+    "name": "Capcut",
+    "icon": "./img/Capcut.png",
+    "mainLink": "https://www.capcut.com/",
+    "subLinks": []
   },
   {
     "name": "",

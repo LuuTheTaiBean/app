@@ -75,8 +75,32 @@
     "mainLink": "https://www.youtube.com/",
     "subLinks": [
       {
-        "name": "The Tai E-MIT Official",
+        "name": "-The Tai E-MIT Official",
         "url": "https://www.youtube.com/@thetaie-mit"
+      },
+      {
+        "name": "N5 Từ vựng",
+        "url": "https://www.youtube.com/playlist?list=PLHTexYj6KLSbVL3j-AInZUGSjDymj2oc7"
+      },
+      {
+        "name": "Đàm Đạo Lịch Sử",
+        "url": "https://www.youtube.com/playlist?list=PLCt4nt291lLVfIQp1T63PticcJQlpbuhm"
+      },
+      {
+        "name": "Toán 11 Cánh Diều",
+        "url": "https://www.youtube.com/playlist?list=PLCd8j6ZYo0lZQORsvi6INVSqDdNNNQRST"
+      },
+      {
+        "name": "Toán 08 Cánh Diều",
+        "url": "https://www.youtube.com/playlist?list=PLCd8j6ZYo0lZTVJ_6GWxKiSU-eywgoHjY"
+      },
+      {
+        "name": "Toán 10 Cánh Diều",
+        "url": "https://www.youtube.com/playlist?list=PLCd8j6ZYo0laruhgRmxC8zrfd5PY6Ne4u"
+      },
+      {
+        "name": "N5 Ngữ pháp",
+        "url": "https://www.youtube.com/playlist?list=PLHTexYj6KLSYvWRheFW7-PJOuoGf32CTm"
       }
     ]
   },
@@ -375,7 +399,7 @@
   },
   {
     "name": "News In...",
-    "icon": "./img/News In Levels.png",
+    "icon": "./img/News In Levels.jpg",
     "mainLink": "https://www.newsinlevels.com/",
     "subLinks": [
       {
@@ -780,6 +804,26 @@
       {
         "name": "Táo quân 2022 P2",
         "url": "https://vtvgo.vn/video/play/gap-nhau-cuoi-nam--tao-quan-2022--phan-2-2,xmw4iPu2NA.html"
+      },
+      {
+        "name": "Táo quân 2017",
+        "url": "https://vtvgo.vn/video/play/gap-nhau-cuoi-nam--tao-quan-2017-2,l60atDzxKM.html"
+      },
+      {
+        "name": "Táo quân 2014",
+        "url": "https://vtvgo.vn/video/play/gap-nhau-cuoi-nam--tao-quan-2014-2,5bjEDCyiul.html"
+      },
+      {
+        "name": "Táo quân 2015",
+        "url": "https://vtvgo.vn/video/play/gap-nhau-cuoi-nam--tao-quan-2015-2,O7PyhxTDH2.html"
+      },
+      {
+        "name": "Táo quân 2016 P1",
+        "url": "https://vtvgo.vn/video/play/gap-nhau-cuoi-nam--tao-quan-2016--phan-1-2,TdSGyUL5ja.html"
+      },
+      {
+        "name": "Táo quân 2016 P2",
+        "url": "https://vtvgo.vn/video/play/gap-nhau-cuoi-nam--tao-quan-2016--phan-2-2,R4otLX2CeM.html"
       }
     ]
   },
@@ -935,7 +979,7 @@
   },
   {
     "name": "-Answerr",
-    "icon": "./img/Answerr.ico",
+    "icon": "./img/Answerr.png",
     "mainLink": "https://answerr.ai/",
     "subLinks": []
   },
@@ -952,30 +996,26 @@
     "subLinks": []
   },
   {
-    "name": "",
-    "icon": "",
-    "mainLink": "",
-    "subLinks": [
-      {"name": "", "url": ""},
-      {"name": "", "url": ""}
-    ]
+    "name": "Hán Việt",
+    "icon": "./img/Hán Việt.png",
+    "mainLink": "https://hvdic.thivien.net/",
+    "subLinks": []
   },
   {
-    "name": "",
-    "icon": "",
-    "mainLink": "",
-    "subLinks": [
-      {"name": "", "url": ""},
-      {"name": "", "url": ""}
-    ]
+    "name": "Mazii",
+    "icon": "./img/Mazii.ico",
+    "mainLink": "https://mazii.net/",
+    "subLinks": []
   },
   {
-    "name": "",
-    "icon": "",
-    "mainLink": "",
+    "name": "Điện máy...",
+    "icon": "./img/Điện máy xanh.ico",
+    "mainLink": "https://www.dienmayxanh.com/",
     "subLinks": [
-      {"name": "", "url": ""},
-      {"name": "", "url": ""}
+      {
+        "name": "Dell Vostro 15 3520",
+        "url": "https://www.dienmayxanh.com/laptop/dell-vostro-3520-i3-v5i3614w1"
+      }
     ]
   },
   {

@@ -195,10 +195,15 @@
     "subLinks": []
   },
   {
-    "name": "Word",
+    "name": "-Word",
     "icon": "./img/Word.png",
     "mainLink": "https://docs.google.com/document",
-    "subLinks": []
+    "subLinks": [
+      {
+        "name": "Công việc hôm nay",
+        "url": "https://docs.google.com/document/d/1SqxVQI8TWo4kxrD2Xx0CmwqlrSouh8Eu/edit"
+      }
+    ]
   },
   {
     "name": "Excel",
@@ -240,7 +245,16 @@
     "name": "-Figma",
     "icon": "./img/Figma.png",
     "mainLink": "https://www.figma.com/",
-    "subLinks": []
+    "subLinks": [
+      {
+        "name": "Streamline English",
+        "url": "https://www.figma.com/design/C0GzNzGdz6uPWAqqgHpEg3/Streamline-English?node-id=0-1&p=f&t=2ubLs8YkVFd9JWWj-0"
+      },
+      {
+        "name": "Beautice Clinic Beauty Consultation Website Design",
+        "url": "https://www.figma.com/design/Ry2YV1BCuUR3m0xPZdqrGP/Beautice---Clinic---Beauty-Consultation-Website-Design?node-id=0-1&p=f&t=Zb8zgQYew5J2XyMX-0"
+      }
+    ]
   },
   {
     "name": "W3schools",
@@ -855,7 +869,16 @@
     "name": "Motchilli",
     "icon": "./img/Motchilli.png",
     "mainLink": "https://motchilli.to/",
-    "subLinks": []
+    "subLinks": [
+      {
+        "name": "The Good Dinosaur",
+        "url": "https://motchilli.to/phim/chu-khung-long-tot-bung/tap-full-sv-0"
+      },
+      {
+        "name": "Home Alone",
+        "url": "https://motchilli.to/phim/o-nha-mot-minh/tap-full-sv-0"
+      }
+    ]
   },
   {
     "name": "CSS Gradient",
@@ -1019,13 +1042,10 @@
     ]
   },
   {
-    "name": "",
-    "icon": "",
-    "mainLink": "",
-    "subLinks": [
-      {"name": "", "url": ""},
-      {"name": "", "url": ""}
-    ]
+    "name": "Imou Life",
+    "icon": "./img/Imou.png",
+    "mainLink": "https://imouhome.vn/",
+    "subLinks": []
   },
   {
     "name": "",

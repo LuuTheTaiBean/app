@@ -168,7 +168,12 @@
     "name": "-Drive",
     "icon": "./img/GoogleDrive.png",
     "mainLink": "https://drive.google.com",
-    "subLinks": []
+    "subLinks": [
+      {
+        "name": "Kho lưu code",
+        "url": "https://drive.google.com/drive/u/1/folders/17bvW_BSFBbObgC_T04KmgcLfiimee6Xy"
+      }
+    ]
   },
   {
     "name": "-Gmail",
@@ -1052,13 +1057,10 @@
     "subLinks": []
   },
   {
-    "name": "",
-    "icon": "",
-    "mainLink": "",
-    "subLinks": [
-      {"name": "", "url": ""},
-      {"name": "", "url": ""}
-    ]
+    "name": "Wikipedia",
+    "icon": "./img/Wikipedia.ico",
+    "mainLink": "https://vi.wikipedia.org/wiki/",
+    "subLinks": [{"name": "HTML", "url": "https://vi.wikipedia.org/wiki/HTML"}]
   },
   {
     "name": "",

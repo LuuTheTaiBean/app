@@ -1,48 +1,48 @@
 [
   {
-    "name": "-Chat GPT",
+    "name": " Chat GPT",
     "icon": "./img/CHATGPT.ico",
     "mainLink": "https://chat.openai.com/",
     "subLinks": []
   },
   {
-    "name": "-BlackBox",
+    "name": " BlackBox",
     "icon": "./img/BLACKBOX.AI.ico",
     "mainLink": "https://www.blackbox.ai",
     "subLinks": []
   },
   {
-    "name": "-Gemini",
+    "name": " Gemini",
     "icon": "./img/GEMINI.png",
     "mainLink": "https://gemini.google.com",
     "subLinks": []
   },
   {
-    "name": "-Deepseek",
+    "name": " Deepseek",
     "icon": "./img/DEEPSEEK.png",
     "mainLink": "https://chat.deepseek.com/",
     "subLinks": []
   },
   {
-    "name": "-Copilot",
+    "name": " Copilot",
     "icon": "./img/COPILOT.svg",
     "mainLink": "https://copilot.microsoft.com",
     "subLinks": []
   },
   {
-    "name": "-Grok",
+    "name": " Grok",
     "icon": "./img/GROK.svg",
     "mainLink": "https://grok.com/",
     "subLinks": []
   },
   {
-    "name": "-Claude",
+    "name": " Claude",
     "icon": "./img/Claude.png",
     "mainLink": "https://claude.ai",
     "subLinks": []
   },
   {
-    "name": "-Facebook",
+    "name": " Facebook",
     "icon": "./img/Facebook.svg",
     "mainLink": "https://www.facebook.com",
     "subLinks": [
@@ -53,7 +53,7 @@
     ]
   },
   {
-    "name": "-Zalo",
+    "name": " Zalo",
     "icon": "./img/ZALO.png",
     "mainLink": "https://chat.zalo.me/",
     "subLinks": []
@@ -70,12 +70,12 @@
     ]
   },
   {
-    "name": "-YouTube",
+    "name": " YouTube",
     "icon": "./img/YOUTUBE.png",
     "mainLink": "https://www.youtube.com/",
     "subLinks": [
       {
-        "name": "-The Tai E-MIT Official",
+        "name": " The Tai E-MIT Official",
         "url": "https://www.youtube.com/@thetaie-mit"
       },
       {
@@ -117,19 +117,19 @@
     "subLinks": []
   },
   {
-    "name": "-Math",
+    "name": " Math",
     "icon": "./img/Math.png",
     "mainLink": "https://toanmath.com/",
     "subLinks": []
   },
   {
-    "name": "-Máy tính",
+    "name": " Máy tính",
     "icon": "./img/maytinh.png",
     "mainLink": "https://maytinhonline.info/",
     "subLinks": []
   },
   {
-    "name": "-Maps",
+    "name": " Maps",
     "icon": "./img/GoogleMap.png",
     "mainLink": "https://www.google.com/maps",
     "subLinks": []
@@ -165,7 +165,7 @@
     "subLinks": []
   },
   {
-    "name": "-Drive",
+    "name": " Drive",
     "icon": "./img/GoogleDrive.png",
     "mainLink": "https://drive.google.com",
     "subLinks": [
@@ -176,7 +176,7 @@
     ]
   },
   {
-    "name": "-Gmail",
+    "name": " Gmail",
     "icon": "./img/GoogleGmail.png",
     "mainLink": "https://mail.google.com",
     "subLinks": []
@@ -188,19 +188,19 @@
     "subLinks": []
   },
   {
-    "name": "-Wayground",
+    "name": " Wayground",
     "icon": "./img/Wayground.ico",
     "mainLink": "https://wayground.com/",
     "subLinks": []
   },
   {
-    "name": "-GitHub",
+    "name": " GitHub",
     "icon": "./img/GitHub.svg",
     "mainLink": "https://github.com/",
     "subLinks": []
   },
   {
-    "name": "-Word",
+    "name": " Word",
     "icon": "./img/Word.png",
     "mainLink": "https://docs.google.com/document",
     "subLinks": [
@@ -247,12 +247,12 @@
     "subLinks": []
   },
   {
-    "name": "-Figma",
+    "name": " Figma",
     "icon": "./img/Figma.png",
     "mainLink": "https://www.figma.com/",
     "subLinks": [
       {
-        "name": "Streamline English",
+        "name": "English",
         "url": "https://www.figma.com/design/C0GzNzGdz6uPWAqqgHpEg3/Streamline-English?node-id=0-1&p=f&t=2ubLs8YkVFd9JWWj-0"
       },
       {
@@ -299,7 +299,12 @@
     "name": "MDN",
     "icon": "./img/MDN.ico",
     "mainLink": "https://developer.mozilla.org/",
-    "subLinks": []
+    "subLinks": [
+      {
+        "name": "HTML Element",
+        "url": "https://developer.mozilla.org/fr/docs/Web/HTML/Reference/Elements"
+      }
+    ]
   },
   {
     "name": "Calendar",
@@ -320,13 +325,13 @@
     "subLinks": []
   },
   {
-    "name": "-Diffchecker",
+    "name": " Diffchecker",
     "icon": "./img/Diffchecker.svg",
     "mainLink": "https://www.diffchecker.com/",
     "subLinks": []
   },
   {
-    "name": "-I love PDF",
+    "name": " I love PDF",
     "icon": "./img/I love PDF.png",
     "mainLink": "https://www.ilovepdf.com/",
     "subLinks": []
@@ -362,7 +367,7 @@
     "subLinks": []
   },
   {
-    "name": "-Font Aweso...",
+    "name": " Font Aweso...",
     "icon": "./img/Font Awesome.svg",
     "mainLink": "https://fontawesome.com/",
     "subLinks": []
@@ -424,16 +429,7 @@
     "name": "News In...",
     "icon": "./img/News In Levels.jpg",
     "mainLink": "https://www.newsinlevels.com/",
-    "subLinks": [
-      {
-        "name": "Japanese government sells cheap rice",
-        "url": "https://www.newsinlevels.com/products/japanese-government-sells-cheap-rice-level-1/"
-      },
-      {
-        "name": "Policeman is like a dog",
-        "url": "https://www.newsinlevels.com/products/policeman-is-like-a-dog-level-1/"
-      }
-    ]
+    "subLinks": []
   },
   {
     "name": "Messenger",
@@ -478,7 +474,7 @@
     "subLinks": []
   },
   {
-    "name": "-Store",
+    "name": " Store",
     "icon": "./img/Store.png",
     "mainLink": "https://chromewebstore.google.com/",
     "subLinks": [
@@ -497,12 +493,12 @@
     ]
   },
   {
-    "name": "-E-MIT",
+    "name": " E-MIT",
     "icon": "./img/E-MIT.svg",
     "mainLink": "",
     "subLinks": [
       {
-        "name": "Streamline English",
+        "name": "English",
         "url": "https://luuthetaibean.github.io/ENGLISH/login.html"
       },
       {
@@ -851,9 +847,9 @@
     ]
   },
   {
-    "name": "-LRC Generator",
+    "name": " LRC Generator",
     "icon": "./img/LRC Generator.ico",
-    "mainLink": "https://lrcgenerator.com/",
+    "mainLink": "https://lrc-generator.streetvoice.com/",
     "subLinks": []
   },
   {
@@ -1010,7 +1006,7 @@
     "subLinks": []
   },
   {
-    "name": "-Answerr",
+    "name": " Answerr",
     "icon": "./img/Answerr.png",
     "mainLink": "https://answerr.ai/",
     "subLinks": []
@@ -1063,12 +1059,12 @@
     "subLinks": [{"name": "HTML", "url": "https://vi.wikipedia.org/wiki/HTML"}]
   },
   {
-    "name": "",
-    "icon": "",
-    "mainLink": "",
+    "name": "123APPS",
+    "icon": "./img/123APPS.svg",
+    "mainLink": "https://123apps.com/",
     "subLinks": [
-      {"name": "", "url": ""},
-      {"name": "", "url": ""}
+      {"name": "Trim Video", "url": "https://online-video-cutter.com/"},
+      {"name": "Audio Converter", "url": "https://online-audio-converter.com/"}
     ]
   },
   {

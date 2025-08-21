@@ -261,7 +261,15 @@
       },
       {
         "name": "The Tai E-MIT Offical",
-        "url": "https://www.figma.com/board/XqQcAKc9l2Z6T7VnNpikCF/Youtube?node-id=0-1&p=f&t=JooKuitTdwbeuRtg-0"
+        "url": "https://www.figma.com/design/PWQooBJzW8hb3d5RNBArL3/The-Tai-E-MIT-Offical?node-id=0-1&p=f&t=HeCv7pD1V7tjeQt6-0"
+      },
+      {
+        "name": "Education Platform Website",
+        "url": "https://www.figma.com/design/cpEyMr0rEMV2EIS8Ut8S4P/Education-Platform-Website---Lesson?node-id=0-1&p=f&t=9ZQZ5WQH6NY0s8ne-0"
+      },
+      {
+        "name": "Dental Care Landing Page",
+        "url": "https://www.figma.com/design/rUv1JoH3WoYZ4yF3lVTdaT/Dental-Care-Landing-Page---Shine?node-id=1-2&t=axMlmZAX95jqQz6E-0"
       }
     ]
   },
@@ -349,13 +357,13 @@
     "subLinks": []
   },
   {
-    "name": "Đường lên ...",
+    "name": "Đường lên đỉnh Olympia",
     "icon": "./img/Đường lên đỉnh Olympia.ico",
     "mainLink": "https://duong-len-dinh-olympia.fandom.com/vi/wiki/%C4%90%C6%B0%E1%BB%9Dng_l%C3%AAn_%C4%91%E1%BB%89nh_Olympia_Wiki",
     "subLinks": []
   },
   {
-    "name": "Oxford Dictio...",
+    "name": "Oxford Dictionary",
     "icon": "./img/Oxford Dictionary.ico",
     "mainLink": "https://www.oxfordlearnersdictionaries.com/",
     "subLinks": []
@@ -367,7 +375,7 @@
     "subLinks": []
   },
   {
-    "name": " Font Aweso...",
+    "name": " Font Awesome",
     "icon": "./img/Font Awesome.svg",
     "mainLink": "https://fontawesome.com/",
     "subLinks": []
@@ -396,7 +404,7 @@
     "subLinks": []
   },
   {
-    "name": "Visual Studio ...",
+    "name": "Visual Studio Code",
     "icon": "./img/Visual Studio Code.ico",
     "mainLink": "https://code.visualstudio.com/",
     "subLinks": []
@@ -408,13 +416,13 @@
     "subLinks": []
   },
   {
-    "name": "Submarine Ca...",
+    "name": "Submarine Cable Map",
     "icon": "./img/Submarine Cable Map.ico",
     "mainLink": "https://www.submarinecablemap.com/",
     "subLinks": []
   },
   {
-    "name": "Wayback Mac...",
+    "name": "Wayback Machine",
     "icon": "./img/Wayback Machine.png",
     "mainLink": "https://web.archive.org/",
     "subLinks": []
@@ -426,7 +434,7 @@
     "subLinks": []
   },
   {
-    "name": "News In...",
+    "name": "News In Levels",
     "icon": "./img/News In Levels.jpg",
     "mainLink": "https://www.newsinlevels.com/",
     "subLinks": []
@@ -526,7 +534,7 @@
     "subLinks": []
   },
   {
-    "name": "Code S...",
+    "name": "Code Sandbox",
     "icon": "./img/Code Sandbox.svg",
     "mainLink": "https://codesandbox.io/",
     "subLinks": [
@@ -546,7 +554,12 @@
     "name": "Firebase",
     "icon": "./img/Firebase.png",
     "mainLink": "https://firebase.google.com/",
-    "subLinks": []
+    "subLinks": [
+      {
+        "name": "Firebase console",
+        "url": "https://console.firebase.google.com/u/0/"
+      }
+    ]
   },
   {
     "name": "Hợp âm",
@@ -721,7 +734,7 @@
     "subLinks": []
   },
   {
-    "name": "Browser Defa...",
+    "name": "Browser Default Styles",
     "icon": "./img/Browser Default Styles.png",
     "mainLink": "https://browserdefaultstyles.com/",
     "subLinks": []
@@ -762,7 +775,7 @@
     "subLinks": []
   },
   {
-    "name": "HTML Color C...",
+    "name": "HTML Color Codes",
     "icon": "./img/HTML Color Codes.png",
     "mainLink": "https://htmlcolorcodes.com/",
     "subLinks": []
@@ -774,7 +787,7 @@
     "subLinks": []
   },
   {
-    "name": "Styled Compo...",
+    "name": "Styled Components",
     "icon": "./img/Styled Components.png",
     "mainLink": "https://styled-components.com/",
     "subLinks": []
@@ -786,7 +799,7 @@
     "subLinks": []
   },
   {
-    "name": "CSS Generato...",
+    "name": "CSS Generator Tool",
     "icon": "./img/CSS Generator Tool.png",
     "mainLink": "https://cssgenerator.org/",
     "subLinks": []
@@ -1036,7 +1049,7 @@
     "subLinks": []
   },
   {
-    "name": "Điện máy...",
+    "name": "Điện máy xanh",
     "icon": "./img/Điện máy xanh.ico",
     "mainLink": "https://www.dienmayxanh.com/",
     "subLinks": [
@@ -1065,6 +1078,143 @@
     "subLinks": [
       {"name": "Trim Video", "url": "https://online-video-cutter.com/"},
       {"name": "Audio Converter", "url": "https://online-audio-converter.com/"}
+    ]
+  },
+  {
+    "name": "Developers",
+    "icon": "./img/Developers.svg",
+    "mainLink": "https://developer.android.com/",
+    "subLinks": [
+      {
+        "name": "Menu resource",
+        "url": "https://developer.android.com/guide/topics/resources/menu-resource"
+      }
+    ]
+  },
+  {
+    "name": "SQLiteStudio",
+    "icon": "./img/SQLiteStudio.png",
+    "mainLink": "https://sqlitestudio.pl/",
+    "subLinks": [
+      {"name": "", "url": ""},
+      {"name": "", "url": ""}
+    ]
+  },
+  {
+    "name": "",
+    "icon": "",
+    "mainLink": "",
+    "subLinks": [
+      {"name": "", "url": ""},
+      {"name": "", "url": ""}
+    ]
+  },
+  {
+    "name": "",
+    "icon": "",
+    "mainLink": "",
+    "subLinks": [
+      {"name": "", "url": ""},
+      {"name": "", "url": ""}
+    ]
+  },
+  {
+    "name": "",
+    "icon": "",
+    "mainLink": "",
+    "subLinks": [
+      {"name": "", "url": ""},
+      {"name": "", "url": ""}
+    ]
+  },
+  {
+    "name": "",
+    "icon": "",
+    "mainLink": "",
+    "subLinks": [
+      {"name": "", "url": ""},
+      {"name": "", "url": ""}
+    ]
+  },
+  {
+    "name": "",
+    "icon": "",
+    "mainLink": "",
+    "subLinks": [
+      {"name": "", "url": ""},
+      {"name": "", "url": ""}
+    ]
+  },
+  {
+    "name": "",
+    "icon": "",
+    "mainLink": "",
+    "subLinks": [
+      {"name": "", "url": ""},
+      {"name": "", "url": ""}
+    ]
+  },
+  {
+    "name": "",
+    "icon": "",
+    "mainLink": "",
+    "subLinks": [
+      {"name": "", "url": ""},
+      {"name": "", "url": ""}
+    ]
+  },
+  {
+    "name": "",
+    "icon": "",
+    "mainLink": "",
+    "subLinks": [
+      {"name": "", "url": ""},
+      {"name": "", "url": ""}
+    ]
+  },
+  {
+    "name": "",
+    "icon": "",
+    "mainLink": "",
+    "subLinks": [
+      {"name": "", "url": ""},
+      {"name": "", "url": ""}
+    ]
+  },
+  {
+    "name": "",
+    "icon": "",
+    "mainLink": "",
+    "subLinks": [
+      {"name": "", "url": ""},
+      {"name": "", "url": ""}
+    ]
+  },
+  {
+    "name": "",
+    "icon": "",
+    "mainLink": "",
+    "subLinks": [
+      {"name": "", "url": ""},
+      {"name": "", "url": ""}
+    ]
+  },
+  {
+    "name": "",
+    "icon": "",
+    "mainLink": "",
+    "subLinks": [
+      {"name": "", "url": ""},
+      {"name": "", "url": ""}
+    ]
+  },
+  {
+    "name": "",
+    "icon": "",
+    "mainLink": "",
+    "subLinks": [
+      {"name": "", "url": ""},
+      {"name": "", "url": ""}
     ]
   },
   {

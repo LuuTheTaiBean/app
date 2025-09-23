@@ -56,7 +56,24 @@
     "name": " Zalo",
     "icon": "./img/ZALO.png",
     "mainLink": "https://chat.zalo.me/",
-    "subLinks": []
+    "subLinks": [
+      {
+        "name": "22 HTML",
+        "url": "https://zalo.me/g/gjufii282"
+      },
+      {
+        "name": "22 CSS",
+        "url": "https://zalo.me/g/vzrgsm561"
+      },
+      {
+        "name": "22 JAVASCRIPT",
+        "url": "https://zalo.me/g/boryff135"
+      },
+      {
+        "name": "22 REACT",
+        "url": "https://zalo.me/g/tkwnou215"
+      }
+    ]
   },
   {
     "name": "TikTok",
@@ -101,6 +118,30 @@
       {
         "name": "N5 Ngữ pháp",
         "url": "https://www.youtube.com/playlist?list=PLHTexYj6KLSYvWRheFW7-PJOuoGf32CTm"
+      },
+      {
+        "name": "101 Bài Tập Thực Hành Excel",
+        "url": "https://www.youtube.com/playlist?list=PLApuTT4CRzA8AmXsFQkLKW5DpMrEUn_h9"
+      },
+      {
+        "name": "Toán 10 Kết Nối Tri Thức",
+        "url": "https://www.youtube.com/playlist?list=PLCd8j6ZYo0lYG_l7ZNJQEcEyhwtna1Kgf"
+      },
+      {
+        "name": "Python",
+        "url": "https://www.youtube.com/playlist?list=PLPt6-BtUI22oGqQwAEF6xwrFL6aOjtHWl"
+      },
+      {
+        "name": "NHẠC LÝ CƠ BẢN",
+        "url": "https://www.youtube.com/playlist?list=PLuQPCaSUXvyEfaoU_j13rX34Z-5pXYdUw"
+      },
+      {
+        "name": "JavaScript",
+        "url": "https://www.youtube.com/playlist?list=PLPt6-BtUI22pYwpfmkP4EuJkf6GRe63KU"
+      },
+      {
+        "name": "HTML, CSS",
+        "url": "https://www.youtube.com/playlist?list=PLPt6-BtUI22oveeGAyckbAXRSmTBGLZP4"
       }
     ]
   },
@@ -197,18 +238,18 @@
     "name": " GitHub",
     "icon": "./img/GitHub.svg",
     "mainLink": "https://github.com/",
-    "subLinks": []
+    "subLinks": [
+      {
+        "name": "Gà Lại Lập Trình",
+        "url": "https://github.com/galailaptrinh"
+      }
+    ]
   },
   {
     "name": " Word",
     "icon": "./img/Word.png",
     "mainLink": "https://docs.google.com/document",
-    "subLinks": [
-      {
-        "name": "Công việc hôm nay",
-        "url": "https://docs.google.com/document/d/1SqxVQI8TWo4kxrD2Xx0CmwqlrSouh8Eu/edit"
-      }
-    ]
+    "subLinks": [{}]
   },
   {
     "name": "Excel",

@@ -1260,10 +1260,7 @@
     "icon": "./img/SQLiteStudio.png",
     "mainLink": "https://sqlitestudio.pl/",
     "note": "",
-    "subLinks": [
-      {"name": "", "url": ""},
-      {"name": "", "url": ""}
-    ]
+    "subLinks": []
   },
   {
     "name": "",

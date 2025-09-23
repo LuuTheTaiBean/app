@@ -47,11 +47,8 @@
       margin-top: 6px;
       color: #fff;
       white-space: nowrap;
-      /* Không xuống dòng */
       overflow: hidden;
-      /* Ẩn phần dư */
       text-overflow: ellipsis;
-      /* Hiện dấu ... */
       max-width: 60px;
       cursor: default;
     }
@@ -131,9 +128,8 @@
 </head>
 
 <body>
-  <!-- <h2 class="text-center mb-4">Ứng dụng của tôi</h2> -->
   <div class="app-container" id="appGrid"></div>
-  <!-- <img src="./img/SQLiteStudio.png" alt=""> -->
+
   <!-- Modal -->
   <div id="modal" style="display:none;">
     <div class="overlay" onclick="closeModal()"></div>
@@ -146,11 +142,9 @@
     fetch('data.json')
       .then(res => res.json())
       .then(data => {
-        // Sắp xếp theo ABC
         data.sort((a, b) => a.name.localeCompare(b.name));
         renderApps(data);
       });
-
 
     function renderApps(data) {
       const container = document.getElementById("appGrid");
@@ -161,12 +155,12 @@
         const iconLink = document.createElement("a");
         iconLink.href = app.mainLink;
         iconLink.target = "_blank";
-        iconLink.innerHTML = `<img src="${app.icon}" alt="${app.name}" />`;
+        iconLink.innerHTML = `<img src="${app.icon}" alt="${app.name}" title="${app.note || app.name}" />`;
         wrapper.appendChild(iconLink);
 
         if (app.subLinks.length > 0) {
           const badge = document.createElement("span");
-          badge.className = "badge ";
+          badge.className = "badge";
           badge.innerText = app.subLinks.length;
           badge.title = "Click để xem các link phụ";
           badge.addEventListener("click", (e) => {
@@ -180,7 +174,7 @@
         const label = document.createElement("div");
         label.className = "app-label";
         label.innerText = app.name;
-        label.title = app.name;
+        label.title = app.note || app.name;
         wrapper.appendChild(label);
 
         container.appendChild(wrapper);
@@ -191,16 +185,13 @@
       const modal = document.getElementById("modal");
       const content = document.getElementById("modalContent");
 
-      // Sắp xếp links con theo tên (ABC)
       links.sort((a, b) => a.name.localeCompare(b.name));
 
-      // Reset nội dung và thêm tiêu đề
       content.innerHTML = `
-    <span class="close-btn" onclick="closeModal()">&times;</span>
-    <h5>${appName}</h5>
-  `;
+        <span class="close-btn" onclick="closeModal()">&times;</span>
+        <h5>${appName}</h5>
+      `;
 
-      // Thêm từng link
       links.forEach(link => {
         const a = document.createElement("a");
         a.href = link.url;
@@ -211,7 +202,6 @@
 
       modal.style.display = "block";
     }
-
 
     function closeModal() {
       document.getElementById("modal").style.display = "none";

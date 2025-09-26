@@ -1158,12 +1158,7 @@
     "icon": "./img/Tâm Linh.png",
     "mainLink": "https://www.tamlinh.org/",
     "note": " chưa có",
-    "subLinks": [
-      {
-        "name": "Lời văn thỉnh quan hoàng Mười Nghệ An",
-        "url": "https://www.tamlinh.org/loi-van-thinh-quan-hoang-muoi-nghe-an.html"
-      }
-    ]
+    "subLinks": []
   },
   {
     "name": "Dunno",

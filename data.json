@@ -107,6 +107,14 @@
         "url": "https://www.youtube.com/@thetaie-mit"
       },
       {
+        "name": " Xem sau",
+        "url": "https://www.youtube.com/playlist?list=WL"
+      },
+      {
+        "name": " Video đã thích",
+        "url": "https://www.youtube.com/playlist?list=LL"
+      },
+      {
         "name": "N5 Từ vựng",
         "url": "https://www.youtube.com/playlist?list=PLHTexYj6KLSbVL3j-AInZUGSjDymj2oc7"
       },
@@ -392,6 +400,10 @@
       {
         "name": "HTML Element",
         "url": "https://developer.mozilla.org/fr/docs/Web/HTML/Reference/Elements"
+      },
+      {
+        "name": "Operator precedence",
+        "url": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Operator_precedence"
       }
     ]
   },
@@ -606,6 +618,18 @@
       {
         "name": "Từ điển eJOY AI",
         "url": "https://chromewebstore.google.com/detail/t%E1%BB%AB-%C4%91i%E1%BB%83n-ejoy-ai/amfojhdiedpdnlijjbhjnhokbnohfdfb"
+      },
+      {
+        "name": "YouTube Dubbing – Dịch phụ đề AI & Lồng tiếng | Translate & Dub",
+        "url": "https://chromewebstore.google.com/detail/youtube-dubbing-%E2%80%93-transla/oglffgiaiekgeicdgkdlnlkhliajdlja"
+      },
+      {
+        "name": "Color Picker for Chrome",
+        "url": "https://chromewebstore.google.com/detail/color-picker-for-chrome/clldacgmdnnanihiibdgemajcfkmfhia"
+      },
+      {
+        "name": "Clear Cache",
+        "url": "https://chromewebstore.google.com/detail/clear-cache/cppjkneekbjaeellbfkmgnhonkkjfpdn"
       }
     ]
   },
@@ -1040,56 +1064,56 @@
     "name": "CSS Gradient",
     "icon": "./img/CSS Gradient.ico",
     "mainLink": "https://cssgradient.io/",
-    "note": "",
+    "note": " chưa có ",
     "subLinks": []
   },
   {
     "name": "Newsweek",
     "icon": "./img/Newsweek.ico",
     "mainLink": "https://www.newsweek.com/",
-    "note": "",
+    "note": " chưa có",
     "subLinks": []
   },
   {
     "name": "Bản đồ",
     "icon": "./img/Bản đồ.ico",
     "mainLink": "https://www.bing.com/maps",
-    "note": "",
+    "note": " chưa có",
     "subLinks": []
   },
   {
     "name": "Jetbrains",
     "icon": "./img/Jetbrains.ico",
     "mainLink": "https://www.jetbrains.com/",
-    "note": "",
+    "note": " chưa có",
     "subLinks": []
   },
   {
     "name": "CSS Scan",
     "icon": "./img/CSS Scan.png",
     "mainLink": "https://getcssscan.com/",
-    "note": "",
+    "note": " chưa có",
     "subLinks": []
   },
   {
     "name": "Netlify",
     "icon": "./img/Netlify.ico",
     "mainLink": "https://www.netlify.com/",
-    "note": "",
+    "note": " chưa có",
     "subLinks": []
   },
   {
     "name": "Dev Tools",
     "icon": "./img/Dev Tools.png",
     "mainLink": "https://tools.webdevpuneet.com/",
-    "note": "",
+    "note": " chưa có",
     "subLinks": []
   },
   {
     "name": "Hợp Âm V",
     "icon": "./img/Hợp Âm Việt.png",
     "mainLink": "https://hopamviet.vn/",
-    "note": "",
+    "note": " chưa có",
     "subLinks": [
       {
         "name": "Xót xa",
@@ -1133,7 +1157,7 @@
     "name": "Tâm Linh",
     "icon": "./img/Tâm Linh.png",
     "mainLink": "https://www.tamlinh.org/",
-    "note": "",
+    "note": " chưa có",
     "subLinks": [
       {
         "name": "Lời văn thỉnh quan hoàng Mười Nghệ An",
@@ -1145,70 +1169,70 @@
     "name": "Dunno",
     "icon": "./img/Dunno.ico",
     "mainLink": "https://dunno.ai/",
-    "note": "",
+    "note": " chưa có",
     "subLinks": []
   },
   {
     "name": "Roadmaps",
     "icon": "./img/Roadmaps.ico",
     "mainLink": "https://roadmap.sh/",
-    "note": "",
+    "note": " chưa có",
     "subLinks": []
   },
   {
     "name": "Vocal Remover",
     "icon": "./img/Vocal Remover.ico",
     "mainLink": "https://vocalremover.org/",
-    "note": "",
+    "note": " chưa có",
     "subLinks": []
   },
   {
     "name": "Vue.js",
     "icon": "./img/Vuejs.svg",
     "mainLink": "https://vuejs.org",
-    "note": "",
+    "note": " chưa có",
     "subLinks": []
   },
   {
     "name": " Answerr",
     "icon": "./img/Answerr.png",
     "mainLink": "https://answerr.ai/",
-    "note": "",
+    "note": " chưa có",
     "subLinks": []
   },
   {
     "name": "Reedsy",
     "icon": "./img/Reedsy.ico",
     "mainLink": "https://blog.reedsy.com/",
-    "note": "",
+    "note": " chưa có",
     "subLinks": []
   },
   {
     "name": "Capcut",
     "icon": "./img/Capcut.png",
     "mainLink": "https://www.capcut.com/",
-    "note": "",
+    "note": " chưa có",
     "subLinks": []
   },
   {
     "name": "Hán Việt",
     "icon": "./img/Hán Việt.png",
     "mainLink": "https://hvdic.thivien.net/",
-    "note": "",
+    "note": " chưa có",
     "subLinks": []
   },
   {
     "name": "Mazii",
     "icon": "./img/Mazii.ico",
     "mainLink": "https://mazii.net/",
-    "note": "",
+    "note": " chưa có",
     "subLinks": []
   },
   {
     "name": "Điện máy xanh",
     "icon": "./img/Điện máy xanh.ico",
     "mainLink": "https://www.dienmayxanh.com/",
-    "note": "",
+    "note": " chưa có",
     "subLinks": [
       {
         "name": "Dell Vostro 15 3520",
@@ -1220,21 +1244,21 @@
     "name": "Imou Life",
     "icon": "./img/Imou.png",
     "mainLink": "https://imouhome.vn/",
-    "note": "",
+    "note": " chưa có",
     "subLinks": []
   },
   {
     "name": "Wikipedia",
     "icon": "./img/Wikipedia.ico",
     "mainLink": "https://vi.wikipedia.org/wiki/",
-    "note": "",
+    "note": " chưa có",
     "subLinks": [{"name": "HTML", "url": "https://vi.wikipedia.org/wiki/HTML"}]
   },
   {
     "name": "123APPS",
     "icon": "./img/123APPS.svg",
     "mainLink": "https://123apps.com/",
-    "note": "",
+    "note": " chưa có",
     "subLinks": [
       {"name": "Trim Video", "url": "https://online-video-cutter.com/"},
       {
@@ -1247,7 +1271,7 @@
     "name": "Developers",
     "icon": "./img/Developers.svg",
     "mainLink": "https://developer.android.com/",
-    "note": "",
+    "note": " chưa có",
     "subLinks": [
       {
         "name": "Menu resource",
@@ -1259,14 +1283,51 @@
     "name": "SQLiteStudio",
     "icon": "./img/SQLiteStudio.png",
     "mainLink": "https://sqlitestudio.pl/",
-    "note": "",
+    "note": " chưa có",
     "subLinks": []
   },
   {
+    "name": "Shopee",
+    "icon": "./img/Shopee.png",
+    "mainLink": "https://shopee.vn/",
+    "note": " chưa có",
+    "subLinks": []
+  },
+  {
+    "name": "Uiverse",
+    "icon": "./img/Uiverse.png",
+    "mainLink": "https://uiverse.io/",
+    "note": " chưa có",
+    "subLinks": []
+  },
+  {
+    "name": "Animate",
+    "icon": "./img/Animate.ico",
+    "mainLink": "https://animate.style/",
+    "note": " chưa có",
+    "subLinks": []
+  },
+  {
+    "name": "Infinityfree",
+    "icon": "./img/Infinityfree.ico",
+    "mainLink": "https://www.infinityfree.com/",
+    "note": " chưa có",
+    "subLinks": []
+  },
+  {
+    "name": "Wordpress",
+    "icon": "./img/Wordpress.ico",
+    "mainLink": "https://wordpress.org/",
+    "note": " chưa có",
+    "subLinks": [
+      {"name": "Get WordPress", "url": "https://wordpress.org/download/"}
+    ]
+  },
+  {
     "name": "",
     "icon": "",
     "mainLink": "",
-    "note": "",
+    "note": " chưa có",
     "subLinks": [
       {"name": "", "url": ""},
       {"name": "", "url": ""}
@@ -1276,7 +1337,7 @@
     "name": "",
     "icon": "",
     "mainLink": "",
-    "note": "",
+    "note": " chưa có",
     "subLinks": [
       {"name": "", "url": ""},
       {"name": "", "url": ""}
@@ -1286,7 +1347,7 @@
     "name": "",
     "icon": "",
     "mainLink": "",
-    "note": "",
+    "note": " chưa có",
     "subLinks": [
       {"name": "", "url": ""},
       {"name": "", "url": ""}
@@ -1296,7 +1357,7 @@
     "name": "",
     "icon": "",
     "mainLink": "",
-    "note": "",
+    "note": " chưa có",
     "subLinks": [
       {"name": "", "url": ""},
       {"name": "", "url": ""}
@@ -1306,7 +1367,7 @@
     "name": "",
     "icon": "",
     "mainLink": "",
-    "note": "",
+    "note": " chưa có",
     "subLinks": [
       {"name": "", "url": ""},
       {"name": "", "url": ""}
@@ -1316,7 +1377,7 @@
     "name": "",
     "icon": "",
     "mainLink": "",
-    "note": "",
+    "note": " chưa có",
     "subLinks": [
       {"name": "", "url": ""},
       {"name": "", "url": ""}
@@ -1326,7 +1387,7 @@
     "name": "",
     "icon": "",
     "mainLink": "",
-    "note": "",
+    "note": " chưa có",
     "subLinks": [
       {"name": "", "url": ""},
       {"name": "", "url": ""}
@@ -1336,7 +1397,7 @@
     "name": "",
     "icon": "",
     "mainLink": "",
-    "note": "",
+    "note": " chưa có",
     "subLinks": [
       {"name": "", "url": ""},
       {"name": "", "url": ""}
@@ -1346,57 +1407,7 @@
     "name": "",
     "icon": "",
     "mainLink": "",
-    "note": "",
-    "subLinks": [
-      {"name": "", "url": ""},
-      {"name": "", "url": ""}
-    ]
-  },
-  {
-    "name": "",
-    "icon": "",
-    "mainLink": "",
-    "note": "",
-    "subLinks": [
-      {"name": "", "url": ""},
-      {"name": "", "url": ""}
-    ]
-  },
-  {
-    "name": "",
-    "icon": "",
-    "mainLink": "",
-    "note": "",
-    "subLinks": [
-      {"name": "", "url": ""},
-      {"name": "", "url": ""}
-    ]
-  },
-  {
-    "name": "",
-    "icon": "",
-    "mainLink": "",
-    "note": "",
-    "subLinks": [
-      {"name": "", "url": ""},
-      {"name": "", "url": ""}
-    ]
-  },
-  {
-    "name": "",
-    "icon": "",
-    "mainLink": "",
-    "note": "",
-    "subLinks": [
-      {"name": "", "url": ""},
-      {"name": "", "url": ""}
-    ]
-  },
-  {
-    "name": "",
-    "icon": "",
-    "mainLink": "",
-    "note": "",
+    "note": " chưa có",
     "subLinks": [
       {"name": "", "url": ""},
       {"name": "", "url": ""}

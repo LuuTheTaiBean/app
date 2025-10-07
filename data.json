@@ -115,52 +115,68 @@
         "url": "https://www.youtube.com/playlist?list=LL"
       },
       {
-        "name": "N5 Từ vựng",
+        "name": "Dũng Mori-N5 Từ vựng",
         "url": "https://www.youtube.com/playlist?list=PLHTexYj6KLSbVL3j-AInZUGSjDymj2oc7"
       },
       {
-        "name": "Đàm Đạo Lịch Sử",
+        "name": "Tuấn tiền Tỉ-Đàm Đạo Lịch Sử",
         "url": "https://www.youtube.com/playlist?list=PLCt4nt291lLVfIQp1T63PticcJQlpbuhm"
       },
       {
-        "name": "Toán 11 Cánh Diều",
+        "name": "THẦY QUANG-Toán 11 Cánh Diều",
         "url": "https://www.youtube.com/playlist?list=PLCd8j6ZYo0lZQORsvi6INVSqDdNNNQRST"
       },
       {
-        "name": "Toán 08 Cánh Diều",
+        "name": "THẦY QUANG-Toán 08 Cánh Diều",
         "url": "https://www.youtube.com/playlist?list=PLCd8j6ZYo0lZTVJ_6GWxKiSU-eywgoHjY"
       },
       {
-        "name": "Toán 10 Cánh Diều",
+        "name": "THẦY QUANG-Toán 10 Cánh Diều",
         "url": "https://www.youtube.com/playlist?list=PLCd8j6ZYo0laruhgRmxC8zrfd5PY6Ne4u"
       },
       {
-        "name": "N5 Ngữ pháp",
+        "name": "Dũng Mori-N5 Ngữ pháp",
         "url": "https://www.youtube.com/playlist?list=PLHTexYj6KLSYvWRheFW7-PJOuoGf32CTm"
       },
       {
-        "name": "101 Bài Tập Thực Hành Excel",
+        "name": "Gà Excel-101 Bài Tập Thực Hành Excel",
         "url": "https://www.youtube.com/playlist?list=PLApuTT4CRzA8AmXsFQkLKW5DpMrEUn_h9"
       },
       {
-        "name": "Toán 10 Kết Nối Tri Thức",
+        "name": "THẦY QUANG-Toán 10 Kết Nối Tri Thức",
         "url": "https://www.youtube.com/playlist?list=PLCd8j6ZYo0lYG_l7ZNJQEcEyhwtna1Kgf"
       },
       {
-        "name": "Python",
+        "name": "Gà Lại Lập Trình-Python",
         "url": "https://www.youtube.com/playlist?list=PLPt6-BtUI22oGqQwAEF6xwrFL6aOjtHWl"
       },
       {
-        "name": "NHẠC LÝ CƠ BẢN",
+        "name": "Nhạc Cụ BK-NHẠC LÝ CƠ BẢN",
         "url": "https://www.youtube.com/playlist?list=PLuQPCaSUXvyEfaoU_j13rX34Z-5pXYdUw"
       },
       {
-        "name": "JavaScript",
+        "name": "Gà Lại Lập Trình-JavaScript",
         "url": "https://www.youtube.com/playlist?list=PLPt6-BtUI22pYwpfmkP4EuJkf6GRe63KU"
       },
       {
-        "name": "HTML, CSS",
+        "name": "Gà Lại Lập Trình-HTML, CSS",
         "url": "https://www.youtube.com/playlist?list=PLPt6-BtUI22oveeGAyckbAXRSmTBGLZP4"
+      },
+      {
+        "name": "Gà Lại Lập Trình-Bootstrap 5",
+        "url": "https://www.youtube.com/playlist?list=PLPt6-BtUI22oRD2jqJVG-dCxzlsb5sJvy"
+      },
+      {
+        "name": "Gà Lại Lập Trình-Lập trình Android",
+        "url": "https://www.youtube.com/playlist?list=PLPt6-BtUI22qf3KE1V1PyAm1v8M2qqwL5"
+      },
+      {
+        "name": "Hưng Del-AutoCAD",
+        "url": "https://www.youtube.com/playlist?list=PLq1fzy8kh1ALAtpSyUTFUT71CAYgGoCkI"
+      },
+      {
+        "name": "Tuấn tiền Tỉ-Tổ Buôn 247",
+        "url": "https://www.youtube.com/playlist?list=PLCt4nt291lLWQynJVIY6VQ6CTyuGB7Aph"
       }
     ]
   },
@@ -404,6 +420,10 @@
       {
         "name": "Operator precedence",
         "url": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Operator_precedence"
+      },
+      {
+        "name": "Type coercion",
+        "url": "https://developer.mozilla.org/en-US/docs/Glossary/Type_coercion"
       }
     ]
   },
@@ -585,7 +605,9 @@
     "icon": "./img/Emmet.ico",
     "mainLink": "https://emmet.io/",
     "note": "Emmet: Công cụ tăng tốc viết mã HTML và CSS",
-    "subLinks": []
+    "subLinks": [
+      {"name": "Cheat Sheet", "url": "https://docs.emmet.io/cheat-sheet/"}
+    ]
   },
   {
     "name": "X",
@@ -1110,7 +1132,7 @@
     "subLinks": []
   },
   {
-    "name": "Hợp Âm V",
+    "name": "Hợp Âm Việt",
     "icon": "./img/Hợp Âm Việt.png",
     "mainLink": "https://hopamviet.vn/",
     "note": " chưa có",
@@ -1319,64 +1341,46 @@
     ]
   },
   {
-    "name": "",
-    "icon": "",
-    "mainLink": "",
+    "name": " Windy",
+    "icon": "./img/Windy.png",
+    "mainLink": "https://www.windy.com/",
     "note": " chưa có",
-    "subLinks": [
-      {"name": "", "url": ""},
-      {"name": "", "url": ""}
-    ]
+    "subLinks": []
   },
   {
-    "name": "",
-    "icon": "",
-    "mainLink": "",
+    "name": "Taongafarm",
+    "icon": "/img/Taongafarm.png",
+    "mainLink": "https://taongafarm.com/",
     "note": " chưa có",
-    "subLinks": [
-      {"name": "", "url": ""},
-      {"name": "", "url": ""}
-    ]
+    "subLinks": []
   },
   {
-    "name": "",
-    "icon": "",
-    "mainLink": "",
+    "name": "Earth",
+    "icon": "./img/Earth.ico",
+    "mainLink": "https://earth.google.com/",
     "note": " chưa có",
-    "subLinks": [
-      {"name": "", "url": ""},
-      {"name": "", "url": ""}
-    ]
+    "subLinks": []
   },
   {
-    "name": "",
-    "icon": "",
-    "mainLink": "",
+    "name": "Plant UML",
+    "icon": "./img/Plant UML.ico",
+    "mainLink": "https://www.plantuml.com/",
     "note": " chưa có",
-    "subLinks": [
-      {"name": "", "url": ""},
-      {"name": "", "url": ""}
-    ]
+    "subLinks": []
   },
   {
-    "name": "",
-    "icon": "",
-    "mainLink": "",
+    "name": "User Benchmark",
+    "icon": "./img/User Benchmark.ico",
+    "mainLink": "https://cpu.userbenchmark.com/",
     "note": " chưa có",
-    "subLinks": [
-      {"name": "", "url": ""},
-      {"name": "", "url": ""}
-    ]
+    "subLinks": []
   },
   {
-    "name": "",
-    "icon": "",
-    "mainLink": "",
+    "name": " Slides Go",
+    "icon": "./img/Slides Go.ico",
+    "mainLink": "https://slidesgo.com/",
     "note": " chưa có",
-    "subLinks": [
-      {"name": "", "url": ""},
-      {"name": "", "url": ""}
-    ]
+    "subLinks": []
   },
   {
     "name": "",

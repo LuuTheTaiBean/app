@@ -27,6 +27,19 @@
     .app-icon {
       text-align: center;
       position: relative;
+      transition: opacity 0.25s, transform 0.18s;
+      opacity: 1;
+    }
+
+    .app-icon.dimmed {
+      opacity: 0.18;
+      transform: scale(0.98);
+      pointer-events: none;
+    }
+
+    .app-icon.highlight {
+      transform: scale(1.06);
+      z-index: 2;
     }
 
     .app-icon img {
@@ -162,6 +175,47 @@
       background: #0f0f0f;
       color: #fff;
     }
+
+    /* tiny typing indicator (very subtle, not a search bar) */
+    .type-indicator {
+      position: fixed;
+      bottom: 18px;
+      left: 50%;
+      transform: translateX(-50%);
+      background: rgba(255, 255, 255, 0.06);
+      color: #fff;
+      padding: 6px 12px;
+      border-radius: 999px;
+      backdrop-filter: blur(4px);
+      font-size: 0.9rem;
+      letter-spacing: 0.6px;
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      z-index: 1200;
+      transition: opacity 0.2s, transform 0.2s;
+      opacity: 0;
+      pointer-events: none;
+    }
+
+    .type-indicator.visible {
+      opacity: 1;
+    }
+
+    .type-indicator .query {
+      font-weight: 600;
+      text-transform: none;
+    }
+
+    .type-indicator .hint {
+      font-size: 0.75rem;
+      opacity: 0.7;
+    }
+
+    body.light-mode .type-indicator {
+      color: #111;
+      background: rgba(16, 16, 16, 0.06);
+    }
   </style>
 </head>
 
@@ -176,6 +230,12 @@
     <div class="modal-links" id="modalContent">
       <span class="close-btn" onclick="closeModal()">&times;</span>
     </div>
+  </div>
+
+  <!-- tiny typing indicator (not a search input) -->
+  <div id="typeIndicator" class="type-indicator" aria-hidden="true">
+    <span class="query" id="typedQuery"></span>
+    <span class="hint" id="typedHint">• Gõ để lọc — Esc xóa</span>
   </div>
 
   <script>
@@ -197,18 +257,28 @@
       }
     }
 
+    // tải data và render
+    let appsData = [];
     fetch('data.json')
       .then(res => res.json())
       .then(data => {
         data.sort((a, b) => a.name.localeCompare(b.name));
+        appsData = data;
         renderApps(data);
+        // prepare elements map for fast filtering
+        prepareAppElements();
+      })
+      .catch(err => {
+        console.error('Không load được data.json', err);
       });
 
     function renderApps(data) {
       const container = document.getElementById("appGrid");
+      container.innerHTML = '';
       data.forEach(app => {
         const wrapper = document.createElement("div");
         wrapper.className = "app-icon";
+        wrapper.dataset.name = app.name || '';
 
         const iconLink = document.createElement("a");
         iconLink.href = app.mainLink;
@@ -216,7 +286,7 @@
         iconLink.innerHTML = `<img src="${app.icon}" alt="${app.name}" title="${app.note || app.name}" />`;
         wrapper.appendChild(iconLink);
 
-        if (app.subLinks.length > 0) {
+        if (app.subLinks && app.subLinks.length > 0) {
           const badge = document.createElement("span");
           badge.className = "badge";
           badge.innerText = app.subLinks.length;
@@ -264,6 +334,146 @@
     function closeModal() {
       document.getElementById("modal").style.display = "none";
     }
+
+    // --------------------------
+    // Quick-typing filter (không hiển thị search bar)
+    // - Gõ các ký tự trên bàn phím để lọc (case-insensitive).
+    // - Backspace xóa ký tự cuối, Esc xóa toàn bộ.
+    // - Sau 1200ms không gõ sẽ tự reset.
+    // --------------------------
+    let typed = '';
+    let clearTimer = null;
+    const CLEAR_TIMEOUT = 5000; // ms
+    const indicator = document.getElementById('typeIndicator');
+    const typedQueryEl = document.getElementById('typedQuery');
+    let appElements = []; // cached DOM nodes
+
+    function prepareAppElements() {
+      const nodes = document.querySelectorAll('.app-icon');
+      appElements = Array.from(nodes).map(n => ({
+        el: n,
+        name: (n.dataset.name || '').toLowerCase()
+      }));
+    }
+
+    function updateIndicator() {
+      if (!typed) {
+        indicator.classList.remove('visible');
+        typedQueryEl.innerText = '';
+      } else {
+        typedQueryEl.innerText = typed;
+        indicator.classList.add('visible');
+      }
+    }
+
+    function applyFilter() {
+      const q = typed.trim().toLowerCase();
+      if (!q) {
+        // restore
+        appElements.forEach(a => {
+          a.el.classList.remove('dimmed', 'highlight');
+        });
+        return;
+      }
+
+      // match: includes anywhere (case-insensitive)
+      let anyMatch = false;
+      appElements.forEach(a => {
+        if (a.name.includes(q)) {
+          a.el.classList.remove('dimmed');
+          a.el.classList.add('highlight');
+          anyMatch = true;
+        } else {
+          a.el.classList.add('dimmed');
+          a.el.classList.remove('highlight');
+        }
+      });
+
+      // if nothing matches, keep all dimmed? we'll just keep all dimmed cleared so user knows no match
+      if (!anyMatch) {
+        appElements.forEach(a => {
+          a.el.classList.add('dimmed');
+          a.el.classList.remove('highlight');
+        });
+      }
+    }
+
+    function clearTyped() {
+      typed = '';
+      updateIndicator();
+      applyFilter();
+      if (clearTimer) {
+        clearTimeout(clearTimer);
+        clearTimer = null;
+      }
+    }
+
+    function scheduleClear() {
+      if (clearTimer) clearTimeout(clearTimer);
+      clearTimer = setTimeout(() => {
+        clearTyped();
+      }, CLEAR_TIMEOUT);
+    }
+
+    // key handler
+    window.addEventListener('keydown', (e) => {
+      const tag = document.activeElement && document.activeElement.tagName;
+      if (tag === 'INPUT' || tag === 'TEXTAREA' || document.activeElement.isContentEditable) return;
+
+      if (e.key === 'Escape') {
+        clearTyped();
+        return;
+      }
+
+      if (e.key === 'Backspace') {
+        e.preventDefault();
+        if (typed.length > 0) {
+          typed = typed.slice(0, -1);
+          updateIndicator();
+          applyFilter();
+          scheduleClear();
+        }
+        return;
+      }
+
+      if (e.key === 'Enter') {
+        const q = typed.trim().toLowerCase();
+        if (q) {
+          // tìm app đầu tiên match
+          const firstMatch = appElements.find(a => a.name.includes(q));
+          if (firstMatch) {
+            // mở link chính
+            const link = firstMatch.el.querySelector("a");
+            if (link) {
+              window.open(link.href, "_blank");
+            }
+          }
+        }
+        clearTyped(); // reset sau khi Enter
+        return;
+      }
+
+      // ignore non-printable keys
+      if (e.key.length !== 1) return;
+
+      // append char
+      typed += e.key;
+      updateIndicator();
+      applyFilter();
+      scheduleClear();
+    });
+
+    // ensure prepare map after window resize or if apps re-render
+    window.addEventListener('resize', () => {
+      prepareAppElements();
+    });
+
+    // if you dynamically change apps, call prepareAppElements() again
+
+    // when page loads, ensure elements ready (in case fetch was very fast)
+    window.addEventListener('load', () => {
+      setTimeout(() => prepareAppElements(), 120);
+    });
   </script>
 </body>
 

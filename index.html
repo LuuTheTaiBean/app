@@ -339,11 +339,11 @@
     // Quick-typing filter (không hiển thị search bar)
     // - Gõ các ký tự trên bàn phím để lọc (case-insensitive).
     // - Backspace xóa ký tự cuối, Esc xóa toàn bộ.
-    // - Sau 1200ms không gõ sẽ tự reset.
+    // - Sau 8000ms không gõ sẽ tự reset.
     // --------------------------
     let typed = '';
     let clearTimer = null;
-    const CLEAR_TIMEOUT = 5000; // ms
+    const CLEAR_TIMEOUT = 8000; // ms
     const indicator = document.getElementById('typeIndicator');
     const typedQueryEl = document.getElementById('typedQuery');
     let appElements = []; // cached DOM nodes

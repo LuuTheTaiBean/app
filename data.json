@@ -1,7 +1,7 @@
 [
   {
     "name": " Chat GPT",
-    "icon": "./img/CHATGPT.ico",
+    "icon": "./img/Chat GPT.svg",
     "mainLink": "https://chat.openai.com/",
     "note": "Chat GPT: Trợ lý ảo thông minh",
     "subLinks": []
@@ -91,9 +91,10 @@
     "note": "TikTok: Nền tảng video ngắn phổ biến",
     "subLinks": [
       {
-        "name": "Tài tệp tễnh",
-        "url": "https://www.tiktok.com/@taitaptenh?_t=ZS-8yP3r9F3OPh&_r=1&fbclid=IwY2xjawL0PXNleHRuA2FlbQIxMABicmlkETFOU1B4YlpTMzB2dDVMaDFmAR7GLkv2X7qg0wwLlaq8IasMvOKQdjccFFnzV605dOZu6IsoZyyThHbPYRU6lQ_aem_E4yAe99aySvP_vYYCv0MWQ"
-      }
+        "name": "Tài lạnh nhạt",
+        "url": "https://www.tiktok.com/@tailanhnhat?_t=ZS-90kpWLyMO36&_r=1"
+      },
+      {"name": "Tải video Tiktok không logo", "url": "https://tikdown.com/vi"}
     ]
   },
   {
@@ -258,7 +259,7 @@
     "subLinks": [
       {
         "name": "Kho lưu code",
-        "url": "https://drive.google.com/drive/u/1/folders/17bvW_BSFBbObgC_T04KmgcLfiimee6Xy"
+        "url": "https://drive.google.com/drive/folders/1MHifh8AW_oQiLojnuDj1x4n1eCbcofT-"
       }
     ]
   },
@@ -292,7 +293,8 @@
       {
         "name": "Gà Lại Lập Trình",
         "url": "https://github.com/galailaptrinh"
-      }
+      },
+      {"name": "Hdodenhof", "url": "https://github.com/hdodenhof"}
     ]
   },
   {
@@ -369,6 +371,14 @@
       {
         "name": "Dental Care Landing Page",
         "url": "https://www.figma.com/design/rUv1JoH3WoYZ4yF3lVTdaT/Dental-Care-Landing-Page---Shine?node-id=1-2&t=axMlmZAX95jqQz6E-0"
+      },
+      {
+        "name": "Empty Code",
+        "url": "https://www.figma.com/design/coiR70GxkE3iHyWJvw66SS/Empty-code?node-id=0-1&p=f&t=baOqz0oEupEoxNAV-0"
+      },
+      {
+        "name": "Code Syntax Highlighter",
+        "url": "https://www.figma.com/community/plugin/938793197191698232/code-syntax-highlighter"
       }
     ]
   },
@@ -377,7 +387,12 @@
     "icon": "./img/W3schools.ico",
     "mainLink": "https://www.w3schools.com/",
     "note": "W3schools: Tài liệu học lập trình web trực tuyến",
-    "subLinks": []
+    "subLinks": [
+      {
+        "name": "JavaScript Hoisting",
+        "url": "https://www.w3schools.com/js/js_hoisting.asp"
+      }
+    ]
   },
   {
     "name": "Sách mềm",
@@ -424,6 +439,10 @@
       {
         "name": "Type coercion",
         "url": "https://developer.mozilla.org/en-US/docs/Glossary/Type_coercion"
+      },
+      {
+        "name": "Truthy",
+        "url": "https://developer.mozilla.org/en-US/docs/Glossary/Truthy"
       }
     ]
   },
@@ -869,6 +888,10 @@
       {
         "name": "Hoa Cài Mái Tóc",
         "url": "https://hopamchuan.com/song/3122/hoa-cai-mai-toc"
+      },
+      {
+        "name": "Quê Hương",
+        "url": "https://hopamchuan.com/song/156/que-huong/?s=1"
       }
     ]
   },
@@ -1384,10 +1407,145 @@
   },
   {
     "name": " Vite React",
-    "icon": "/img/Vite React.svg",
+    "icon": "./img/Vite React.svg",
     "mainLink": "http://localhost:5173/",
     "note": " chưa có",
     "subLinks": []
+  },
+  {
+    "name": " Qwen",
+    "icon": "./img/Qwen.png",
+    "mainLink": "https://chat.qwen.ai/",
+    "note": " chưa có",
+    "subLinks": []
+  },
+  {
+    "name": "Instagram",
+    "icon": "./img/Instagram.webp",
+    "mainLink": "https://www.instagram.com/",
+    "note": " chưa có",
+    "subLinks": []
+  },
+  {
+    "name": "MAS",
+    "icon": "./img/MAS.ico",
+    "mainLink": "https://massgrave.dev/",
+    "note": " chưa có",
+    "subLinks": []
+  },
+  {
+    "name": "Click Up",
+    "icon": "./img/Click Up.png",
+    "mainLink": "https://clickup.com/",
+    "note": " chưa có",
+    "subLinks": []
+  },
+  {
+    "name": "English Practice Test",
+    "icon": "./img/English Practice Test.png",
+    "mainLink": "https://englishpracticetest.net/",
+    "note": " chưa có",
+    "subLinks": []
+  },
+  {
+    "name": "",
+    "icon": "",
+    "mainLink": "",
+    "note": " chưa có",
+    "subLinks": [
+      {"name": "", "url": ""},
+      {"name": "", "url": ""}
+    ]
+  },
+  {
+    "name": "",
+    "icon": "",
+    "mainLink": "",
+    "note": " chưa có",
+    "subLinks": [
+      {"name": "", "url": ""},
+      {"name": "", "url": ""}
+    ]
+  },
+  {
+    "name": "",
+    "icon": "",
+    "mainLink": "",
+    "note": " chưa có",
+    "subLinks": [
+      {"name": "", "url": ""},
+      {"name": "", "url": ""}
+    ]
+  },
+  {
+    "name": "",
+    "icon": "",
+    "mainLink": "",
+    "note": " chưa có",
+    "subLinks": [
+      {"name": "", "url": ""},
+      {"name": "", "url": ""}
+    ]
+  },
+  {
+    "name": "",
+    "icon": "",
+    "mainLink": "",
+    "note": " chưa có",
+    "subLinks": [
+      {"name": "", "url": ""},
+      {"name": "", "url": ""}
+    ]
+  },
+  {
+    "name": "",
+    "icon": "",
+    "mainLink": "",
+    "note": " chưa có",
+    "subLinks": [
+      {"name": "", "url": ""},
+      {"name": "", "url": ""}
+    ]
+  },
+  {
+    "name": "",
+    "icon": "",
+    "mainLink": "",
+    "note": " chưa có",
+    "subLinks": [
+      {"name": "", "url": ""},
+      {"name": "", "url": ""}
+    ]
+  },
+  {
+    "name": "",
+    "icon": "",
+    "mainLink": "",
+    "note": " chưa có",
+    "subLinks": [
+      {"name": "", "url": ""},
+      {"name": "", "url": ""}
+    ]
+  },
+  {
+    "name": "",
+    "icon": "",
+    "mainLink": "",
+    "note": " chưa có",
+    "subLinks": [
+      {"name": "", "url": ""},
+      {"name": "", "url": ""}
+    ]
+  },
+  {
+    "name": "",
+    "icon": "",
+    "mainLink": "",
+    "note": " chưa có",
+    "subLinks": [
+      {"name": "", "url": ""},
+      {"name": "", "url": ""}
+    ]
   },
   {
     "name": "",

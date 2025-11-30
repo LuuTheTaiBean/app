@@ -85,7 +85,7 @@
     ]
   },
   {
-    "name": "TikTok",
+    "name": " TikTok",
     "icon": "./img/TIKTOK.ico",
     "mainLink": "https://www.tiktok.com",
     "note": "TikTok: Nền tảng video ngắn phổ biến",
@@ -116,68 +116,8 @@
         "url": "https://www.youtube.com/playlist?list=LL"
       },
       {
-        "name": "Dũng Mori-N5 Từ vựng",
-        "url": "https://www.youtube.com/playlist?list=PLHTexYj6KLSbVL3j-AInZUGSjDymj2oc7"
-      },
-      {
-        "name": "Tuấn tiền Tỉ-Đàm Đạo Lịch Sử",
-        "url": "https://www.youtube.com/playlist?list=PLCt4nt291lLVfIQp1T63PticcJQlpbuhm"
-      },
-      {
-        "name": "THẦY QUANG-Toán 11 Cánh Diều",
-        "url": "https://www.youtube.com/playlist?list=PLCd8j6ZYo0lZQORsvi6INVSqDdNNNQRST"
-      },
-      {
-        "name": "THẦY QUANG-Toán 08 Cánh Diều",
-        "url": "https://www.youtube.com/playlist?list=PLCd8j6ZYo0lZTVJ_6GWxKiSU-eywgoHjY"
-      },
-      {
-        "name": "THẦY QUANG-Toán 10 Cánh Diều",
-        "url": "https://www.youtube.com/playlist?list=PLCd8j6ZYo0laruhgRmxC8zrfd5PY6Ne4u"
-      },
-      {
-        "name": "Dũng Mori-N5 Ngữ pháp",
-        "url": "https://www.youtube.com/playlist?list=PLHTexYj6KLSYvWRheFW7-PJOuoGf32CTm"
-      },
-      {
-        "name": "Gà Excel-101 Bài Tập Thực Hành Excel",
-        "url": "https://www.youtube.com/playlist?list=PLApuTT4CRzA8AmXsFQkLKW5DpMrEUn_h9"
-      },
-      {
-        "name": "THẦY QUANG-Toán 10 Kết Nối Tri Thức",
-        "url": "https://www.youtube.com/playlist?list=PLCd8j6ZYo0lYG_l7ZNJQEcEyhwtna1Kgf"
-      },
-      {
-        "name": "Gà Lại Lập Trình-Python",
-        "url": "https://www.youtube.com/playlist?list=PLPt6-BtUI22oGqQwAEF6xwrFL6aOjtHWl"
-      },
-      {
-        "name": "Nhạc Cụ BK-NHẠC LÝ CƠ BẢN",
-        "url": "https://www.youtube.com/playlist?list=PLuQPCaSUXvyEfaoU_j13rX34Z-5pXYdUw"
-      },
-      {
-        "name": "Gà Lại Lập Trình-JavaScript",
-        "url": "https://www.youtube.com/playlist?list=PLPt6-BtUI22pYwpfmkP4EuJkf6GRe63KU"
-      },
-      {
-        "name": "Gà Lại Lập Trình-HTML, CSS",
-        "url": "https://www.youtube.com/playlist?list=PLPt6-BtUI22oveeGAyckbAXRSmTBGLZP4"
-      },
-      {
-        "name": "Gà Lại Lập Trình-Bootstrap 5",
-        "url": "https://www.youtube.com/playlist?list=PLPt6-BtUI22oRD2jqJVG-dCxzlsb5sJvy"
-      },
-      {
-        "name": "Gà Lại Lập Trình-Lập trình Android",
-        "url": "https://www.youtube.com/playlist?list=PLPt6-BtUI22qf3KE1V1PyAm1v8M2qqwL5"
-      },
-      {
-        "name": "Hưng Del-AutoCAD",
-        "url": "https://www.youtube.com/playlist?list=PLq1fzy8kh1ALAtpSyUTFUT71CAYgGoCkI"
-      },
-      {
-        "name": "Tuấn tiền Tỉ-Tổ Buôn 247",
-        "url": "https://www.youtube.com/playlist?list=PLCt4nt291lLWQynJVIY6VQ6CTyuGB7Aph"
+        "name": " Playlists",
+        "url": "https://www.youtube.com/feed/playlists"
       }
     ]
   },
@@ -238,18 +178,23 @@
     "subLinks": []
   },
   {
-    "name": "Meet",
+    "name": " Meet",
     "icon": "./img/GoogleMeet.png",
     "mainLink": "https://meet.google.com",
     "note": "Meet: Ứng dụng họp trực tuyến",
     "subLinks": []
   },
   {
-    "name": "Form",
+    "name": " Form",
     "icon": "./img/GoogleForm.png",
     "mainLink": "https://docs.google.com/forms",
     "note": "Form: Công cụ tạo biểu mẫu trực tuyến",
-    "subLinks": []
+    "subLinks": [
+      {
+        "name": "Đăng ký học lập trình với The Tai E-MIT",
+        "url": "https://docs.google.com/forms/d/e/1FAIpQLScfC7i6ILWsWOzYkhwKEcdkVAUsmtgtZdCQeZ5AXtLAHKZWHA/viewform"
+      }
+    ]
   },
   {
     "name": " Drive",
@@ -294,7 +239,9 @@
         "name": "Gà Lại Lập Trình",
         "url": "https://github.com/galailaptrinh"
       },
-      {"name": "Hdodenhof", "url": "https://github.com/hdodenhof"}
+      {"name": "Hdodenhof", "url": "https://github.com/hdodenhof"},
+      {"name": "Haryphamdev", "url": "https://github.com/haryphamdev"},
+      {"name": " LuuTheTaiBean", "url": "https://github.com/LuuTheTaiBean"}
     ]
   },
   {
@@ -423,7 +370,7 @@
     "subLinks": []
   },
   {
-    "name": "MDN",
+    "name": " MDN",
     "icon": "./img/MDN.ico",
     "mainLink": "https://developer.mozilla.org/",
     "note": "MDN: Tài liệu phát triển web toàn diện",
@@ -461,7 +408,7 @@
     "subLinks": []
   },
   {
-    "name": "Bootstrap",
+    "name": " Bootstrap",
     "icon": "./img/Bootstrap.png",
     "mainLink": "https://getbootstrap.com/",
     "note": "Bootstrap: Framework CSS phổ biến",
@@ -503,7 +450,7 @@
     "subLinks": []
   },
   {
-    "name": "Oxford Dictionary",
+    "name": " Oxford Dictionary",
     "icon": "./img/Oxford Dictionary.ico",
     "mainLink": "https://www.oxfordlearnersdictionaries.com/",
     "note": "Oxford Dictionary: Từ điển Anh-Anh uy tín",
@@ -592,7 +539,7 @@
     "subLinks": []
   },
   {
-    "name": "Messenger",
+    "name": " Messenger",
     "icon": "./img/Messenger.svg",
     "mainLink": "https://www.messenger.com",
     "note": "Messenger: Ứng dụng nhắn tin của Facebook",
@@ -731,7 +678,7 @@
     "subLinks": []
   },
   {
-    "name": "Firebase",
+    "name": " Firebase",
     "icon": "./img/Firebase.png",
     "mainLink": "https://firebase.google.com/",
     "note": "Firebase: Nền tảng phát triển ứng dụng di động và web",
@@ -892,6 +839,14 @@
       {
         "name": "Quê Hương",
         "url": "https://hopamchuan.com/song/156/que-huong/?s=1"
+      },
+      {
+        "name": "Để Nhớ Một Thời Ta Đã Yêu",
+        "url": "https://hopamchuan.com/song/1777/de-nho-mot-thoi-ta-da-yeu/?s=1"
+      },
+      {
+        "name": "Lâu Đài Tình Ái",
+        "url": "https://hopamchuan.com/song/108/lau-dai-tinh-ai/?s=1"
       }
     ]
   },
@@ -1448,63 +1403,50 @@
     "subLinks": []
   },
   {
-    "name": "",
-    "icon": "",
-    "mainLink": "",
+    "name": "Gamma",
+    "icon": "./img/Gamma.ico",
+    "mainLink": "https://gamma.app/",
     "note": " chưa có",
-    "subLinks": [
-      {"name": "", "url": ""},
-      {"name": "", "url": ""}
-    ]
+    "subLinks": []
   },
   {
-    "name": "",
-    "icon": "",
-    "mainLink": "",
+    "name": "Datpmt English",
+    "icon": "./img/English Writing.png",
+    "mainLink": "https://english.datpmt.com/",
     "note": " chưa có",
-    "subLinks": [
-      {"name": "", "url": ""},
-      {"name": "", "url": ""}
-    ]
+    "subLinks": []
   },
   {
-    "name": "",
-    "icon": "",
-    "mainLink": "",
+    "name": "Highlands Coffee",
+    "icon": "./img/Highlands Coffee.png",
+    "mainLink": "https://www.highlandscoffee.com.vn/",
     "note": " chưa có",
-    "subLinks": [
-      {"name": "", "url": ""},
-      {"name": "", "url": ""}
-    ]
+    "subLinks": []
   },
   {
-    "name": "",
-    "icon": "",
-    "mainLink": "",
+    "name": "Indeed",
+    "icon": "./img/indeed.ico",
+    "mainLink": "https://vn.indeed.com/",
     "note": " chưa có",
-    "subLinks": [
-      {"name": "", "url": ""},
-      {"name": "", "url": ""}
-    ]
+    "subLinks": []
   },
   {
-    "name": "",
-    "icon": "",
-    "mainLink": "",
+    "name": "Typescript Lang",
+    "icon": "./img/Typescript Lang.png",
+    "mainLink": "https://www.typescriptlang.org/",
     "note": " chưa có",
-    "subLinks": [
-      {"name": "", "url": ""},
-      {"name": "", "url": ""}
-    ]
+    "subLinks": []
   },
   {
-    "name": "",
-    "icon": "",
-    "mainLink": "",
+    "name": "CDN js",
+    "icon": "./img/CDN js.webp",
+    "mainLink": "https://cdnjs.com/",
     "note": " chưa có",
     "subLinks": [
-      {"name": "", "url": ""},
-      {"name": "", "url": ""}
+      {
+        "name": "Font Awesome",
+        "url": "https://cdnjs.com/libraries/font-awesome"
+      }
     ]
   },
   {

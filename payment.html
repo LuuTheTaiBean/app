@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="vi">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Gia hạn tài khoản</title>
+
+    <!-- Bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <style>
+        body {
+            background: radial-gradient(circle at top, #1f4037, #0f2027);
+            font-family: 'Segoe UI', sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+
+        .payment-card {
+            width: 500px;
+            padding: 35px;
+            border-radius: 25px;
+            background: rgba(255, 255, 255, 0.08);
+            backdrop-filter: blur(20px);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            color: white;
+            box-shadow: 0 0 40px rgba(0, 198, 255, 0.25);
+            animation: fadeIn 0.6s ease-in-out;
+        }
+
+        .title-lock {
+            font-weight: 700;
+            font-size: 22px;
+        }
+
+        .price {
+            font-size: 20px;
+            font-weight: bold;
+            color: #00e5ff;
+        }
+
+        .bank-box {
+            background: rgba(255, 255, 255, 0.06);
+            padding: 15px;
+            border-radius: 15px;
+            margin-top: 10px;
+        }
+
+        .bank-box p {
+            margin: 6px 0;
+            font-size: 14px;
+        }
+
+        .content-highlight {
+            color: #00e5ff;
+            font-weight: 600;
+        }
+
+        #qrImage {
+            margin-top: 15px;
+            border-radius: 20px;
+            border: 2px solid rgba(0, 198, 255, 0.5);
+            padding: 8px;
+            background: white;
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(15px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @media (max-width: 500px) {
+            .payment-card {
+                width: 95%;
+                padding: 25px;
+            }
+        }
+
+        #qrImage {
+            margin-top: 15px;
+            width: 300px;
+            /* chỉnh kích thước ở đây */
+            max-width: 100%;
+            border-radius: 20px;
+            border: 2px solid rgba(0, 198, 255, 0.5);
+            padding: 8px;
+            background: white;
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .processing-text {
+            margin-top: 20px;
+            /* tăng khoảng cách khỏi ảnh QR */
+            font-size: 14px;
+            color: #d0faff;
+            opacity: 0.9;
+            font-style: italic;
+            text-align: center;
+        }
+    </style>
+</head>
+
+<body class="d-flex justify-content-center align-items-center vh-100">
+
+    <div class="payment-card text-center">
+
+        <div class="title-lock mb-2">🔒 Tài khoản đã hết hạn</div>
+
+        <p>
+            Vui lòng quét mã QR bên dưới và chuyển khoản <br>
+            <span class="price">10.000đ</span>
+            để tiếp tục sử dụng dịch vụ trong 1 tháng.
+        </p>
+
+        <div class="bank-box text-start">
+            <!-- <p><strong>Ngân hàng:</strong> Techcombank</p> -->
+            <!-- <p><strong>Số tài khoản:</strong> 982459626789</p> -->
+            <p>
+                <strong>Nội dung chuyển khoản:</strong>
+                <span id="userEmail" class="content-highlight"></span>
+            </p>
+        </div>
+
+        <p class="mt-3 mb-1"><strong>Quét mã QR để thanh toán</strong></p>
+
+        <img id="qrImage" class="img-fluid" />
+        <p class="processing-text">
+            ⏳ Quét mã QR và và chờ đơi hệ thống xác nhận thanh toán. <br>
+        </p>
+    </div>
+
+    <script type="module">
+        import { initializeApp } from "https://www.gstatic.com/firebasejs/10.12.0/firebase-app.js";
+        import { getAuth, onAuthStateChanged } from "https://www.gstatic.com/firebasejs/10.12.0/firebase-auth.js";
+        // import { getFirestore, doc, updateDoc } from "https://www.gstatic.com/firebasejs/10.12.0/firebase-firestore.js";
+        // import { getFirestore } from "https://www.gstatic.com/firebasejs/10.12.0/firebase-firestore.js";
+        import { getFirestore, doc, getDoc } from "https://www.gstatic.com/firebasejs/10.12.0/firebase-firestore.js";
+        const firebaseConfig = {
+            apiKey: "AIzaSyCoDmEDEuEQjmBAFnIA6_j-n0jpWi0Kr9Q",
+            authDomain: "tai-s-app.firebaseapp.com",
+            projectId: "tai-s-app",
+            storageBucket: "tai-s-app.firebasestorage.app",
+            messagingSenderId: "993650714379",
+            appId: "1:993650714379:web:01711d0ce352cc5de7240e"
+        };
+
+        const app = initializeApp(firebaseConfig);
+        const auth = getAuth(app);
+        const db = getFirestore(app);
+
+        let currentUser = null;
+
+        // Kiểm tra đăng nhập
+        onAuthStateChanged(auth, async (user) => {
+            if (!user) {
+                window.location.href = "login.html";
+                return;
+            }
+            const userDoc = await getDoc(doc(db, "users", user.uid));
+
+            if (userDoc.exists()) {
+                const data = userDoc.data();
+
+                if (data.isPaid) {
+                    window.location.href = "app.html";
+                    return;
+                }
+            }
+
+            currentUser = user;
+            // Lấy tháng và năm hiện tại
+            const now = new Date();
+            const month = String(now.getMonth() + 1).padStart(2, "0");
+            const year = now.getFullYear();
+
+            // Tạo nội dung: email-tháng-năm
+            const paymentContent = `${user.email} ${month} ${year}`;
+
+            // Hiển thị ra giao diện
+            document.getElementById("userEmail").innerText = paymentContent;
+
+            // ===== TẠO QR VIETQR =====
+            const bankCode = "TCB"; // Techcombank
+            const accountNumber = "982459626789";
+            // Thay đổi số tiền tại đây
+            const amount = 10000;
+
+            const qrUrl = `https://img.vietqr.io/image/${bankCode}-${accountNumber}-compact.png?amount=${amount}&addInfo=${encodeURIComponent(paymentContent)}`;
+
+            document.getElementById("qrImage").src = qrUrl;
+        });
+
+        // Xác nhận thanh toán
+        // window.confirmPayment = async function () {
+        //     if (!currentUser) return;
+
+        //     try {
+        //         await updateDoc(doc(db, "users", currentUser.uid), {
+        //             isPaid: true
+        //         });
+
+        //         // alert("Thanh toán thành công!");
+        //         window.location.href = "app.html";
+
+        //     } catch (error) {
+        //         alert("Có lỗi xảy ra!");
+        //         console.error(error);
+        //     }
+        // }
+    </script>
+
+</body>
+
+</html>

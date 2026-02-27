@@ -1,0 +1,1357 @@
+<!DOCTYPE html>
+<html lang="vi">
+
+<head>
+  <meta charset="UTF-8" />
+  <title>Tài's Computer</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="shortcut icon" href="./img/E-MIT.svg" type="image/x-icon">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <style>
+    body {
+      background-color: #0f0f0f;
+      color: #fff;
+      padding: 30px;
+      margin-top: 30px;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      transition: background-color 0.3s, color 0.3s;
+    }
+
+    /* Ẩn scrollbar toàn trang */
+    html,
+    body {
+      scrollbar-width: none;
+      /* Firefox */
+      -ms-overflow-style: none;
+      /* IE 10+ */
+    }
+
+    html::-webkit-scrollbar,
+    body::-webkit-scrollbar {
+      display: none;
+      /* Chrome, Safari, Edge */
+    }
+
+    .app-container {
+      display: grid;
+      grid-template-columns: repeat(15, 1fr);
+      gap: 16px;
+      justify-items: center;
+    }
+
+    .app-icon {
+      text-align: center;
+      position: relative;
+      transition: opacity 0.25s, transform 0.18s;
+      opacity: 1;
+    }
+
+    .app-icon.dimmed {
+      opacity: 0.18;
+      transform: scale(0.98);
+      pointer-events: none;
+    }
+
+    .app-icon.highlight {
+      transform: scale(1.06);
+      z-index: 2;
+    }
+
+    .app-icon img {
+      width: 48px;
+      height: 48px;
+      border-radius: 12px;
+      background-color: #fff;
+      padding: 5px;
+      transition: transform 0.2s;
+      box-shadow: 0 2px 6px rgba(0, 0, 0, 0.3);
+
+    }
+
+    .app-icon:hover img {
+      transform: scale(1.1);
+    }
+
+    .app-label {
+      font-size: 0.75rem;
+      margin-top: 6px;
+      color: inherit;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      max-width: 60px;
+      cursor: default;
+    }
+
+    .badge {
+      position: absolute;
+      top: -6px;
+      right: -15px;
+      background-color: red;
+      color: #fff;
+      border-radius: 999px;
+      font-size: 0.75rem;
+      font-weight: bold;
+      cursor: pointer;
+      padding: 5px;
+      min-width: 22px;
+      text-align: center;
+    }
+
+    .modal-links {
+      position: fixed;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      background: #fff;
+      color: #333;
+      padding: 20px;
+      border-radius: 10px;
+      width: 30vw;
+      max-height: 70vh;
+      overflow-y: auto;
+      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+      z-index: 1000;
+    }
+
+    .modal-links h5 {
+      margin-bottom: 15px;
+    }
+
+    .modal-links a {
+      display: block;
+      margin: 6px 0;
+      text-decoration: none;
+      color: #007bff;
+    }
+
+    .modal-links a:hover {
+      text-decoration: underline;
+    }
+
+    .overlay {
+      position: fixed;
+      inset: 0;
+      background: rgba(0, 0, 0, 0.6);
+      z-index: 998;
+    }
+
+    .close-btn {
+      position: absolute;
+      top: 8px;
+      right: 12px;
+      font-size: 1.2rem;
+      cursor: pointer;
+      color: #888;
+    }
+
+    .close-btn:hover {
+      color: #000;
+    }
+
+    @media (max-width: 1400px) {
+      .app-container {
+        grid-template-columns: repeat(auto-fit, minmax(50px, 1fr));
+      }
+    }
+
+    /* 🌞 LIGHT MODE */
+    body.light-mode {
+      background-color: #ffcc96;
+      color: #222;
+    }
+
+    body.light-mode .app-icon img {
+      background-color: #fff;
+      box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
+    }
+
+    body.light-mode .modal-links {
+      background: #fff;
+      color: #222;
+    }
+
+    /* Toggle button */
+    .theme-toggle {
+      position: fixed;
+      top: 10px;
+      right: 20px;
+      background: #fce5cd;
+      border: none;
+      border-radius: 20px;
+      padding: 6px 12px;
+      cursor: pointer;
+      box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
+      font-size: 0.9rem;
+      z-index: 1100;
+    }
+
+    body.light-mode .theme-toggle {
+      background: #0f0f0f;
+      color: #fff;
+    }
+
+    /* tiny typing indicator (very subtle, not a search bar) */
+    .type-indicator {
+      position: fixed;
+      bottom: 18px;
+      left: 50%;
+      transform: translateX(-50%);
+      background: rgba(255, 255, 255, 0.06);
+      color: #fff;
+      padding: 6px 12px;
+      border-radius: 999px;
+      backdrop-filter: blur(4px);
+      font-size: 0.9rem;
+      letter-spacing: 0.6px;
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      z-index: 1200;
+      transition: opacity 0.2s, transform 0.2s;
+      opacity: 0;
+      pointer-events: none;
+    }
+
+    .type-indicator.visible {
+      opacity: 1;
+    }
+
+    .type-indicator .query {
+      font-weight: 600;
+      text-transform: none;
+    }
+
+    .type-indicator .hint {
+      font-size: 0.75rem;
+      opacity: 0.7;
+    }
+
+    body.light-mode .type-indicator {
+      color: #111;
+      background: rgba(16, 16, 16, 0.06);
+    }
+
+    /* ===== TOP ACTION BAR ===== */
+
+    .top-actions {
+      position: fixed;
+      top: 18px;
+      left: 50%;
+      transform: translateX(-50%);
+      display: flex;
+      gap: 14px;
+      align-items: center;
+      z-index: 2000;
+    }
+
+    /* Base button */
+    .action-btn {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      padding: 8px 16px;
+      border-radius: 999px;
+      border: 1px solid rgba(255, 255, 255, 0.15);
+      background: rgba(255, 255, 255, 0.06);
+      color: #fff;
+      text-decoration: none;
+      font-size: 0.85rem;
+      font-weight: 500;
+      backdrop-filter: blur(6px);
+      transition: all 0.25s ease;
+      cursor: pointer;
+    }
+
+    .action-btn:hover {
+      transform: translateY(-2px);
+      background: rgba(255, 255, 255, 0.12);
+      box-shadow: 0 6px 16px rgba(0, 0, 0, 0.35);
+    }
+
+    /* Register button */
+    .register-btn {
+      border-color: rgba(0, 255, 200, 0.4);
+    }
+
+    .register-btn:hover {
+      background: rgba(0, 255, 200, 0.15);
+    }
+
+    /* Logout button */
+    .logout-btn {
+      border-color: rgba(255, 70, 70, 0.4);
+    }
+
+    .logout-btn:hover {
+      background: rgba(255, 70, 70, 0.15);
+    }
+
+    /* Theme circle button */
+    .theme-switch {
+      width: 38px;
+      height: 38px;
+      border-radius: 50%;
+      border: 1px solid rgba(255, 255, 255, 0.2);
+      background: rgba(255, 255, 255, 0.06);
+      color: #fff;
+      font-size: 0.9rem;
+      cursor: pointer;
+      backdrop-filter: blur(6px);
+      transition: all 0.25s ease;
+    }
+
+    .theme-switch:hover {
+      transform: rotate(20deg) scale(1.05);
+      background: rgba(255, 255, 255, 0.15);
+    }
+
+    .action-btn i {
+      font-size: 0.9rem;
+    }
+
+    .theme-switch i {
+      font-size: 0.85rem;
+    }
+
+    /* ===== NAVBAR FIXED TOP ===== */
+
+    .main-navbar {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 60px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 0 28px;
+      background: rgba(15, 15, 15, 0.85);
+      backdrop-filter: blur(12px);
+      border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+      z-index: 3000;
+    }
+
+
+
+    .nav-right {
+      display: flex;
+      gap: 12px;
+    }
+
+    /* icon buttons */
+    .nav-btn {
+      width: 40px;
+      height: 40px;
+      border-radius: 10px;
+      border: 1px solid rgba(255, 255, 255, 0.15);
+      background: rgba(255, 255, 255, 0.05);
+      color: #fff;
+      cursor: pointer;
+      transition: all 0.25s ease;
+    }
+
+    .nav-btn:hover {
+      background: rgba(255, 255, 255, 0.15);
+      transform: translateY(-2px);
+    }
+
+    .nav-btn i {
+      font-size: 0.9rem;
+    }
+
+    /* tránh bị navbar che nội dung */
+    body {
+      padding-top: 40px;
+    }
+
+    /* light mode navbar */
+    body.light-mode .main-navbar {
+      background: rgba(255, 255, 255, 0.85);
+      border-bottom: 1px solid rgba(0, 0, 0, 0.08);
+    }
+
+    body.light-mode .nav-btn {
+      color: #111;
+    }
+
+    .search-icon {
+      font-size: 0.8rem;
+      opacity: 0.6;
+    }
+
+    /* ===== NAV SEARCH ===== */
+    .nav-search {
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      padding: 6px 12px;
+      border-radius: 999px;
+      background: rgba(255, 255, 255, 0.06);
+      border: 1px solid rgba(255, 255, 255, 0.15);
+      font-size: 0.85rem;
+      min-width: 40px;
+      transition: all 0.25s ease;
+      opacity: 1;
+    }
+
+    .nav-search.visible {
+      opacity: 1;
+    }
+
+    .nav-search i {
+      font-size: 0.8rem;
+      opacity: 0.7;
+    }
+
+    .nav-search span {
+      max-width: 0;
+      overflow: hidden;
+      transition: max-width 0.3s ease;
+    }
+
+    .nav-search.visible span {
+      max-width: 200px;
+    }
+
+    /* SEARCH WRAPPER */
+    .nav-search-wrapper {
+      position: relative;
+      display: flex;
+      align-items: center;
+    }
+
+    /* Hidden search box */
+    .nav-search-box {
+      pointer-events: none;
+      position: absolute;
+      right: 0;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      padding: 6px 14px;
+      border-radius: 999px;
+      background: rgba(255, 255, 255, 0.08);
+      border: 1px solid rgba(255, 255, 255, 0.2);
+      backdrop-filter: blur(10px);
+      width: 0;
+      overflow: hidden;
+      opacity: 0;
+      transition: all 0.3s ease;
+    }
+
+    /* Active state */
+    .nav-search-box.active {
+      width: 260px;
+      opacity: 1;
+      pointer-events: auto;
+    }
+
+    /* Input */
+    .nav-search-box input {
+      background: transparent;
+      border: none;
+      outline: none;
+      color: white;
+      width: 100%;
+      font-size: 0.85rem;
+    }
+
+    /* Close icon */
+    .close-search {
+      cursor: pointer;
+      opacity: 0.7;
+    }
+
+    .close-search:hover {
+      opacity: 1;
+    }
+
+    /* Light mode */
+    body.light-mode .nav-search-box input {
+      color: #111;
+    }
+
+    .user-badge {
+      background-color: #00c853 !important;
+
+      /* giữ nguyên size của .badge */
+      top: -6px;
+      left: -15px;
+      right: auto;
+
+      opacity: 0;
+      transform: scale(0.85);
+      transition: 0.2s ease;
+    }
+
+    .app-icon:hover .user-badge {
+      opacity: 1;
+      transform: scale(1);
+    }
+
+    .user-link-form {
+      background: #f8f9fa;
+      border-radius: 12px;
+    }
+
+    body.dark-mode .user-link-form {
+      background: #1e1e1e;
+    }
+
+    .user-links-list .link-item {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 8px 10px;
+      border-radius: 8px;
+      background: #f1f1f1;
+      margin-bottom: 6px;
+      transition: 0.2s;
+    }
+
+    .user-links-list .link-item:hover {
+      background: #e0e0e0;
+    }
+
+    .link-actions i {
+      cursor: pointer;
+      margin-left: 10px;
+      font-size: 0.9rem;
+    }
+
+    .link-actions .edit {
+      color: #007bff;
+    }
+
+    .link-actions .delete {
+      color: #dc3545;
+    }
+
+    .user-modal {
+      display: flex;
+      flex-direction: column;
+      gap: 14px;
+    }
+
+    .user-modal-title {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      font-weight: 600;
+      font-size: 0.95rem;
+    }
+
+    .user-input-group {
+      display: flex;
+      gap: 8px;
+    }
+
+    .user-input-group input {
+      flex: 1;
+      border: 1px solid #ddd;
+      border-radius: 8px;
+      padding: 6px 10px;
+      font-size: 0.85rem;
+      outline: none;
+    }
+
+    .user-input-group button {
+      width: 36px;
+      border: none;
+      border-radius: 8px;
+      background: #00c853;
+      color: white;
+      cursor: pointer;
+      transition: 0.2s;
+    }
+
+    .user-input-group button:hover {
+      transform: scale(1.05);
+    }
+
+    .user-links-list {
+      display: flex;
+      flex-direction: column;
+      gap: 6px;
+    }
+
+    .bottom-menu {
+      position: fixed;
+      bottom: 5px;
+      left: 50%;
+      transform: translateX(-50%);
+      display: flex;
+      gap: 14px;
+      background: rgba(0, 0, 0, 0.7);
+      padding: 10px 20px;
+      border-radius: 30px;
+      backdrop-filter: blur(8px);
+      z-index: 2500;
+    }
+
+    .side-menu {
+      position: fixed;
+      top: 60px;
+      right: -320px;
+      width: 300px;
+      height: calc(100vh - 60px);
+      background: rgba(20, 20, 20, 0.95);
+      backdrop-filter: blur(12px);
+      border-left: 1px solid rgba(255, 255, 255, 0.1);
+      transition: right 0.3s ease;
+      z-index: 2800;
+      padding: 20px;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .side-menu.active {
+      right: 0;
+    }
+
+    .side-menu-header {
+      font-weight: 600;
+      margin-bottom: 15px;
+    }
+
+    .side-menu-apps {
+      flex: 1;
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      /* luôn 4 app 1 hàng */
+      gap: 16px;
+      overflow-y: auto;
+      padding-top: 10px;
+      justify-items: center;
+    }
+
+    @media (max-width: 1200px) {
+      .side-menu-apps {
+        grid-template-columns: repeat(3, 1fr);
+      }
+    }
+
+    .side-menu-apps {
+      overflow-y: auto;
+
+      /* Ẩn scrollbar Chrome, Edge, Safari */
+      scrollbar-width: none;
+      /* Firefox */
+      -ms-overflow-style: none;
+      /* IE 10+ */
+    }
+
+    .side-menu-apps::-webkit-scrollbar {
+      display: none;
+      /* Chrome, Safari */
+    }
+
+
+    .side-menu {
+      overflow: hidden;
+    }
+
+    .side-menu-apps img {
+      width: 42px;
+      height: 42px;
+      border-radius: 10px;
+      cursor: grab;
+    }
+  </style>
+
+
+</head>
+
+<body>
+  <nav class="main-navbar">
+    <div class="nav-left">
+      <span class="brand">
+        <img src="./img/E-MIT.svg" alt="">
+      </span>
+    </div>
+
+    <div class="nav-right">
+
+      <!-- SEARCH -->
+      <div class="nav-search-wrapper">
+
+        <button class="nav-btn search-btn" onclick="toggleSearch()">
+          <i class="fa-solid fa-magnifying-glass"></i>
+        </button>
+
+        <div class="nav-search-box" id="navSearchBox">
+          <i class="fa-solid fa-magnifying-glass"></i>
+          <input type="text" id="navSearchInput" placeholder="Tìm ứng dụng..." />
+          <i class="fa-solid fa-xmark close-search" onclick="toggleSearch()"></i>
+        </div>
+
+      </div>
+
+      <button class="nav-btn logout-btn" onclick="logout()">
+        <i class="fa-solid fa-right-from-bracket"></i>
+      </button>
+
+      <button class="nav-btn theme-btn" onclick="toggleTheme()">
+        <i class="fa-solid fa-moon"></i>
+      </button>
+      <button class="nav-btn menu-btn" onclick="toggleAppMenu()">
+        <i class="fa-solid fa-bars"></i>
+      </button>
+    </div>
+  </nav>
+  <div id="sideMenu" class="side-menu">
+    <div class="side-menu-header">
+      <span>Ứng dụng ít dùng hãy kéo vào đây</span>
+    </div>
+    <div id="sideMenuApps" class="side-menu-apps"></div>
+  </div>
+  <div class="app-container" id="appGrid"></div>
+  <div id="bottomMenu" class="bottom-menu"></div>
+
+  <!-- Modal -->
+  <div id="modal" style="display:none;">
+    <div class="overlay" onclick="closeModal()"></div>
+    <div class="modal-links" id="modalContent">
+      <span class="close-btn" onclick="closeModal()">&times;</span>
+    </div>
+  </div>
+
+  <script type="module">
+    import { initializeApp } from "https://www.gstatic.com/firebasejs/10.12.0/firebase-app.js";
+    import { getAuth, onAuthStateChanged, signOut }
+      from "https://www.gstatic.com/firebasejs/10.12.0/firebase-auth.js";
+    import { getFirestore, doc, getDoc } from "https://www.gstatic.com/firebasejs/10.12.0/firebase-firestore.js";
+    import { updateDoc, setDoc } from
+      "https://www.gstatic.com/firebasejs/10.12.0/firebase-firestore.js";
+    import { collection, getDocs } from
+      "https://www.gstatic.com/firebasejs/10.12.0/firebase-firestore.js";
+    const firebaseConfig = {
+      apiKey: "AIzaSyCoDmEDEuEQjmBAFnIA6_j-n0jpWi0Kr9Q",
+      authDomain: "tai-s-app.firebaseapp.com",
+      projectId: "tai-s-app",
+    };
+
+    const app = initializeApp(firebaseConfig);
+    const auth = getAuth(app);
+    const db = getFirestore(app);
+
+    window.auth = auth;
+    window.db = db;
+    window.getDoc = getDoc;
+    window.doc = doc;
+    window.getDocs = getDocs;
+    window.collection = collection;
+
+    window.saveLayout = async function () {
+      const user = auth.currentUser;
+      if (!user) return;
+
+      const mainApps = Array.from(document.querySelectorAll("#appGrid .app-icon"))
+        .map(el => el.dataset.name);
+
+      const menuApps = Array.from(document.querySelectorAll("#sideMenuApps .app-icon"))
+        .map(el => el.dataset.name);
+
+      const ref = doc(db, "users", user.uid);
+
+      await updateDoc(ref, {
+        layout: {
+          main: mainApps,
+          menu: menuApps
+        }
+      });
+    };
+    window.auth = auth;
+    window.db = db;
+    window.getDocs = getDocs;
+    window.collection = collection;
+    onAuthStateChanged(auth, async (user) => {
+      if (!user) {
+        window.location.href = "login.html";
+        return;
+      }
+
+      const docSnap = await getDoc(doc(db, "users", user.uid));
+
+      if (!docSnap.exists()) {
+        window.location.href = "login.html";
+        return;
+      }
+
+      const data = docSnap.data();
+
+      // 🔒 Nếu chưa thanh toán → khóa
+      if (!data.isPaid) {
+        window.location.href = "payment.html";
+        return;
+      }
+      // ✅ Load apps sau khi auth xong
+      fetch('data.json')
+        .then(res => res.json())
+        .then(async (appData) => {
+          appData.sort((a, b) => a.name.localeCompare(b.name));
+          appsData = appData;
+          await renderSmartApps(appData);
+          prepareAppElements();
+        })
+        .catch(err => {
+          console.error('Không load được data.json', err);
+        });
+      // ✅ Nếu đã thanh toán → cho phép dùng app
+      // console.log("Đã thanh toán, được truy cập");
+    });
+    window.saveUserLink = async function (appName) {
+      const user = auth.currentUser;
+      if (!user) return;
+
+      const name = document.getElementById("linkName").value.trim();
+      const url = document.getElementById("linkUrl").value.trim();
+
+      if (!name || !url) {
+        alert("Vui lòng nhập đủ thông tin");
+        return;
+      }
+
+      const ref = doc(db, "users", user.uid, "savedLinks", appName);
+
+      const snap = await getDoc(ref);
+
+      let links = [];
+
+      if (snap.exists()) {
+        links = snap.data().links || [];
+      }
+
+      links.push({ name, url });
+
+      await setDoc(ref, { links });
+
+      document.getElementById("linkName").value = "";
+      document.getElementById("linkUrl").value = "";
+
+      loadUserLinks(appName);
+    }
+    window.loadUserLinks = async function (appName) {
+      const user = auth.currentUser;
+      if (!user) return;
+
+      const ref = doc(db, "users", user.uid, "savedLinks", appName);
+      const snap = await getDoc(ref);
+
+      const list = document.getElementById("userLinksList");
+      list.innerHTML = "";
+
+      if (!snap.exists()) {
+        updateUserBadge(appName, 0);
+        return;
+      }
+
+      const links = snap.data().links || [];
+
+      links.forEach((link, index) => {
+        const item = document.createElement("div");
+        item.className = "link-item";
+
+        item.innerHTML = `
+      <a href="${link.url}" target="_blank">${link.name}</a>
+      <div class="link-actions">
+        <i class="fa-solid fa-pen edit" onclick="editUserLink('${appName}', ${index})"></i>
+        <i class="fa-solid fa-trash delete" onclick="deleteUserLink('${appName}', ${index})"></i>
+      </div>
+    `;
+
+        list.appendChild(item);
+      });
+
+      updateUserBadge(appName, links.length);
+    };
+    window.editUserLink = async function (appName, index) {
+      const user = auth.currentUser;
+      if (!user) return;
+
+      const ref = doc(db, "users", user.uid, "savedLinks", appName);
+      const snap = await getDoc(ref);
+
+      if (!snap.exists()) return;
+
+      const links = snap.data().links || [];
+      const link = links[index];
+
+      document.getElementById("linkName").value = link.name;
+      document.getElementById("linkUrl").value = link.url;
+
+      links.splice(index, 1);
+      await setDoc(ref, { links });
+
+      loadUserLinks(appName);
+    };
+
+    window.deleteUserLink = async function (appName, index) {
+      const user = auth.currentUser;
+      if (!user) return;
+
+      if (!confirm("Bạn có chắc muốn xóa link này?")) return;
+
+      const ref = doc(db, "users", user.uid, "savedLinks", appName);
+      const snap = await getDoc(ref);
+
+      if (!snap.exists()) return;
+
+      const links = snap.data().links || [];
+      links.splice(index, 1);
+
+      await setDoc(ref, { links });
+
+      loadUserLinks(appName);
+    };
+
+    // Đăng xuất
+    window.logout = async function () {
+      try {
+        await signOut(auth);
+        // alert("Đã đăng xuất!");
+        window.location.href = "login.html";
+      } catch (error) {
+        console.error("Lỗi đăng xuất:", error);
+        alert("Đăng xuất thất bại!");
+      }
+    };
+    window.recordUsage = async function (appName) {
+      const user = auth.currentUser;
+      if (!user) return;
+
+      const ref = doc(db, "users", user.uid, "appUsage", appName);
+      const snap = await getDoc(ref);
+
+      let count = 0;
+
+      if (snap.exists()) {
+        count = snap.data().count || 0;
+      }
+
+      await setDoc(ref, { count: count + 1 });
+    };
+  </script>
+  <script>
+    // Load theme từ localStorage
+    if (localStorage.getItem("theme") === "light") {
+      document.body.classList.add("light-mode");
+      // document.querySelector(".theme-toggle").innerText = "🌞 Light";
+    }
+
+    function toggleTheme() {
+      document.body.classList.toggle("light-mode");
+      const btn = document.querySelector(".theme-toggle");
+      if (document.body.classList.contains("light-mode")) {
+        btn.innerText = "🌞 Light";
+        localStorage.setItem("theme", "light");
+      } else {
+        btn.innerText = "🌙 Dark";
+        localStorage.setItem("theme", "dark");
+      }
+    }
+
+    // tải data và render
+    let appsData = [];
+    // Coment
+    // fetch('data.json')
+    //   .then(res => res.json())
+    //   .then(async (data) => {   // thêm async ở đây
+    //     data.sort((a, b) => a.name.localeCompare(b.name));
+    //     appsData = data;
+    //     await renderSmartApps(data);
+    //     prepareAppElements();
+    //   })
+    //   .catch(err => {
+    //     console.error('Không load được data.json', err);
+    //   });
+
+    function renderApps(data) {
+      const container = document.getElementById("appGrid");
+      container.innerHTML = '';
+      data.forEach(app => {
+        const wrapper = document.createElement("div");
+        wrapper.className = "app-icon";
+        wrapper.dataset.name = app.name || '';
+        wrapper.draggable = true;
+        wrapper.addEventListener("dragstart", dragStart);
+        wrapper.addEventListener("dragover", dragOver);
+        wrapper.addEventListener("drop", dropToMain);
+
+        const iconLink = document.createElement("a");
+        iconLink.href = app.mainLink;
+        iconLink.target = "_blank";
+        iconLink.innerHTML = `<img src="${app.icon}" alt="${app.name}" title="${app.note || app.name}" />`;
+        wrapper.appendChild(iconLink);
+
+        iconLink.addEventListener("click", () => {
+          recordUsage(app.name);
+        });
+
+        if (app.subLinks && app.subLinks.length > 0) {
+          const badge = document.createElement("span");
+          badge.className = "badge";
+          badge.innerText = app.subLinks.length;
+          badge.title = "Click để xem các link phụ";
+          badge.addEventListener("click", (e) => {
+            e.preventDefault();
+            e.stopPropagation();
+            showModal(app.name, app.subLinks);
+          });
+          wrapper.appendChild(badge);
+        }
+
+        // 🔵 Badge xanh (user links)
+        const userBadge = document.createElement("span");
+        userBadge.className = "badge user-badge";
+        userBadge.innerText = "0";
+        userBadge.title = "Link của bạn";
+
+        userBadge.style.left = "-15px";
+        userBadge.style.right = "auto";
+        userBadge.style.backgroundColor = "#00c853";
+
+        userBadge.addEventListener("click", (e) => {
+          e.preventDefault();
+          e.stopPropagation();
+          openUserLinkModal(app);
+        });
+
+        wrapper.appendChild(userBadge);
+
+        const label = document.createElement("div");
+        label.className = "app-label";
+        label.innerText = app.name;
+        label.title = app.note || app.name;
+        wrapper.appendChild(label);
+
+        container.appendChild(wrapper);
+      });
+    }
+
+
+    async function renderSmartApps(data) {
+      const user = auth.currentUser;
+      if (!user) return renderApps(data);
+
+      const userSnap = await getDoc(doc(db, "users", user.uid));
+      const userData = userSnap.data();
+
+      if (userData.layout) {
+        const mainNames = userData.layout.main || [];
+        const menuNames = userData.layout.menu || [];
+
+        const mainApps = data.filter(a => mainNames.includes(a.name));
+        const menuApps = data.filter(a => menuNames.includes(a.name));
+
+        renderApps(mainApps);
+        renderMenuApps(menuApps);
+        return;
+      }
+
+      // Nếu chưa có layout → sort theo usage như cũ
+      const usageSnap = await getDocs(
+        collection(db, "users", user.uid, "appUsage")
+      );
+
+      const usageMap = {};
+      usageSnap.forEach(doc => {
+        usageMap[doc.id] = doc.data().count || 0;
+      });
+
+      data.sort((a, b) => {
+        return (usageMap[b.name] || 0) - (usageMap[a.name] || 0);
+      });
+
+      const mainApps = data.slice(0, 40);
+      const menuApps = data.slice(40);
+
+      renderApps(mainApps);
+      renderMenuApps(menuApps);
+    }
+
+    function renderMenuApps(data) {
+      const menu = document.getElementById("sideMenuApps");
+      menu.innerHTML = "";
+
+      data.forEach(app => {
+
+        const wrapper = document.createElement("div");
+        wrapper.className = "app-icon";
+        wrapper.dataset.name = app.name || '';
+        wrapper.draggable = true;
+
+        wrapper.addEventListener("dragstart", dragStart);
+        wrapper.addEventListener("dragover", dragOver);
+
+        // Link chính
+        const iconLink = document.createElement("a");
+        iconLink.href = app.mainLink;
+        iconLink.target = "_blank";
+        iconLink.innerHTML = `<img src="${app.icon}" alt="${app.name}" title="${app.note || app.name}" />`;
+        wrapper.appendChild(iconLink);
+
+        iconLink.addEventListener("click", () => {
+          recordUsage(app.name);
+        });
+
+        // 🔴 Badge đỏ (subLinks)
+        if (app.subLinks && app.subLinks.length > 0) {
+          const badge = document.createElement("span");
+          badge.className = "badge";
+          badge.innerText = app.subLinks.length;
+
+          badge.addEventListener("click", (e) => {
+            e.preventDefault();
+            e.stopPropagation();
+            showModal(app.name, app.subLinks);
+          });
+
+          wrapper.appendChild(badge);
+        }
+
+        // 🟢 Badge xanh (user links)
+        const userBadge = document.createElement("span");
+        userBadge.className = "badge user-badge";
+        userBadge.innerText = "0";
+
+        userBadge.addEventListener("click", (e) => {
+          e.preventDefault();
+          e.stopPropagation();
+          openUserLinkModal(app);
+        });
+
+        wrapper.appendChild(userBadge);
+
+        // Tên app
+        const label = document.createElement("div");
+        label.className = "app-label";
+        label.innerText = app.name;
+        wrapper.appendChild(label);
+
+        menu.appendChild(wrapper);
+      });
+    }
+
+    function showModal(appName, links) {
+      const modal = document.getElementById("modal");
+      const content = document.getElementById("modalContent");
+
+      links.sort((a, b) => a.name.localeCompare(b.name));
+
+      content.innerHTML = `
+        <span class="close-btn" onclick="closeModal()">&times;</span>
+        <h5>${appName}</h5>
+      `;
+
+      links.forEach(link => {
+        const a = document.createElement("a");
+        a.href = link.url;
+        a.innerText = link.name;
+        a.target = "_blank";
+        content.appendChild(a);
+      });
+
+      modal.style.display = "block";
+    }
+
+    function closeModal() {
+      document.getElementById("modal").style.display = "none";
+    }
+    function updateUserBadge(appName, count) {
+      const badges = document.querySelectorAll(".user-badge");
+
+      badges.forEach(b => {
+        const parent = b.closest(".app-icon");
+        if (parent.dataset.name === appName) {
+          b.innerText = count;
+        }
+      });
+    }
+
+    async function openUserLinkModal(app) {
+      const modal = document.getElementById("modal");
+      const content = document.getElementById("modalContent");
+
+      content.innerHTML = `
+  <span class="close-btn" onclick="closeModal()">&times;</span>
+
+  <div class="user-modal">
+
+    <div class="user-modal-title">
+      <i class="fa-solid fa-link"></i>
+      <span>${app.name}</span>
+    </div>
+
+    <div class="user-input-group">
+      <input id="linkName" placeholder="Tên link" />
+      <input id="linkUrl" placeholder="https://..." />
+      <button onclick="saveUserLink('${app.name}')">
+        <i class="fa-solid fa-plus"></i>
+      </button>
+    </div>
+
+    <div id="userLinksList" class="user-links-list"></div>
+
+  </div>
+`;
+
+      modal.style.display = "block";
+
+      loadUserLinks(app.name);
+    }
+
+    let typed = '';
+    let clearTimer = null;
+    const CLEAR_TIMEOUT = 8000; // ms
+    let appElements = []; // cached DOM nodes
+
+    function prepareAppElements() {
+      const nodes = document.querySelectorAll('.app-icon');
+      appElements = Array.from(nodes).map(n => ({
+        el: n,
+        name: (n.dataset.name || '').toLowerCase()
+      }));
+    }
+
+
+    function applyFilter() {
+      const q = typed.trim().toLowerCase();
+      if (!q) {
+        // restore
+        appElements.forEach(a => {
+          a.el.classList.remove('dimmed', 'highlight');
+        });
+        return;
+      }
+
+      // match: includes anywhere (case-insensitive)
+      let anyMatch = false;
+      appElements.forEach(a => {
+        if (a.name.includes(q)) {
+          a.el.classList.remove('dimmed');
+          a.el.classList.add('highlight');
+          anyMatch = true;
+        } else {
+          a.el.classList.add('dimmed');
+          a.el.classList.remove('highlight');
+        }
+      });
+
+      // if nothing matches, keep all dimmed? we'll just keep all dimmed cleared so user knows no match
+      if (!anyMatch) {
+        appElements.forEach(a => {
+          a.el.classList.add('dimmed');
+          a.el.classList.remove('highlight');
+        });
+      }
+    }
+
+    // ensure prepare map after window resize or if apps re-render
+    window.addEventListener('resize', () => {
+      prepareAppElements();
+    });
+
+    // if you dynamically change apps, call prepareAppElements() again
+
+    // when page loads, ensure elements ready (in case fetch was very fast)
+    window.addEventListener('load', () => {
+      setTimeout(() => prepareAppElements(), 120);
+    });
+
+    /* ================= SEARCH YOUTUBE STYLE ================= */
+
+    function toggleSearch() {
+      const box = document.getElementById("navSearchBox");
+      const input = document.getElementById("navSearchInput");
+
+      box.classList.toggle("active");
+
+      if (box.classList.contains("active")) {
+        setTimeout(() => input.focus(), 200);
+      } else {
+        input.value = "";
+        typed = "";
+        applyFilter();
+      }
+    }
+
+    // search realtime
+    document.getElementById("navSearchInput").addEventListener("input", function () {
+      typed = this.value;
+      applyFilter();
+    });// mở app đầu tiên khi nhấn Enter
+    document.getElementById("navSearchInput").addEventListener("keydown", function (e) {
+      if (e.key === "Enter") {
+        const q = this.value.trim().toLowerCase();
+        if (!q) return;
+
+        const firstMatch = appElements.find(a => a.name.includes(q));
+
+        if (firstMatch) {
+          const link = firstMatch.el.querySelector("a");
+          if (link) {
+            window.open(link.href, "_blank");
+          }
+        }
+      }
+    });
+    function toggleAppMenu() {
+      document.getElementById("sideMenu").classList.toggle("active");
+    }
+    let draggedApp = null;
+
+    function dragStart(e) {
+      draggedApp = e.currentTarget;
+    }
+
+    function dragOver(e) {
+      e.preventDefault();
+    }
+
+    function dropToMain(e) {
+      e.preventDefault();
+      if (!draggedApp) return;
+
+      const main = document.getElementById("appGrid");
+      main.appendChild(draggedApp);
+
+      draggedApp = null;
+
+      prepareAppElements();
+    }
+
+    const sideMenuApps = document.getElementById("sideMenuApps");
+    const appGrid = document.getElementById("appGrid");
+
+    appGrid.addEventListener("dragover", dragOver);
+
+    appGrid.addEventListener("drop", async function (e) {
+      e.preventDefault();
+      if (!draggedApp) return;
+
+      appGrid.appendChild(draggedApp);
+      draggedApp = null;
+
+      prepareAppElements();
+      await saveLayout();
+    });
+    sideMenuApps.addEventListener("dragover", dragOver);
+
+    sideMenuApps.addEventListener("drop", async function (e) {
+      e.preventDefault();
+      if (!draggedApp) return;
+
+      sideMenuApps.appendChild(draggedApp);
+      draggedApp = null;
+
+      prepareAppElements();
+      await saveLayout();
+    });
+
+  </script>
+</body>
+
+</html>

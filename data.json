@@ -1450,14 +1450,11 @@
     ]
   },
   {
-    "name": "",
-    "icon": "",
-    "mainLink": "",
+    "name": " Vàng bạc Mão Thiệt",
+    "icon": "./img/Vàng bạc Mão Thiệt.png",
+    "mainLink": "https://giavangmaothiet.com/",
     "note": " chưa có",
-    "subLinks": [
-      {"name": "", "url": ""},
-      {"name": "", "url": ""}
-    ]
+    "subLinks": []
   },
   {
     "name": "",

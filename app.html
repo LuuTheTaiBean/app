@@ -652,6 +652,7 @@
 </head>
 
 <body>
+  <!-- <img src="./img/OceanDoc.ico" alt=""> -->
   <nav class="main-navbar">
     <div class="nav-left">
       <span class="brand">
@@ -1031,14 +1032,25 @@
         const mainNames = userData.layout.main || [];
         const menuNames = userData.layout.menu || [];
 
-        // const mainApps = data.filter(a => mainNames.includes(a.name));
+        // App chưa có trong layout
+        const allNames = [...mainNames, ...menuNames];
+
+        const newApps = data.filter(a =>
+          !allNames.map(n => n.trim()).includes(a.name.trim())
+        );
+
         const mainApps = data.filter(a =>
           mainNames.map(n => n.trim()).includes(a.name.trim())
         );
-        const menuApps = data.filter(a => menuNames.includes(a.name));
 
+        const menuApps = data.filter(a =>
+          menuNames.map(n => n.trim()).includes(a.name.trim())
+        );
+
+        // Tự động thêm app mới vào menu
         renderApps(mainApps);
-        renderMenuApps(menuApps);
+        renderMenuApps([...menuApps, ...newApps]);
+
         return;
       }
 

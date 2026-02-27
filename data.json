@@ -106,18 +106,6 @@
       {
         "name": "The Tai E-MIT Official",
         "url": "https://www.youtube.com/@thetaie-mit"
-      },
-      {
-        "name": "Xem sau",
-        "url": "https://www.youtube.com/playlist?list=WL"
-      },
-      {
-        "name": "Video đã thích",
-        "url": "https://www.youtube.com/playlist?list=LL"
-      },
-      {
-        "name": "Playlists",
-        "url": "https://www.youtube.com/feed/playlists"
       }
     ]
   },
@@ -205,6 +193,10 @@
       {
         "name": "Kho lưu code",
         "url": "https://drive.google.com/drive/folders/1MHifh8AW_oQiLojnuDj1x4n1eCbcofT-"
+      },
+      {
+        "name": "Download Drive",
+        "url": "https://ipv4.google.com/intl/en_zm/drive/download/"
       }
     ]
   },
@@ -234,15 +226,7 @@
     "icon": "./img/GitHub.svg",
     "mainLink": "https://github.com/",
     "note": "GitHub: Nền tảng lưu trữ mã nguồn",
-    "subLinks": [
-      {
-        "name": "Gà Lại Lập Trình",
-        "url": "https://github.com/galailaptrinh"
-      },
-      {"name": "Hdodenhof", "url": "https://github.com/hdodenhof"},
-      {"name": "Haryphamdev", "url": "https://github.com/haryphamdev"},
-      {"name": "LuuTheTaiBean", "url": "https://github.com/LuuTheTaiBean"}
-    ]
+    "subLinks": []
   },
   {
     "name": "Word",
@@ -1452,44 +1436,32 @@
     "subLinks": []
   },
   {
-    "name": "",
-    "icon": "",
-    "mainLink": "",
+    "name": "OceanDoc",
+    "icon": "./img/OceanDoc.ico",
+    "mainLink": "https://oceandoc.com/",
     "note": " chưa có",
-    "subLinks": [
-      {"name": "", "url": ""},
-      {"name": "", "url": ""}
-    ]
+    "subLinks": []
   },
   {
-    "name": "",
-    "icon": "",
-    "mainLink": "",
+    "name": "Genspark AI",
+    "icon": "./img/Genspark AI.ico",
+    "mainLink": "https://www.genspark.ai/",
     "note": " chưa có",
-    "subLinks": [
-      {"name": "", "url": ""},
-      {"name": "", "url": ""}
-    ]
+    "subLinks": []
   },
   {
-    "name": "",
-    "icon": "",
-    "mainLink": "",
+    "name": "GeoGebra 3D",
+    "icon": "./img/GeoGebra 3D.ico",
+    "mainLink": "https://www.geogebra.org/3d?lang=vi",
     "note": " chưa có",
-    "subLinks": [
-      {"name": "", "url": ""},
-      {"name": "", "url": ""}
-    ]
+    "subLinks": []
   },
   {
-    "name": "",
-    "icon": "",
-    "mainLink": "",
+    "name": "SePay",
+    "icon": "./img/SePay.webp",
+    "mainLink": "https://sepay.vn/",
     "note": " chưa có",
-    "subLinks": [
-      {"name": "", "url": ""},
-      {"name": "", "url": ""}
-    ]
+    "subLinks": []
   },
   {
     "name": "",

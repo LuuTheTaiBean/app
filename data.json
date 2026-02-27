@@ -1,55 +1,55 @@
 [
   {
-    "name": " Chat GPT",
+    "name": "Chat GPT",
     "icon": "./img/Chat GPT.svg",
     "mainLink": "https://chat.openai.com/",
     "note": "Chat GPT: Trợ lý ảo thông minh",
     "subLinks": []
   },
   {
-    "name": " BlackBox",
+    "name": "BlackBox",
     "icon": "./img/BLACKBOX.AI.ico",
     "mainLink": "https://www.blackbox.ai",
     "note": "BlackBox: Trợ lý lập trình AI",
     "subLinks": []
   },
   {
-    "name": " Gemini",
+    "name": "Gemini",
     "icon": "./img/GEMINI.png",
     "mainLink": "https://gemini.google.com",
     "note": "Gemini: Trợ lý AI tiên tiến từ Google",
     "subLinks": []
   },
   {
-    "name": " Deepseek",
+    "name": "Deepseek",
     "icon": "./img/DEEPSEEK.png",
     "mainLink": "https://chat.deepseek.com/",
     "note": "Deepseek: Tìm kiếm thông tin AI",
     "subLinks": []
   },
   {
-    "name": " Copilot",
+    "name": "Copilot",
     "icon": "./img/COPILOT.svg",
     "mainLink": "https://copilot.microsoft.com",
     "note": "Copilot: Trợ lý AI từ Microsoft",
     "subLinks": []
   },
   {
-    "name": " Grok",
+    "name": "Grok",
     "icon": "./img/GROK.svg",
     "mainLink": "https://grok.com/",
     "note": "Grok: Trợ lý AI cá nhân",
     "subLinks": []
   },
   {
-    "name": " Claude",
+    "name": "Claude",
     "icon": "./img/Claude.png",
     "mainLink": "https://claude.ai",
     "note": "Claude: Trợ lý AI sáng tạo",
     "subLinks": []
   },
   {
-    "name": " Facebook",
+    "name": "Facebook",
     "icon": "./img/Facebook.svg",
     "mainLink": "https://www.facebook.com",
     "note": "Facebook: Mạng xã hội kết nối bạn bè",
@@ -61,7 +61,7 @@
     ]
   },
   {
-    "name": " Zalo",
+    "name": "Zalo",
     "icon": "./img/ZALO.png",
     "mainLink": "https://chat.zalo.me/",
     "note": "Zalo: Ứng dụng nhắn tin phổ biến tại Việt Nam",
@@ -85,7 +85,7 @@
     ]
   },
   {
-    "name": " TikTok",
+    "name": "TikTok",
     "icon": "./img/TIKTOK.ico",
     "mainLink": "https://www.tiktok.com",
     "note": "TikTok: Nền tảng video ngắn phổ biến",
@@ -98,25 +98,25 @@
     ]
   },
   {
-    "name": " YouTube",
+    "name": "YouTube",
     "icon": "./img/YOUTUBE.png",
     "mainLink": "https://www.youtube.com/",
     "note": "YouTube: Nền tảng chia sẻ video lớn nhất thế giới",
     "subLinks": [
       {
-        "name": " The Tai E-MIT Official",
+        "name": "The Tai E-MIT Official",
         "url": "https://www.youtube.com/@thetaie-mit"
       },
       {
-        "name": " Xem sau",
+        "name": "Xem sau",
         "url": "https://www.youtube.com/playlist?list=WL"
       },
       {
-        "name": " Video đã thích",
+        "name": "Video đã thích",
         "url": "https://www.youtube.com/playlist?list=LL"
       },
       {
-        "name": " Playlists",
+        "name": "Playlists",
         "url": "https://www.youtube.com/feed/playlists"
       }
     ]
@@ -136,28 +136,28 @@
     "subLinks": []
   },
   {
-    "name": " Math",
+    "name": "Math",
     "icon": "./img/Math.png",
     "mainLink": "https://toanmath.com/",
     "note": "Math: Trang web lấy tài liệu toán học",
     "subLinks": []
   },
   {
-    "name": " Máy tính",
+    "name": "Máy tính",
     "icon": "./img/maytinh.png",
     "mainLink": "https://maytinhonline.info/",
     "note": "Máy tính: Công cụ tính toán trực tuyến",
     "subLinks": []
   },
   {
-    "name": " Maps",
+    "name": "Maps",
     "icon": "./img/GoogleMap.png",
     "mainLink": "https://www.google.com/maps",
     "note": "Maps: Dịch vụ bản đồ trực tuyến",
     "subLinks": []
   },
   {
-    "name": " Search",
+    "name": "Search",
     "icon": "./img/GoogleSearch.ico",
     "mainLink": "https://www.google.com/",
     "note": "Search: Công cụ tìm kiếm hàng đầu",
@@ -178,14 +178,14 @@
     "subLinks": []
   },
   {
-    "name": " Meet",
+    "name": "Meet",
     "icon": "./img/GoogleMeet.png",
     "mainLink": "https://meet.google.com",
     "note": "Meet: Ứng dụng họp trực tuyến",
     "subLinks": []
   },
   {
-    "name": " Form",
+    "name": "Form",
     "icon": "./img/GoogleForm.png",
     "mainLink": "https://docs.google.com/forms",
     "note": "Form: Công cụ tạo biểu mẫu trực tuyến",
@@ -197,7 +197,7 @@
     ]
   },
   {
-    "name": " Drive",
+    "name": "Drive",
     "icon": "./img/GoogleDrive.png",
     "mainLink": "https://drive.google.com",
     "note": "Drive: Lưu trữ và chia sẻ file trực tuyến",
@@ -209,7 +209,7 @@
     ]
   },
   {
-    "name": " Gmail",
+    "name": "Gmail",
     "icon": "./img/GoogleGmail.png",
     "mainLink": "https://mail.google.com",
     "note": "Gmail: Dịch vụ email phổ biến",
@@ -223,14 +223,14 @@
     "subLinks": []
   },
   {
-    "name": " Wayground",
+    "name": "Wayground",
     "icon": "./img/Wayground.ico",
     "mainLink": "https://wayground.com/",
     "note": "Wayground: Tạo câu hỏi trắc nghiệm nhanh chóng",
     "subLinks": []
   },
   {
-    "name": " GitHub",
+    "name": "GitHub",
     "icon": "./img/GitHub.svg",
     "mainLink": "https://github.com/",
     "note": "GitHub: Nền tảng lưu trữ mã nguồn",
@@ -241,11 +241,11 @@
       },
       {"name": "Hdodenhof", "url": "https://github.com/hdodenhof"},
       {"name": "Haryphamdev", "url": "https://github.com/haryphamdev"},
-      {"name": " LuuTheTaiBean", "url": "https://github.com/LuuTheTaiBean"}
+      {"name": "LuuTheTaiBean", "url": "https://github.com/LuuTheTaiBean"}
     ]
   },
   {
-    "name": " Word",
+    "name": "Word",
     "icon": "./img/Word.png",
     "mainLink": "https://docs.google.com/document",
     "note": "Word: Công cụ soạn thảo văn bản trực tuyến",
@@ -294,7 +294,7 @@
     "subLinks": []
   },
   {
-    "name": " Figma",
+    "name": "Figma",
     "icon": "./img/Figma.png",
     "mainLink": "https://www.figma.com/",
     "note": "Figma: Công cụ thiết kế giao diện và cộng tác trực tuyến",
@@ -370,7 +370,7 @@
     "subLinks": []
   },
   {
-    "name": " MDN",
+    "name": "MDN",
     "icon": "./img/MDN.ico",
     "mainLink": "https://developer.mozilla.org/",
     "note": "MDN: Tài liệu phát triển web toàn diện",
@@ -408,21 +408,21 @@
     "subLinks": []
   },
   {
-    "name": " Bootstrap",
+    "name": "Bootstrap",
     "icon": "./img/Bootstrap.png",
     "mainLink": "https://getbootstrap.com/",
     "note": "Bootstrap: Framework CSS phổ biến",
     "subLinks": []
   },
   {
-    "name": " Diffchecker",
+    "name": "Diffchecker",
     "icon": "./img/Diffchecker.svg",
     "mainLink": "https://www.diffchecker.com/",
     "note": " Diffchecker: Công cụ so sánh văn bản theo chiều dọc",
     "subLinks": []
   },
   {
-    "name": " I love PDF",
+    "name": "I love PDF",
     "icon": "./img/I love PDF.png",
     "mainLink": "https://www.ilovepdf.com/",
     "note": "I love PDF: Công cụ xử lý file PDF trực tuyến",
@@ -450,7 +450,7 @@
     "subLinks": []
   },
   {
-    "name": " Oxford Dictionary",
+    "name": "Oxford Dictionary",
     "icon": "./img/Oxford Dictionary.ico",
     "mainLink": "https://www.oxfordlearnersdictionaries.com/",
     "note": "Oxford Dictionary: Từ điển Anh-Anh uy tín",
@@ -464,7 +464,7 @@
     "subLinks": []
   },
   {
-    "name": " Font Awesome",
+    "name": "Font Awesome",
     "icon": "./img/Font Awesome.svg",
     "mainLink": "https://fontawesome.com/",
     "note": "Font Awesome: Thư viện lấy icon phổ biến",
@@ -475,12 +475,7 @@
     "icon": "./img/24H.svg",
     "mainLink": "https://www.24h.com.vn/",
     "note": "24H: Trang tin tức đa dạng",
-    "subLinks": [
-      {
-        "name": "Giá vàng hôm nay",
-        "url": "https://www.24h.com.vn/gia-vang-hom-nay-c425.html"
-      }
-    ]
+    "subLinks": []
   },
   {
     "name": "Listen English",
@@ -525,7 +520,7 @@
     "subLinks": []
   },
   {
-    "name": " Perplexity",
+    "name": "Perplexity",
     "icon": "./img/Perplexity.png",
     "mainLink": "https://www.perplexity.ai/",
     "note": "Perplexity: Công cụ tìm kiếm và trả lời câu hỏi bằng AI",
@@ -539,7 +534,7 @@
     "subLinks": []
   },
   {
-    "name": " Messenger",
+    "name": "Messenger",
     "icon": "./img/Messenger.svg",
     "mainLink": "https://www.messenger.com",
     "note": "Messenger: Ứng dụng nhắn tin của Facebook",
@@ -590,7 +585,7 @@
     "subLinks": []
   },
   {
-    "name": " Store",
+    "name": "Store",
     "icon": "./img/Store.png",
     "mainLink": "https://chromewebstore.google.com/",
     "note": "Store: Cửa hàng tiện ích mở rộng cho trình duyệt Chrome",
@@ -622,7 +617,7 @@
     ]
   },
   {
-    "name": " E-MIT",
+    "name": "E-MIT",
     "icon": "./img/E-MIT.svg",
     "mainLink": "",
     "note": "E-MIT: Học viện công nghệ và thiết kế trực tuyến",
@@ -678,7 +673,7 @@
     "subLinks": []
   },
   {
-    "name": " Firebase",
+    "name": "Firebase",
     "icon": "./img/Firebase.png",
     "mainLink": "https://firebase.google.com/",
     "note": "Firebase: Nền tảng phát triển ứng dụng di động và web",
@@ -1017,7 +1012,7 @@
     ]
   },
   {
-    "name": " LRC Generator",
+    "name": "LRC Generator",
     "icon": "./img/LRC Generator.ico",
     "mainLink": "https://lrc-generator.streetvoice.com/",
     "note": "LRC Generator: Công cụ tạo file lời bài hát định dạng LRC",
@@ -1189,7 +1184,7 @@
     "subLinks": []
   },
   {
-    "name": " Answerr",
+    "name": "Answerr",
     "icon": "./img/Answerr.png",
     "mainLink": "https://answerr.ai/",
     "note": " chưa có",
@@ -1319,7 +1314,7 @@
     ]
   },
   {
-    "name": " Windy",
+    "name": "Windy",
     "icon": "./img/Windy.png",
     "mainLink": "https://www.windy.com/",
     "note": " chưa có",
@@ -1354,21 +1349,21 @@
     "subLinks": []
   },
   {
-    "name": " Slides Go",
+    "name": "Slides Go",
     "icon": "./img/Slides Go.ico",
     "mainLink": "https://slidesgo.com/",
     "note": " chưa có",
     "subLinks": []
   },
   {
-    "name": " Vite React",
+    "name": "Vite React",
     "icon": "./img/Vite React.svg",
     "mainLink": "http://localhost:5173/",
     "note": " chưa có",
     "subLinks": []
   },
   {
-    "name": " Qwen",
+    "name": "Qwen",
     "icon": "./img/Qwen.png",
     "mainLink": "https://chat.qwen.ai/",
     "note": " chưa có",
@@ -1450,7 +1445,7 @@
     ]
   },
   {
-    "name": " Vàng bạc Mão Thiệt",
+    "name": "Vàng bạc Mão Thiệt",
     "icon": "./img/Vàng bạc Mão Thiệt.png",
     "mainLink": "https://giavangmaothiet.com/",
     "note": " chưa có",

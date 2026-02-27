@@ -577,19 +577,6 @@
       gap: 6px;
     }
 
-    .bottom-menu {
-      position: fixed;
-      bottom: 5px;
-      left: 50%;
-      transform: translateX(-50%);
-      display: flex;
-      gap: 14px;
-      background: rgba(0, 0, 0, 0.7);
-      padding: 10px 20px;
-      border-radius: 30px;
-      backdrop-filter: blur(8px);
-      z-index: 2500;
-    }
 
     .side-menu {
       position: fixed;
@@ -708,7 +695,7 @@
     <div id="sideMenuApps" class="side-menu-apps"></div>
   </div>
   <div class="app-container" id="appGrid"></div>
-  <div id="bottomMenu" class="bottom-menu"></div>
+  <!-- <div id="bottomMenu" class="bottom-menu"></div> -->
 
   <!-- Modal -->
   <div id="modal" style="display:none;">
@@ -974,7 +961,8 @@
       data.forEach(app => {
         const wrapper = document.createElement("div");
         wrapper.className = "app-icon";
-        wrapper.dataset.name = app.name || '';
+        // wrapper.dataset.name = app.name || '';
+        wrapper.dataset.name = app.name.trim() || '';
         wrapper.draggable = true;
         wrapper.addEventListener("dragstart", dragStart);
         wrapper.addEventListener("dragover", dragOver);
@@ -1043,7 +1031,10 @@
         const mainNames = userData.layout.main || [];
         const menuNames = userData.layout.menu || [];
 
-        const mainApps = data.filter(a => mainNames.includes(a.name));
+        // const mainApps = data.filter(a => mainNames.includes(a.name));
+        const mainApps = data.filter(a =>
+          mainNames.map(n => n.trim()).includes(a.name.trim())
+        );
         const menuApps = data.filter(a => menuNames.includes(a.name));
 
         renderApps(mainApps);

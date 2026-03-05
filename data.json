@@ -170,7 +170,32 @@
     "icon": "./img/GoogleMeet.png",
     "mainLink": "https://meet.google.com",
     "note": "Meet: Ứng dụng họp trực tuyến",
-    "subLinks": []
+    "subLinks": [
+      {
+        "name": "Link 1",
+        "url": "https://meet.google.com/gwp-ouju-yio"
+      },
+      {
+        "name": "Link 2",
+        "url": "https://meet.google.com/equ-tcxe-ung"
+      },
+      {
+        "name": "Link 3",
+        "url": "https://meet.google.com/yrd-napn-gze"
+      },
+      {
+        "name": "Link 4",
+        "url": "https://meet.google.com/aki-jias-dow"
+      },
+      {
+        "name": "Link 5",
+        "url": "https://meet.google.com/vms-vtog-hef"
+      },
+      {
+        "name": "Link 6",
+        "url": "https://meet.google.com/tos-yiew-zon"
+      }
+    ]
   },
   {
     "name": "Form",
@@ -608,7 +633,7 @@
     "subLinks": [
       {
         "name": "English",
-        "url": "https://luuthetaibean.github.io/ENGLISH/login.html"
+        "url": "https://luuthetaibean.github.io/STREAMLINE-ENGLISH/lesson.html"
       },
       {
         "name": "Music",

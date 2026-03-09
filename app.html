@@ -567,6 +567,7 @@
     .user-input-group {
       display: flex;
       gap: 8px;
+      align-items: center;
     }
 
     .user-input-group input {
@@ -576,16 +577,36 @@
       padding: 6px 10px;
       font-size: 0.85rem;
       outline: none;
+      flex: 1 1 calc(50% - 4px);
+      min-width: 0;
     }
 
     .user-input-group button {
       width: 36px;
+      height: 36px;
       border: none;
       border-radius: 8px;
       background: #00c853;
       color: white;
       cursor: pointer;
       transition: 0.2s;
+      flex-shrink: 0;
+    }
+
+    @media (max-width: 576px) {
+
+      .user-input-group {
+        flex-direction: column;
+      }
+
+      .user-input-group input {
+        width: 100%;
+      }
+
+      .user-input-group button {
+        width: 100%;
+      }
+
     }
 
     .user-input-group button:hover {

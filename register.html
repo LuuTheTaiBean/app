@@ -116,35 +116,7 @@
                 <input type="text" id="phone" class="form-control" placeholder="Số điện thoại" required>
             </div>
 
-            <div class="input-group mb-3">
-                <span class="input-group-text"><i class="bi bi-bank"></i></span>
-                <input type="text" id="bankAccount" class="form-control" placeholder="Số tài khoản" required>
-            </div>
 
-            <div class="input-group mb-3">
-                <span class="input-group-text"><i class="bi bi-credit-card"></i></span>
-                <input list="banks" id="bankName" class="form-control" placeholder="Tên ngân hàng" required>
-                <datalist id="banks">
-                    <option value="Vietcombank">
-                    <option value="BIDV">
-                    <option value="VietinBank">
-                    <option value="Techcombank">
-                    <option value="MB Bank">
-                    <option value="ACB">
-                    <option value="TPBank">
-                    <option value="VPBank">
-                    <option value="Sacombank">
-                    <option value="Agribank">
-                    <option value="SHB">
-                    <option value="HDBank">
-                    <option value="Eximbank">
-                    <option value="SeABank">
-                    <option value="Nam A Bank">
-                    <option value="OceanBank">
-                    <option value="LienVietPostBank">
-                    <option value="SCB">
-                </datalist>
-            </div>
 
             <div class="input-group mb-3">
                 <span class="input-group-text"><i class="bi bi-envelope"></i></span>
@@ -174,7 +146,7 @@
         </form>
 
         <div class="text-center mt-3">
-            Bạn chưa có tài khoản? <a href="login.html">Đăng nhập</a>
+            Đã có tài khoản? <a href="login.html">Đăng nhập</a>
         </div>
     </div>
     <script>
@@ -225,8 +197,8 @@
             const dob = document.getElementById("dob").value;
             const hometown = document.getElementById("hometown").value;
             const phone = document.getElementById("phone").value;
-            const bankAccount = document.getElementById("bankAccount").value;
-            const bankName = document.getElementById("bankName").value;
+            // const bankAccount = document.getElementById("bankAccount").value;
+            // const bankName = document.getElementById("bankName").value;
             const email = document.getElementById("email").value;
             const password = document.getElementById("password").value;
             const confirmPassword = document.getElementById("confirmPassword").value;
@@ -245,8 +217,6 @@
                     dob,
                     hometown,
                     phone,
-                    bankAccount,
-                    bankName,
                     email,
                     createdAt: new Date(),
                     isPaid: false

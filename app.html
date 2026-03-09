@@ -876,6 +876,29 @@
       max-height: 180px;
       overflow-y: auto;
     }
+    /* icon mắt password */
+
+.stats-eye{
+  position:absolute;
+  right:6px;
+  top:50%;
+  transform:translateY(-50%);
+  width:30px;
+  height:30px;
+  border-radius:50%;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  background:#f1f1f1;
+  color:#333;
+  cursor:pointer;
+  transition:0.2s;
+}
+
+.stats-eye:hover{
+  background:#3b82f6;
+  color:white;
+}
   </style>
 
 
@@ -1167,28 +1190,40 @@
       content.innerHTML = `
     <span class="close-btn" onclick="closeModal()">&times;</span>
 
-    <h5>Xác nhận mật khẩu</h5>
+    <h5 style="display:flex;align-items:center;gap:8px;">
+      <i class="fa-solid fa-lock"></i>
+      Xác nhận mật khẩu
+    </h5>
 
-    <input 
-      type="password" 
-      id="statsPassword"
-      placeholder="Nhập mật khẩu..."
-      style="
-        width:100%;
-        padding:8px;
-        margin-top:10px;
-        border-radius:6px;
-        border:none;
-      "
-    />
+    <div style="position:relative;margin-top:10px;">
+
+      <input 
+        type="password" 
+        id="statsPassword"
+        placeholder="Nhập mật khẩu..."
+        style="
+          width:100%;
+          padding:8px 36px 8px 10px;
+          border-radius:8px;
+          border:none;
+          outline:none;
+        "
+      />
+
+ <i 
+  class="fa-solid fa-eye stats-eye"
+  onclick="toggleStatsPassword()"
+></i>
+
+    </div>
 
     <button 
       onclick="confirmStatsPassword()"
       style="
-        margin-top:10px;
-        padding:6px 12px;
+        margin-top:12px;
+        padding:6px 14px;
         border:none;
-        border-radius:6px;
+        border-radius:8px;
         background:#3b82f6;
         color:white;
         cursor:pointer;
@@ -1198,7 +1233,20 @@
   `;
 
       modal.style.display = "block";
-    }
+
+      // focus input
+      setTimeout(() => {
+        document.getElementById("statsPassword").focus();
+      }, 100);
+
+      // Enter để xác nhận
+      document.getElementById("statsPassword")
+        .addEventListener("keydown", function (e) {
+          if (e.key === "Enter") {
+            confirmStatsPassword();
+          }
+        });
+    };
 
     window.confirmStatsPassword = async function () {
 
@@ -1228,6 +1276,22 @@
 
     }
 
+    window.toggleStatsPassword = function () {
+
+      const input = document.getElementById("statsPassword");
+      const icon = event.target;
+
+      if (input.type === "password") {
+        input.type = "text";
+        icon.classList.remove("fa-eye");
+        icon.classList.add("fa-eye-slash");
+      } else {
+        input.type = "password";
+        icon.classList.remove("fa-eye-slash");
+        icon.classList.add("fa-eye");
+      }
+
+    }
     async function showStats() {
 
       const user = auth.currentUser;

@@ -676,6 +676,9 @@
         </div>
 
       </div>
+      <button class="nav-btn stats-btn" onclick="openStats()">
+        <i class="fa-solid fa-chart-simple"></i>
+      </button>
 
       <button class="nav-btn logout-btn" onclick="logout()">
         <i class="fa-solid fa-right-from-bracket"></i>
@@ -715,6 +718,10 @@
       "https://www.gstatic.com/firebasejs/10.12.0/firebase-firestore.js";
     import { collection, getDocs } from
       "https://www.gstatic.com/firebasejs/10.12.0/firebase-firestore.js";
+    import {
+      EmailAuthProvider,
+      reauthenticateWithCredential
+    } from "https://www.gstatic.com/firebasejs/10.12.0/firebase-auth.js";
     const firebaseConfig = {
       apiKey: "AIzaSyCoDmEDEuEQjmBAFnIA6_j-n0jpWi0Kr9Q",
       authDomain: "tai-s-app.firebaseapp.com",
@@ -921,6 +928,141 @@
 
       await setDoc(ref, { count: count + 1 });
     };
+
+    window.openStats = async function () {
+
+      const password = prompt("Nhập lại mật khẩu để xem thống kê:");
+
+      if (!password) return;
+
+      const user = auth.currentUser;
+
+      const credential = EmailAuthProvider.credential(
+        user.email,
+        password
+      );
+
+      try {
+
+        await reauthenticateWithCredential(user, credential);
+
+        showStats();
+
+      } catch (error) {
+
+        alert("Mật khẩu không đúng!");
+
+      }
+
+    }
+
+    async function showStats() {
+
+      const user = auth.currentUser;
+
+      const snap = await getDocs(
+        collection(db, "users", user.uid, "savedLinks")
+      );
+
+      let allLinks = [];
+
+      snap.forEach(docSnap => {
+
+        const appName = docSnap.id;
+        const links = docSnap.data().links || [];
+
+        links.forEach(link => {
+
+          allLinks.push({
+            app: appName,
+            name: link.name,
+            url: link.url
+          });
+
+        });
+
+      });
+
+      renderStats(allLinks);
+
+    }
+
+    window.deleteStatLink = async function (appName, index) {
+
+      const user = auth.currentUser;
+
+      const ref = doc(db, "users", user.uid, "savedLinks", appName);
+
+      const snap = await getDoc(ref);
+
+      const links = snap.data().links || [];
+
+      links.splice(index, 1);
+
+      await setDoc(ref, { links });
+
+      alert("Đã xóa!");
+
+      showStats();
+
+    }
+    window.moveLink = async function (index, newApp) {
+
+      if (!newApp) return;
+
+      const user = auth.currentUser;
+
+      const snap = await getDocs(
+        collection(db, "users", user.uid, "savedLinks")
+      );
+
+      let allLinks = [];
+      let oldApp = "";
+
+      snap.forEach(docSnap => {
+        const appName = docSnap.id;
+        const links = docSnap.data().links || [];
+
+        links.forEach((link, i) => {
+          allLinks.push({
+            ...link,
+            app: appName
+          });
+        });
+      });
+
+      const link = allLinks[index];
+      oldApp = link.app;
+
+      // Xóa khỏi app cũ
+      const oldRef = doc(db, "users", user.uid, "savedLinks", oldApp);
+      const oldSnap = await getDoc(oldRef);
+      const oldLinks = oldSnap.data().links || [];
+
+      const newOldLinks = oldLinks.filter(l => l.url !== link.url);
+      await setDoc(oldRef, { links: newOldLinks });
+
+      // Thêm vào app mới
+      const newRef = doc(db, "users", user.uid, "savedLinks", newApp);
+      const newSnap = await getDoc(newRef);
+
+      let newLinks = [];
+
+      if (newSnap.exists()) {
+        newLinks = newSnap.data().links || [];
+      }
+
+      newLinks.push({
+        name: link.name,
+        url: link.url
+      });
+
+      await setDoc(newRef, { links: newLinks });
+
+      alert("Đã chuyển link sang " + newApp);
+
+      showStats();
+    }
   </script>
   <script>
     // Load theme từ localStorage
@@ -1162,6 +1304,64 @@
 
     function closeModal() {
       document.getElementById("modal").style.display = "none";
+    }
+
+    function renderStats(links) {
+
+      const modal = document.getElementById("modal");
+      const content = document.getElementById("modalContent");
+
+      content.innerHTML = `
+    <span class="close-btn" onclick="closeModal()">&times;</span>
+    <h5>Thống kê Link</h5>
+
+    <table class="table table-sm">
+      <thead>
+        <tr>
+          <th>App</th>
+          <th>Tên</th>
+          <th>Link</th>
+          <th>Action</th>
+        </tr>
+      </thead>
+      <tbody id="statsTable"></tbody>
+    </table>
+  `;
+
+      const table = document.getElementById("statsTable");
+
+      links.forEach((link, index) => {
+
+        const tr = document.createElement("tr");
+
+        tr.innerHTML = `
+              <td>${link.app}</td>
+              <td>${link.name}</td>
+              <td>
+                <a href="${link.url}" target="_blank">Open</a>
+              </td>
+
+<td>
+
+<select onchange="moveLink(${index},this.value)">
+  <option value="">Chuyển app</option>
+  ${appsData.map(a =>
+          `<option value="${a.name}">${a.name}</option>`
+        ).join("")}
+</select>
+
+<i class="fa-solid fa-trash delete"
+onclick="deleteStatLink('${link.app}',${index})"></i>
+
+</td>
+            `;
+
+        table.appendChild(tr);
+
+      });
+
+      modal.style.display = "block";
+
     }
     function updateUserBadge(appName, count) {
       const badges = document.querySelectorAll(".user-badge");

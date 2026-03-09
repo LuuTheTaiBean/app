@@ -1159,9 +1159,50 @@
       await setDoc(ref, { count: count + 1 });
     };
 
-    window.openStats = async function () {
+    window.openStats = function () {
 
-      const password = prompt("Nhập lại mật khẩu để xem thống kê:");
+      const modal = document.getElementById("modal");
+      const content = document.getElementById("modalContent");
+
+      content.innerHTML = `
+    <span class="close-btn" onclick="closeModal()">&times;</span>
+
+    <h5>Xác nhận mật khẩu</h5>
+
+    <input 
+      type="password" 
+      id="statsPassword"
+      placeholder="Nhập mật khẩu..."
+      style="
+        width:100%;
+        padding:8px;
+        margin-top:10px;
+        border-radius:6px;
+        border:none;
+      "
+    />
+
+    <button 
+      onclick="confirmStatsPassword()"
+      style="
+        margin-top:10px;
+        padding:6px 12px;
+        border:none;
+        border-radius:6px;
+        background:#3b82f6;
+        color:white;
+        cursor:pointer;
+      ">
+      Xác nhận
+    </button>
+  `;
+
+      modal.style.display = "block";
+    }
+
+    window.confirmStatsPassword = async function () {
+
+      const password = document.getElementById("statsPassword").value;
 
       if (!password) return;
 
@@ -1176,6 +1217,7 @@
 
         await reauthenticateWithCredential(user, credential);
 
+        closeModal();
         showStats();
 
       } catch (error) {

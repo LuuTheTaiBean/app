@@ -636,6 +636,19 @@
       flex-direction: column;
     }
 
+    .stats-top-bar {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      margin-bottom: 10px;
+    }
+
+    .stats-top-left {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
     .side-menu.active {
       right: 0;
     }
@@ -938,6 +951,64 @@
         border-radius: 16px;
       }
 
+    }
+
+    /* HEADER STATS */
+
+    .stats-top-bar {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 14px;
+    }
+
+    /* title */
+
+    .stats-title {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      font-size: 15px;
+      font-weight: 600;
+    }
+
+    .stats-title i {
+      color: #3b82f6;
+    }
+
+    /* right actions */
+
+    .stats-actions {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    /* link count */
+
+    .stats-count {
+      background: #2563eb;
+      padding: 4px 12px;
+      border-radius: 999px;
+      font-size: 12px;
+      font-weight: 500;
+    }
+
+    /* close button */
+
+    .stats-close {
+      width: 32px;
+      height: 32px;
+      border-radius: 8px;
+      border: none;
+      background: rgba(255, 255, 255, 0.08);
+      color: #fff;
+      cursor: pointer;
+      transition: 0.2s;
+    }
+
+    .stats-close:hover {
+      background: #ef4444;
     }
   </style>
 
@@ -1684,37 +1755,40 @@
       const content = document.getElementById("modalContent");
 
       content.innerHTML = `
+<div class="stats-top-bar">
 
-<span class="close-btn" onclick="closeModal()">&times;</span>
+    <div class="stats-title">
+        <i class="fa-solid fa-chart-simple"></i>
+        <span>Thống kê Link</span>
+    </div>
+
+    <div class="stats-actions">
+
+        <span class="stats-count">
+            ${links.length} links
+        </span>
+
+        <button class="stats-close" onclick="closeModal()">
+            <i class="fa-solid fa-xmark"></i>
+        </button>
+
+    </div>
+
+</div>
 
 <div class="stats-card">
+    <div class="stats-scroll">
+        <table class="stats-table">
+            <thead style="opacity:0.6">
+                <tr>
+                    <th style="width:35%">App</th>
+                    <th style="width:65%">Link</th>
+                </tr>
+            </thead>
+            <tbody id="statsTable"></tbody>
+        </table>
 
-<div class="stats-header">
-
-<h6>
-<i class="fa-solid fa-chart-simple me-2"></i>
-Thống kê Link
-</h6>
-
-<span class="stats-count">${links.length} links</span>
-
-</div>
-<div class="stats-scroll">
-
-<table class="stats-table">
-
-<thead style="opacity:0.6">
-<tr>
-<th style="width:35%">App</th>
-<th style="width:65%">Link</th>
-</tr>
-</thead>
-
-<tbody id="statsTable"></tbody>
-
-</table>
-
-</div>
+    </div>
 
 </div>
 

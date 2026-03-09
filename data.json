@@ -1489,6 +1489,25 @@
     "subLinks": []
   },
   {
+    "name": "Xampp",
+    "icon": "./img/Xampp.png",
+    "mainLink": "https://www.apachefriends.org/",
+    "note": " chưa có",
+    "subLinks": [
+      {
+        "name": "Download Xampp",
+        "url": "https://www.apachefriends.org/download.html"
+      }
+    ]
+  },
+  {
+    "name": "Flight Radar 24",
+    "icon": "./img/Flight Radar 24.png",
+    "mainLink": "https://www.flightradar24.com",
+    "note": " chưa có",
+    "subLinks": []
+  },
+  {
     "name": "",
     "icon": "",
     "mainLink": "",

@@ -99,20 +99,41 @@
       text-align: center;
     }
 
+    /* .badge-app {
+      background: #6c757d;
+      color: white;
+      padding: 4px 10px;
+      border-radius: 6px;
+      font-size: 12px;
+    } */
+
     .modal-links {
       position: fixed;
       top: 50%;
       left: 50%;
       transform: translate(-50%, -50%);
-      background: #fff;
-      color: #333;
+      background: #1c1c1c;
+      color: #f1f1f1;
       padding: 20px;
-      border-radius: 10px;
-      width: 30vw;
+      border-radius: 14px;
+      width: 480px;
       max-height: 70vh;
+
       overflow-y: auto;
-      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+      /* cho phép cuộn */
+
+      box-shadow: 0 10px 40px rgba(0, 0, 0, 0.6);
       z-index: 1000;
+
+      scrollbar-width: none;
+      /* Firefox */
+      -ms-overflow-style: none;
+      /* IE */
+    }
+
+    .modal-links::-webkit-scrollbar {
+      display: none;
+      /* Chrome, Edge, Safari */
     }
 
     .modal-links h5 {
@@ -646,6 +667,215 @@
       border-radius: 10px;
       cursor: grab;
     }
+
+    .app-dropdown {
+      position: relative;
+      display: inline-block;
+    }
+
+    .app-dropdown-menu {
+      position: absolute;
+      top: 110%;
+      left: 0;
+      background: white;
+      color: #333;
+      border-radius: 6px;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+      padding: 4px 0;
+      min-width: 120px;
+      z-index: 2000;
+    }
+
+    .app-dropdown-menu div {
+      padding: 6px 10px;
+      font-size: 13px;
+      cursor: pointer;
+    }
+
+    .app-dropdown-menu div:hover {
+      background: #f1f1f1;
+    }
+
+    /* ===== STATS MODERN UI ===== */
+
+    .stats-card {
+      background: rgba(30, 30, 30, 0.9);
+      backdrop-filter: blur(10px);
+      border-radius: 14px;
+      overflow: hidden;
+    }
+
+    .stats-header {
+      padding: 14px 18px;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .stats-header h6 {
+      margin: 0;
+      font-weight: 600;
+      font-size: 0.9rem;
+    }
+
+    .stats-count {
+      background: #3b82f6;
+      padding: 4px 10px;
+      border-radius: 999px;
+      font-size: 12px;
+    }
+
+    .stats-table {
+      width: 100%;
+      font-size: 0.85rem;
+    }
+
+    .stats-table tr {
+      transition: 0.2s;
+    }
+
+    .stats-table tr:hover {
+      background: rgba(255, 255, 255, 0.04);
+    }
+
+    .stats-link {
+      color: #60a5fa;
+      text-decoration: none;
+    }
+
+    .stats-link:hover {
+      text-decoration: underline;
+    }
+
+    .stats-delete {
+      border: none;
+      background: none;
+      color: #ff6b6b;
+      font-size: 13px;
+      cursor: pointer;
+      opacity: 0.7;
+    }
+
+    .stats-delete:hover {
+      opacity: 1;
+    }
+
+    .stats-card {
+      background: transparent;
+    }
+
+    .stats-header {
+      padding: 12px 0 14px 0;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .stats-header h6 {
+      margin: 0;
+      font-weight: 600;
+      font-size: 15px;
+      color: #fff;
+    }
+
+    .stats-count {
+      background: #2563eb;
+      padding: 3px 10px;
+      border-radius: 999px;
+      font-size: 12px;
+    }
+
+    .stats-table {
+      width: 100%;
+      font-size: 13px;
+      border-collapse: collapse;
+    }
+
+    .stats-table thead {
+      position: sticky;
+      top: 0;
+      background: #1c1c1c;
+    }
+
+    .stats-table th {
+      text-align: left;
+      font-weight: 500;
+      padding: 8px 0;
+      opacity: 0.6;
+    }
+
+    .stats-table td {
+      padding: 10px 0;
+    }
+
+    .stats-table tr {
+      border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+    }
+
+    .stats-table tr:hover {
+      background: rgba(255, 255, 255, 0.03);
+    }
+
+    .stats-link {
+      color: #60a5fa;
+      text-decoration: none;
+      font-size: 13px;
+    }
+
+    .stats-link:hover {
+      text-decoration: underline;
+    }
+
+    .stats-delete {
+      border: none;
+      background: none;
+      color: #ff6b6b;
+      font-size: 13px;
+      cursor: pointer;
+    }
+
+    .stats-delete:hover {
+      opacity: 1;
+    }
+
+    .stats-scroll {
+      max-height: none;
+      overflow-y: visible;
+    }
+
+    .badge-app {
+      background: #374151;
+      color: #fff;
+
+      width: 120px;
+      /* chiều rộng cố định */
+      height: 26px;
+
+      border-radius: 8px;
+      font-size: 12px;
+
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      /* căn giữa chữ */
+
+      gap: 6px;
+      cursor: pointer;
+      overflow: hidden;
+      white-space: nowrap;
+      text-overflow: ellipsis;
+    }
+
+    .badge-app:hover {
+      background: #4b5563;
+    }
+
+    .app-dropdown-menu {
+      max-height: 180px;
+      overflow-y: auto;
+    }
   </style>
 
 
@@ -1063,6 +1293,18 @@
 
       showStats();
     }
+
+    window.chooseApp = function (index) {
+
+      const names = appsData.map(a => a.name).join("\n");
+
+      const newApp = prompt("Chuyển link sang app nào?\n\n" + names);
+
+      if (!newApp) return;
+
+      moveLink(index, newApp);
+
+    }
   </script>
   <script>
     // Load theme từ localStorage
@@ -1196,25 +1438,9 @@
         return;
       }
 
-      // Nếu chưa có layout → sort theo usage như cũ
-      const usageSnap = await getDocs(
-        collection(db, "users", user.uid, "appUsage")
-      );
-
-      const usageMap = {};
-      usageSnap.forEach(doc => {
-        usageMap[doc.id] = doc.data().count || 0;
-      });
-
-      data.sort((a, b) => {
-        return (usageMap[b.name] || 0) - (usageMap[a.name] || 0);
-      });
-
-      const mainApps = data.slice(0, 40);
-      const menuApps = data.slice(40);
-
-      renderApps(mainApps);
-      renderMenuApps(menuApps);
+      // Nếu user mới chưa có layout → hiển thị toàn bộ app
+      renderApps(data);
+      renderMenuApps([]);
     }
 
     function renderMenuApps(data) {
@@ -1312,21 +1538,41 @@
       const content = document.getElementById("modalContent");
 
       content.innerHTML = `
-    <span class="close-btn" onclick="closeModal()">&times;</span>
-    <h5>Thống kê Link</h5>
 
-    <table class="table table-sm">
-      <thead>
-        <tr>
-          <th>App</th>
-          <th>Tên</th>
-          <th>Link</th>
-          <th>Action</th>
-        </tr>
-      </thead>
-      <tbody id="statsTable"></tbody>
-    </table>
-  `;
+<span class="close-btn" onclick="closeModal()">&times;</span>
+
+<div class="stats-card">
+
+<div class="stats-header">
+
+<h6>
+<i class="fa-solid fa-chart-simple me-2"></i>
+Thống kê Link
+</h6>
+
+<span class="stats-count">${links.length} links</span>
+
+</div>
+<div class="stats-scroll">
+
+<table class="stats-table">
+
+<thead style="opacity:0.6">
+<tr>
+<th style="width:35%">App</th>
+<th style="width:65%">Link</th>
+</tr>
+</thead>
+
+<tbody id="statsTable"></tbody>
+
+</table>
+
+</div>
+
+</div>
+
+`;
 
       const table = document.getElementById("statsTable");
 
@@ -1335,26 +1581,56 @@
         const tr = document.createElement("tr");
 
         tr.innerHTML = `
-              <td>${link.app}</td>
-              <td>${link.name}</td>
-              <td>
-                <a href="${link.url}" target="_blank">Open</a>
-              </td>
 
 <td>
 
-<select onchange="moveLink(${index},this.value)">
-  <option value="">Chuyển app</option>
-  ${appsData.map(a =>
-          `<option value="${a.name}">${a.name}</option>`
-        ).join("")}
-</select>
+<div class="app-dropdown">
 
-<i class="fa-solid fa-trash delete"
-onclick="deleteStatLink('${link.app}',${index})"></i>
+<span class="badge-app"
+onclick="toggleAppDropdown(event,${index})">
+
+${link.app}
+<i class="fa-solid fa-angle-down"></i>
+
+</span>
+
+<div class="app-dropdown-menu d-none" id="appMenu${index}">
+
+${appsData.map(a => `
+<div onclick="selectApp(${index},'${a.name}')">
+${a.name}
+</div>
+`).join("")}
+
+</div>
+
+</div>
 
 </td>
-            `;
+
+<td>
+
+<div class="d-flex justify-content-between align-items-center">
+
+<a href="${link.url}" target="_blank"
+class="stats-link">
+${link.name}
+
+</a>
+
+<button
+class="stats-delete"
+onclick="deleteStatLink('${link.app}',${index})">
+
+<i class="fa-solid fa-trash"></i>
+
+</button>
+
+</div>
+
+</td>
+
+`;
 
         table.appendChild(tr);
 
@@ -1553,7 +1829,40 @@ onclick="deleteStatLink('${link.app}',${index})"></i>
       prepareAppElements();
       await saveLayout();
     });
+    window.toggleAppDropdown = function (e, index) {
 
+      e.stopPropagation();
+
+      const menu = document.getElementById("appMenu" + index);
+
+      const isOpen = !menu.classList.contains("d-none");
+
+      // đóng tất cả menu
+      document.querySelectorAll(".app-dropdown-menu")
+        .forEach(m => m.classList.add("d-none"));
+
+      // nếu trước đó chưa mở thì mở
+      if (!isOpen) {
+        menu.classList.remove("d-none");
+      }
+
+    }
+
+    document.querySelectorAll(".app-dropdown-menu").forEach(menu => {
+      menu.addEventListener("click", e => e.stopPropagation());
+    });
+
+    window.selectApp = function (index, appName) {
+
+      moveLink(index, appName);
+
+    }
+
+    // click ngoài để đóng
+    document.addEventListener("click", () => {
+      document.querySelectorAll(".app-dropdown-menu")
+        .forEach(m => m.classList.add("d-none"));
+    });
   </script>
 </body>
 

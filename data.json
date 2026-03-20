@@ -638,6 +638,18 @@
       {
         "name": "Music",
         "url": "https://luuthetaibean.github.io/musical/"
+      },
+      {
+        "name": "Đăng ký khóa học tiếng anh",
+        "url": "https://luuthetaibean.github.io/STREAMLINE-ENGLISH/course-register.html"
+      },
+      {
+        "name": "Đăng nhập tài khoản",
+        "url": "https://luuthetaibean.github.io/STREAMLINE-ENGLISH/login.html"
+      },
+      {
+        "name": "Đăng ký tài khoản",
+        "url": "https://luuthetaibean.github.io/STREAMLINE-ENGLISH/register.html"
       }
     ]
   },
@@ -1505,6 +1517,41 @@
     "icon": "./img/Flight Radar 24.png",
     "mainLink": "https://www.flightradar24.com",
     "note": " chưa có",
+    "subLinks": []
+  },
+  {
+    "name": "Squoosh",
+    "icon": "./img/Squoosh.ico",
+    "mainLink": "https://squoosh.app/",
+    "note": " chưa có",
+    "subLinks": []
+  },
+  {
+    "name": "Easy Lrc",
+    "icon": "./img/Easy Lrc.webp",
+    "mainLink": "https://easylrc.com/",
+    "note": " chưa có",
+    "subLinks": []
+  },
+  {
+    "name": "Giá Vàng",
+    "icon": "./img/Giá Vàng.ico",
+    "mainLink": "https://giavang.org/",
+    "note": " chưa có",
+    "subLinks": []
+  },
+  {
+    "name": "Investing",
+    "icon": "./img/Investing.ico",
+    "mainLink": "https://vn.investing.com/",
+    "note": " chưa có",
+    "subLinks": []
+  },
+  {
+    "name": "Oreate AI",
+    "icon": "./img/Oreate AI.ico",
+    "mainLink": "https://www.oreateai.com/",
+    "note": " Tạo slide trình chiếu bằng AI",
     "subLinks": []
   },
   {
